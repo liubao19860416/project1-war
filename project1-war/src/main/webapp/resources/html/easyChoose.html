@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>选车小工具</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet"  href="../css/common.css">
+    <script src="../jslib/jquery_1_8_3.min.js"></script>
+    <style>
+	  .chooseCarSeries {
+	  	width: 130px;
+	  	height: 35px;
+	  	padding: 0 15px;
+	  	border: 2px solid #cfcfcf;
+	  	background-color: #fff;
+	  	/*max-width: 10em;*/
+	  }
+	  .chooseDealer {
+	  	width: 170px;
+	  	height: 35px;
+	  	padding: 0 10px 0 20px;
+	  	border: 2px solid #cfcfcf;
+	  	background-color: #f6f6f6;
+	  	color: #999999;
+	  }
+	  a {
+	  	text-decoration: none;
+	  }
+	  .disable {
+	  	background-color: #cfcfcf;
+	  }
+	  .disable:hover {
+	  	background-color: #cfcfcf;
+	  }
+	  #carSeriesDropDown {
+	  	width: 164px;
+	  	height: 100px;
+	  	position: relative;
+	  	overflow: hidden;
+	  }
+    </style>
+  </head>
+  <body>
+  	<div>
+  	  <h2>第一步</h2>
+  	  <input value="" type="text" class="chooseCarSeries" id="chooseCarSeries" data-default='meizu' data-id="polo" maxlength="10">
+  	  <div id="carSeriesDropDown" class="">
+  	  	<div class="scroll-wrapper">
+  	  		<div class="scroll-content">
+		  	  	<ul>
+		  	  		<li>Polo</li>
+		  	  		<li>Polo</li>
+		  	  		<li>Polo</li>
+		  	  		<li>Polo</li>
+					<li>Polo</li>
+					<li>Polo</li>
+					<li>Polo</li>
+					<li>Polo</li>
+		  	  		<li>Polo</li>
+		  	  		<li>Polo</li>
+		  	  		<li>Polo</li>
+					<li>Polo</li>
+					<li>Polo</li>
+					<li>Polo</li>
+				</ul>
+			</div>
+		</div>
+			<div class="scrollbar">
+              <div class="scrollbar-narrow scrollbar-narrow-up"></div>
+              <div class="scrollbar-bg" style="height: 274px; margin: 13px 0px;">
+                <div class="scrollbar-handler" style="height: 143.7062937062937px; top: 0px; display: block;"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+              </div>
+              <div class="scrollbar-narrow scrollbar-narrow-down"></div>
+            </div>
+		
+  	  </div>
+  	</div>
+  	<div style="margin-top: 200px">
+  	  <h2>第二步</h2>
+  	  <input value="请选择经销商" type="text" class="chooseDealer f-14">
+    </div>
+    <div style="margin-top: 200px">
+      <h2>第三步</h2>
+      <a href="" class="btn btn-med btn-yellow btn-med-price disable">在线询价</a>
+      <a href="" class="btn btn-med btn-blue btn-med-drive disable">预约试驾</a>
+    </div>
+    <div id="text0">
+    </div>
+     <div id="text1">
+    </div>
+     <div id="text2">
+    </div>
+    <script src="../jslib/jquery.mousewheel.js"></script>
+    <script src="../js/component/ECar.imitatescroll.js"></script>
+    <script>
+    	ECar.imitatescroll({
+    		id: "#carSeriesDropDown"});
+    </script>
+    <script src="../js/fastChooseCar.js">
+    </script>
+    <!-- test the jQuery.single function
+    <script>
+    	$.single = (function () {
+    		var collection = jQuery([1]);
+    		return function (elem) {
+    			collection[0] = elem;
+    			return collection;
+    		};
+    	}());
+    </script>
+    <script>
+    	console.log($.single(document.getElementById('text0')).nextAll('div').length);
+    </script>
+	-->
+  </body>
+</html>

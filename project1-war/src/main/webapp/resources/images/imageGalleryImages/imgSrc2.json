@@ -1,0 +1,28 @@
+{
+	"big": ["../images/imageGalleryImages/img0/img00.jpg",
+		"../images/imageGalleryImages/img0/img09.jpg",
+		"../images/imageGalleryImages/img0/img10.jpg",
+		"../images/imageGalleryImages/img0/img01.jpg",
+		"../images/imageGalleryImages/img0/img02.jpg"
+	],
+	"small": ["../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg",
+		"../images/imageGalleryImages/img0/imgSmall00.jpg"
+	],
+	"previousAjaxUrl": "../images/imageGalleryImages/imgSrc1.json",
+	"nextAjaxUrl": null
+}

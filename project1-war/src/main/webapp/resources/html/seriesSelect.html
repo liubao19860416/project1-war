@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>n级联动菜单</title>
+		<meta charset='utf-8'>
+		<style>
+			p {
+				font-size: 20px;
+			}
+			.hide {
+				display: none;
+			}
+			.active {
+				background-color: red;
+			}
+			ul {
+				width: 300px;
+			}
+		</style>
+		<script src="../jslib/jquery_1_8_3.min.js"></script>
+		<script src="../js/component/ECar.seriesSelect.js"></script>
+	</head>
+	<body>
+		<p>这是一个使用多级联动菜单的示例</p>
+		<!-- <div id="city" class="hide"> -->
+		<div id="city">
+			<select class="province" data-val="斯柯达" data-title="请选择车系" style="display: ">
+			</select>
+			<select class="city" data-val="xxx" data-title="请选择车型" disabled="disabled" style="display: ">
+			</select>
+			<select class="area" data-val="斯柯达20" data-title="请选择配件" disabled="disabled" style="display: ">
+			</select>
+		</div>
+		<br>
+		<br>
+		<br>
+		<ul class="model">
+		</ul>
+		<ul class="style">
+		</ul>
+		<ul class="accessory">
+		</ul>
+		<!-- 使用示例，配合美化过的select使用 -->
+		<script> 
+			var $selectCollection = $('#city').children('select'); // 所有的select
+			var $prettySelectCollection = $('.model, .style, .accessory'); // 所有的select对应的美化过的select
+
+			$prettySelectCollection.on('update', updateHandler);
+			function updateHandler(event) {	// 美化过的表单需要自定义update事件，并实现对应的handler
+				/*
+					event.textArray 字符串数组
+					event.chosen 当前被选中的option的index
+				*/
+				var textArray = event.textArray,
+					chosen = event.chosen,
+					_tempHTML = "";
+				// 更新内容
+				for(var i=0, length=textArray.length; i<length; i++) {
+					_tempHTML += ( "<li>" + textArray[i] + "</li>" );
+				}
+				$(this).html(_tempHTML);
+				// 更新选中条目
+				$(this).children().removeClass('active').eq(chosen).addClass('active');
+			}
+			$prettySelectCollection.on('click', 'li', function () {
+				// your logic
+				var $this = $(this);
+				if ($this.hasClass('active')) {
+					return;
+				}
+				$this.siblings().removeClass('active').end().addClass('active');
+
+				// trigger对应的select
+				var selectIndex = $prettySelectCollection.index($this.parent());
+				var optionIndex = $this.parent().children().index($this);
+				triggerSelectChange($selectCollection, selectIndex, optionIndex);	
+			});
+			function triggerSelectChange($selectCollection, selectIndex, optionIndex) {
+				$selectCollection
+					.eq(selectIndex)
+					.val($selectCollection.eq(selectIndex).children('option').eq(optionIndex).val())
+					.trigger("change");
+			}
+
+		</script>
+		<script>
+			var settings = {
+				selects: ["province", "city", "area"],
+				prettySelects: ["model", "style", "accessory"],
+				url: "",
+				nodata: 'none'
+			};
+			ECar.seriesSelect($('#city'), settings);
+		</script>
+	</body>
+</html>

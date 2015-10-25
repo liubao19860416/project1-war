@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动报名</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/component/dialog.css">
+<link rel="stylesheet" type="text/css" href="../css/carorder.css">
+<link rel="stylesheet" type="text/css" href="../css/activityregister.css">
+<link rel="stylesheet" type="text/css" href="../css/component/purchaseStyle.css">
+
+</head>
+	
+<body>
+	<div class="w960">
+    	<!-- 活动信息 -->
+    	<div class="cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>活动信息</span></h3>
+        	<div class="car-odcon">
+            	<ul class="car-odinfo">
+                	<li>
+                    	<div><span class="lt-tit">活动名称：</span>大众朗行沪上金秋大促销，全系直降3万元</div>
+					</li> 
+                    <li>
+                    	<div><span class="lt-tit">活动日期：</span>2013.11.09---2013.12.09</div>
+					</li> 
+                </ul>
+                <hr class="carif-hr" />
+                <ul class="car-odinfo">    
+                    <li>
+                    	<div class="lt-black1"><span class="lt-tit">品牌：</span>大众</div>
+                        <div class="lt-black2"><span>车系：</span>朗行</div>
+					<li>
+                    	<div><span class="lt-tit">经销商：</span>4S店 上海奥鸿汽车销售有限公司-上海大众</div>
+					</li>
+                </ul>
+            </div>
+        	
+        </div>
+        <!-- 填写个人信息  -->
+        <form id="Form" class="validate-from">        
+        <div class="cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>填写个人信息</span><span class="tit-bmxx">(信息保密，请放心填写)</span></h3>
+        	<div class="usif car-odcon">
+            	<!-- 表单信息 -->
+                
+               	<ul class="fm-list">
+                	<li class="fm-list-row">
+                    	<label class="flr-lbl">姓名：</label>
+                        <input type="text" id="name" maxlength="30" data-required="true" data-msg-required="请输入姓名" class="m-member" name="" />
+						<span class="m-notice m-err"><i></i><span data-msg-for="name"></span></span>
+                    </li>
+                    <li class="fm-list-row">
+                    	<label class="flr-lbl">手机号码：</label>
+                        <input type="text" id="mobile" maxlength="11"
+								data-required="true" data-msg-required="请输入手机号码"
+								data-length-min="11" data-msg-length-min="手机号码位数有误"
+								data-regexp="1[3|4|5|8]\d{9}" data-msg-regexp="手机号码有误"
+								class="m-member" name="" value="" />
+						<span class="m-notice m-err"><i></i><span data-msg-for="mobile"></span></span>
+                    </li>
+                    <li class="textarea-li fm-list-row">
+                    	<label class="flr-lbl">补充说明：</label>
+                        <textarea id="text" maxlength="200" placeholder="选填，如您期望的汽车颜色、期望试驾的时间范围等"></textarea>
+                        <p class="clearfix txtipt-msg">您还可以输入<span data-countdown-for="text"></span>字</p>
+                    </li>
+                </ul>
+            </div>
+        	<!-- 提交信息 -->
+            <p class="if-sub"><input type="button" class="carodr_sub" value="立即报名"  id="purchaseOrderbtn"  /></p>
+        </div>
+        </form>
+    </div>
+<!--选择经销商-->     
+<div id="c-purchasedialog-choosedealer" class="hide">
+    <div class="c-purchasedialog-dealer">
+    	<div class="c-purchasedialog-dealerform">
+    		<label>城市</label>
+    		<select class="fl"> <option>上海</option> </select> 
+    		<select class="fl"> <option>区：可不选</option> </select>  
+    	</div>    	
+    	<div class="c-purchasedealer" id="c-purchasedealer">
+             <div class="c-purchasedealer-wrapper scroll-wrapper">
+                <div class="c-purchasedealer-content scroll-content">
+              	    <h2 class="c-purchasedealer-count">当前城市有 <span><b>6</b></span> 个经销商</h2>
+                </div>
+              </div>            
+             <div class="scrollbar">
+              <div class="scrollbar-narrow scrollbar-narrow-up"></div>
+              <div class="scrollbar-bg">
+                <div class="scrollbar-handler"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+              </div>
+              <div class="scrollbar-narrow scrollbar-narrow-down"></div>
+            </div>            
+       </div>
+        <div class="text-c">
+        	<input class="btn btn-med btn-gray" type="button" value="确定" name="">
+        	<input class="btn btn-med" type="button" value="取消" onclick="ECar.dialog.close();"  name="">        	
+        </div>
+    </div>   
+</div>
+        
+<!--未登录报名成功 -->    
+<div id="c-purchasedialog-login-ordersuc" class="hide">
+    <dl class="c-purchasedialog-ordersuc">
+            <dt><i class="icon icon-checked-l fl"></i><span class="fl w400">您已报名成功！我们将尽快联系您！</span></dt>
+            <dd><a href="###">继续浏览网站</a></dd>
+     </dl>
+</div>
+<!--已登录查询成功-->    
+<div id="c-purchasedialog-nologin-ordersuc" class="hide">
+    <dl class="c-purchasedialog-ordersuc">
+            <dt><i class="icon icon-checked-l fl"></i><span class="fl w400">您已报名成功！我们将尽快联系您！</span></dt>
+            <dd><a href="###">继续浏览网站</a><a href="###" class="clr-orange">查看我参加的活动</a></dd>
+     </dl>
+</div>
+
+<script src="../jslib/jquery_1_8_3.min.js"></script>
+<script src="../jslib/jquery.mousewheel.js"></script>
+<script src="../js/component/ECar.imitatescroll.js"></script>
+<script type="text/javascript" src="../js/component/ECar.dialog.js"></script>
+<script src="../js/purchase.js"></script>
+<script type="text/javascript" src="../js/component/ECar.countdown.js"></script>
+<script type="text/javascript" src="../js/purchase.js"></script>
+
+<script type="text/javascript" src="../js/component/ECar.validate.js"></script>
+<script type="text/javascript" src="../js/activityregister.js"></script>
+<script src="../jslib/My97DatePicker/WdatePicker.js"></script>
+</body>
+</html>

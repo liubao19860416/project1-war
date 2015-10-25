@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>个人中心左侧菜单</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/member/user-menu.css" rel="stylesheet" />
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+</head>
+<body>
+
+<div>
+	<dl class="user-menu">
+		<dt><a href="#">交易管理</a></dt>
+		<dd><a href="#">我的询价</a></dd>
+		<dd class="select">我的试乘试驾</dd>
+		<dd><a href="#">我参与的活动</a></dd>
+		<dd><a href="#">我的订单</a></dd>
+	</dl>
+	<dl class="user-menu">
+		<dt><a href="#">个人信息管理</a></dt>
+		<dd><a href="#">编辑个人信息</a></dd>
+		<dd><a href="#">账户安全管理</a></dd>
+	</dl>
+	<dl class="user-menu">
+		<dt><a href="#">社区中心</a></dt>
+		<dd><a href="#">消息提醒</a></dd>
+		<dd><a href="#">邀请好友</a></dd>
+		<dd><a href="#">我的咨询</a></dd>
+	</dl>
+</div>
+
+<script>
+	var menu_dt =  $('dl.user-menu').find('dt');
+	
+	menu_dt.removeClass('on');
+	$('dd.select').parent().children("dt").addClass('on');
+	menu_dt.on("click", function(){
+		menu_dt.removeClass('on');
+		$(this).addClass('on');
+	})
+</script>
+</body>
+</html>

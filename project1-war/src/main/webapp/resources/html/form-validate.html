@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>表单美化与验证</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<style>
+	#formId label{ display: inline-block; width:106px}
+	.usual span{padding-left: 10px;}
+	.errclass{ color:red;}
+</style>
+
+</head>
+<body>
+
+
+	<form class="usual" id="formOne">
+		<h3>form表单验证</h3>
+
+		<p><label><span class="red">*</span>邮箱：</label><input  type="text" name="email"  validate="email" rel-required="true" value=""><span class="emailtxt">a@b.com</span></p>
+
+		<p><label><span class="red">*</span>手机：</label><input type="text" rel-required="true" validate="phone" name="phone" value=""><span class="phonetxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>创建密码：</label><input type="password" rel-required="true" validate="password" name="pwd" value=""><span class="pwdtxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>重复密码：</label><input type="password" rel-required="true" validate="repassword" name="rpwd" value=""><span class="rpwdtxt">提示信息</span></p>
+		
+		<p><label><span class="red">*</span>姓名：</label><input type="text"  validate="username" rel-required="true"  name="username" value=""><span class="usernametxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>证件类型：</label><select class="jj_cardtype" validate="cardtype" name="cardtype">
+			<!-- <option value="">请选择</option> -->
+			<option value="cardId">身份证</option>
+			<option value="xsz">学生证</option>
+			<option value="jgz">军官证</option>
+		</select>
+		<input type="text"  validate="cardnum" depend="cardtype" rel-required="true"  name="cardnum" value="">
+		<span class="cardnumtxt"></span>
+		</p>
+
+		<p groupvalidate="radio@sex"><input class="radiobtn" type="radio"  name="sex"  value="1"><span>男</span><input class="radiobtn" type="radio" name="sex"  value="2"><span>女</span><span class="sextxt"></span></p>
+
+		<p groupvalidate="radio@sex2"><input class="radiobtn" type="radio"  name="sex2"  value="1"><span>男1</span><input class="radiobtn" type="radio" name="sex2"  value="2"><span>女1</span><span class="sex2txt"></span></p>
+
+		<p groupvalidate="checkbox@sel"><input class="radiobtn" type="checkbox"  name="selone"  value="1"><span>男</span><input class="radiobtn" type="checkbox" name="seltwo"  value="2"><span>女</span><span class="seltxt"></span></p>		
+
+		<p groupvalidate="checkbox@read"><input class="radiobtn" type="checkbox" name="read"  value="">我已经阅读并同意&nbsp;&nbsp;<span class="readtxt"></span></p>
+		<p><input class="btn" type="button" name="" value="提 交"></p>
+	</form>
+	
+	<form class="usual" id="formTwo">
+		<h3>form表单验证</h3>
+
+		<p><label><span class="red">*</span>邮箱：</label><input  type="text" name="email"  validate="email" rel-required="true" value=""><span class="emailtxt">a@b.com</span></p>
+
+		<p><label><span class="red">*</span>手机：</label><input type="text" rel-required="true" validate="phone" name="phone" value=""><span class="phonetxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>创建密码：</label><input type="password" rel-required="true" validate="password" name="pwd" value=""><span class="pwdtxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>重复密码：</label><input type="password" rel-required="true" validate="repassword" name="rpwd" value=""><span class="rpwdtxt">提示信息</span></p>
+		
+		<p><label><span class="red">*</span>姓名：</label><input type="text"  validate="username" rel-required="true"  name="username" value=""><span class="usernametxt">提示信息</span></p>
+
+		<p><label><span class="red">*</span>证件类型：</label><select class="jj_cardtype" validate="cardtype" name="cardtype">
+			<!-- <option value="">请选择</option> -->
+			<option value="cardId">身份证</option>
+			<option value="xsz">学生证</option>
+			<option value="jgz">军官证</option>
+		</select>
+		<input type="text"  validate="cardnum" depend="cardtype" rel-required="true"  name="cardnum" value="">
+		<span class="cardnumtxt"></span>
+		</p>
+
+		<p groupvalidate="radio@sex"><input class="radiobtn" type="radio"  name="sex"  value="1"><span>男</span><input class="radiobtn" type="radio" name="sex"  value="2"><span>女</span><span class="sextxt"></span></p>
+
+		<p groupvalidate="radio@sex2"><input class="radiobtn" type="radio"  name="sex2"  value="1"><span>男1</span><input class="radiobtn" type="radio" name="sex2"  value="2"><span>女1</span><span class="sex2txt"></span></p>
+
+		<p groupvalidate="checkbox@sel"><input class="radiobtn" type="checkbox"  name="selone"  value="1"><span>男</span><input class="radiobtn" type="checkbox" name="seltwo"  value="2"><span>女</span><span class="seltxt"></span></p>		
+
+		<p groupvalidate="checkbox@read"><input class="radiobtn" type="checkbox" name="read"  value="">我已经阅读并同意&nbsp;&nbsp;<span class="readtxt"></span></p>
+		<p><input class="btn2" type="button" name="" value="提 交"></p>
+	</form>
+
+
+
+
+    
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+<script src="../js/validate.js"></script>
+<script>
+ 
+//--身份证号码验证-支持新的带x身份证 
+
+
+
+
+$(function(){
+ 	/*
+		empty:为空状态
+		err:邮箱格式有误
+		remoteerr:已经存在的状态
+
+ 	*/
+	ECar.validate.init({
+		formid:'formOne',
+		config:{
+			 'email':{
+				 'empty':'请输入您的邮箱1',
+				 'err':'邮箱格式有误1',
+				 'remoteerr':'已经存在1'
+				}
+		}
+	});
+	
+	ECar.validate.init({
+		formid:'formTwo',
+		config:{
+			 'email':{
+				 'empty':'请输入您的邮箱2',
+				 'err':'邮箱格式有误2',
+				 'remoteerr':'已经存在2'
+				}
+		}
+	});
+
+
+
+
+
+    $('.btn').click(function(){
+        ECar.validate.init.submit('formOne');                                            
+    });
+
+    $('.btn2').click(function(){
+        ECar.validate.init.submit('formTwo');                                            
+    });
+
+    
+});
+</script>
+
+
+</body>
+</html>

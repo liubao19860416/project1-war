@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="../css/reset.css" rel="stylesheet" />
+<link href="../css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+
+<title>主站BUTTON</title>
+</head>
+<body>
+<div style="width:960px;margin:10px auto">
+	默认按钮：btn
+	<p>
+		<strong>按钮大小：</strong>
+		大按钮：btn,
+		中按钮：btn-med,
+		小按钮：btn-sml,
+		微小按钮：btn-min,
+		其他按钮：btn126-34
+	</p>
+	<p>
+		<strong>按钮颜色：</strong>
+		默认色：<span style="width:20px;height:20px;background:#35b5eb;display:inline-block;"></span>
+		btn-yellow：<span class="btn-yellow" style="width:20px;height:20px;display:inline-block;"></span>
+		btn-green：<span class="btn-green" style="width:20px;height:20px;display:inline-block;"></span>
+		btn-blue：<span class="btn-blue" style="width:20px;height:20px;display:inline-block;"></span>
+
+	</p>
+
+	<h3>主按钮</h3>
+	<p>160*50 btn</p>
+		<input class="btn" type="button" name="" value="立即登录">
+		<input class="btn btn-price btn-yellow" type="button" name="" value="询问价格">
+		<input class="btn btn-apply btn-green" type="button" name="" value="立即报名">
+		<input class="btn btn-drive btn-blue" type="button" name="" value="预约驾驶">
+		<input class="btn btn-active btn-blue" type="button" name="" value="订阅活动">
+		<p><br/></p>
+		<input class="btn btn-example" type="button" name="" value="店铺首页">
+		<input class="btn btn-order btn-yellow" type="button" name="" value="询问价格">
+	<p>140*34 btn-med</p>
+		<input class="btn btn-med" type="button" name="" value="立即登录">
+		<input class="btn btn-med btn-yellow btn-med-price" type="button" name="" value="询问价格">
+		<input class="btn btn-med btn-green btn-med-apply" type="button" name="" value="立即报名">
+		<input class="btn btn-med btn-blue btn-med-drive" type="button" name="" value="预约驾驶">
+		<input class="btn btn-med btn-blue btn-med-active" type="button" name="" value="订阅活动">
+		<p><br/></p>
+		<input class="btn btn-med btn-med-example" type="button" name="" value="店铺首页">
+		<input class="btn btn-med" type="button" name="" value="确定">
+		<input class="btn btn-med btn-gray" type="button" name="" value="取消">
+	<p>95*40 btn-sml</p>
+	<input class="btn btn-sml" type="button" name="" value="立即登录">
+	<p>80*25 btn-min</p>
+	<input class="btn btn-min" type="button" name="" value="立即登录">
+	<input class="btn btn-min btn-yellow" type="button" name="" value="立即注册">
+	<p>126*34 btn126</p>
+	<input class="btn btn-med btn126-34" type="button" name="" value="立即登录">
+	<p>220*50 btn220</p>
+	<input class="btn btn-med btn220-50" type="button" name="" value="登录">
+	<p>表单按钮 （视觉新增，added by CD， Sprint 4</p>
+	<input class="btn btn-yellow btn-form-60-25" value="询价" type="button">
+	<input class="btn btn-form-gray btn-form-60-25" value="试驾" type="button">
+	<br/>
+	<br/>
+	<br/>
+
+	<p>共用分页</p>
+	<!--page start-->
+
+	<div class="page">
+		<a class="prev gary" href="">上一页</a><a href="http://www.baidu.com">1</a><a class="current" href="#">2</a><a href="http://www.sohu.com">3</a><a href="#">4</a><a href="#">5</a><a class="noline" href="javascript:void(0);">......</a><a href="#">10</a><a class="next" href="">下一页</a>
+	</div>
+
+	<!--page end-->
+	
+	<span>455</span>
+<script type="text/javascript">
+$(function(){
+
+	$(document).keyup(function(e) {
+		var e = window.e || e;		
+		var key=e.keyCode;		
+		if(key==37){
+			var k=$('.page .current').prev().attr('href');			
+		}
+		if(key==39){
+			var k=$('.page .current').next().attr('href');			
+		}
+		if(!k)return;
+		window.location.href=k;
+		
+	});
+})
+
+
+</script>	
+
+</div>
+</body>
+</html>

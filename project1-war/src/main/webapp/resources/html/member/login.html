@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户登录</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../../css/member/reset.css" rel="stylesheet">	
+    <link href="../../css/member/common.css" rel="stylesheet" />
+    <link href="../../css/member/login.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+    <script type="text/javascript" src="../../js/customerLogin.js"></script>
+    
+</head>
+
+<body>
+<!-- 用户登录 -->
+<div class="login w960">
+  <div class="login-banner"><a href="#"><img src="../../images/member/loginbanner.jpg" width="555px" height="370px" alt="" border="" /></a></div>
+  <div class="login-inner">
+    <h1>账号登录</h1>
+    <!--<span class="m-notice m-err error"><i></i><span>您输入的用户名或密码不正确</span></span>-->
+    <form id="formLogin" name="formLogin" method="post" action="test.html">
+    <dl>
+      <dt>账&nbsp;&nbsp;&nbsp;号:</dt>
+      <dd><input id="username" class="m-member m-member220-46" maxlength="20" name="" type="text" value="用户名/手机号/邮箱"/></dd>
+    </dl>
+    <dl>
+      <dt>密&nbsp;&nbsp;&nbsp;码:</dt>
+      <dd>
+        <input id="passwd" class="m-member m-member220-46" name="" type="password" maxlength="16"/>
+        <span class="loss"><a href="#">忘记密码</a></span>
+      </dd>
+    </dl>
+    <dl>
+      <dt>验证码:</dt>
+      <dd>
+       <input id="identcode" class="m-member m-member220-46 text " name="" type="text" maxlength="4"/>
+       <label class="img"><img src="../../images/member/verify.jpg" width="100px" height="46px" alt="" border="0"></label>
+       <label class="replace">看不清？<br/><a href="#" class="color">换一张</a></label>
+      </dd>
+    </dl>
+    <div class="remember"><input class="checkbox" name="" type="checkbox ticks" value="1"><label class="password">下次自动登录</label></div>
+    <div class="loginbut"><input class="btn btn-med btn220-50" id="submit" type="submit" name="" value="登录"/></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

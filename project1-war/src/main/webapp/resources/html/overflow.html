@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>弹出层组件演示</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/component-overflow.css" rel="stylesheet">
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../js/ECar.overflow.js"></script>
+</head>
+<body>
+<div id="overflow" class="component-overflow">
+	<div class="overflow-title">
+		<i class="gallery-icon icon_close" title="关闭弹出层">&nbsp;</i>
+	</div>
+	<!-- <div>大图</div>
+	<div>
+		<ul class="overflow-small">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>13</li>
+		</ul>
+	</div> -->
+</div>
+	
+	
+<div class="btn">点击显示弹出层</div>
+
+<script>
+$('.btn').click(function(){
+    popupWin("overflow");
+})
+</script>
+</body>
+</html>

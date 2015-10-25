@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>车系详情_二级导航</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/component/carStyle.css" rel="stylesheet">    
+</head>
+
+<body>
+  <div class="c-container"> 
+    <div class="c-modelNav clearfix">
+       <span class="c-modelNav-logo fl"><a href="###"><img src="../images/temp/modellogo01.png" class="fl" alt="" /></a>科帕奇科帕奇</span>
+       <ul class="fl">
+         <li><a href="###" class="current">首页</a></li>
+         <li><a href="###">配置参数</a></li>
+         <li><a href="###">经销商</a></li>
+         <li><a href="###">活动</a></li>
+         <li><a href="###">图片</a></li>
+         <li><a href="###">资讯</a></li>
+       </ul>
+    </div>
+  </div> 
+
+<script src="../jslib/jquery_1_8_3.min.js"></script>
+<script> 
+//合并的时候要删除的
+   $(function(){
+    $('.c-modelNav>ul>li>a').click(function(e){
+      e.stopPropagation(); 
+      $(this).addClass('current').parent().siblings().find('a').removeClass('current');
+    });
+   })
+</script>
+
+</body>
+</html>

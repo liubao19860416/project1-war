@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>车型页</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />		<!--noticetopnav/crumbs的样式-->
+<link href="../css/carModel-info.css" rel="stylesheet" type="text/css" />		<!--carModel-info的样式-->
+<link href="../jslib/tipsy/tipsy.css" rel="stylesheet" type="text/css" />		<!--carModel-info的tip的样式-->
+<link href="../css/component/dealer.css" rel="stylesheet" />			<!--dealerlist的样式-->
+<link rel="stylesheet" type="text/css" href="../css/car-details.css">	<!--car-details的样式-->
+<link rel="stylesheet" type="text/css" href="../css/car-pic.css">		<!--car-showpic的样式-->
+<link href="../css/carModel-config.css" rel="stylesheet" type="text/css" />		<!--carModel-config的样式-->
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+
+<!--carModel需要一个单独的css文件？把模块的整合进来？-->
+<style>	
+.carModel-tab{ height:40px; line-height:40px; background-color:#e9e7e8;}
+.carModel-tab li{ float:left; width:140px; border-right:1px solid #fff; text-align:center;}
+.carModel-tab li.hover,.carModel-tab li.hover a{ background-color: #3f67c0; color:#fff;}
+.carModel-tab li a{display: inline-block;line-height: 40px;height: 40px;width: 100%;color: #333}
+</style>
+</head>
+<body>
+<!--noticetopnav.html-->
+<div class="top_collect_main hide" id="topCollect">
+  <div class="top_collect">公告：本站于2014年3月20日晚12:00-12:30分关机维护,届时所有服务不可访问,带来的不便之处请谅解<img class="close" src="../images/close.jpg" width="16px" height="16px" border="0" id="topCollect-close"></div>
+</div>
+<div class="n-topnav">
+  <div class="header">
+    <h3><a href="#"><span class="current">上海</span><span class="triangle drop"></span></a></h3>
+     <ul class="login-box" id="box01">
+      <li><a href="#">登陆</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">注册</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">车主俱乐部</a></li>
+    </ul>
+    <ul class="login-box" id="box02" style="display:none;">
+      <li><a href="#">早上好 , 用户名用户名用户名名</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">消息</a><span class="news">23</span></li>
+      <li class="site-nav-pipe">|</li>
+      <li class="mouse_over pr" id="userCenter"><a href="#"><span class="current">个人中心</span><span class="triangle drop"></span></a>
+        <div class="group" id="useGroup">
+          <a href="#">我的订单</a>
+          <a href="#">我的询价</a>
+          <a href="#">试乘试驾</a>
+          <a href="#">消息提醒</a>
+        </div>
+      </li>
+    </ul>
+    <div class="top-search">
+      <input class="searchText" type="text" value="荣威550" onFocus="this.style.color='#6a6a6a';if (value =='荣威550'){value =''}" onBlur="this.style.color='#6a6a6a';if (value ==''){value='荣威550'}">
+      <input class="searchBtn" type="submit">
+    </div>
+  </div>
+</div>
+<div class="n-subnav">
+  <div class="subnav-cont">
+    <div class="saiclogo"></div>
+    <div class="subnav-tit">
+      <ul class="subnav-tit-nr">
+        <li><a href="#">车型大全</a><span class="iconthree-all iconlist"></span></li>
+        <li><a href="#">经销商</a></li>
+        <li><a href="#">促销活动</a></li>
+        <li><a href="#">购车工具</a><span class="iconthree-all iconlist"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--noticetopnav.html END-->
+
+<!--crumbs.html-->
+<div class="w960 breadcrumbs" style="margin-left:auto; margin-right:auto;">
+    <a href="#" target="_blank">首页</a>&gt;<a href="#" target="_blank">资讯</a>&gt;<a href="#" target="_blank">品牌新闻</a>&gt;<span>正文</span>
+</div>
+<!--crumbs.html END-->
+
+<!--carmodel-info.html-->
+<div class="carmodel-info w960 mb-30 mt-20">
+	<h3 class="title title-m mb-16"><span class="title-name"><i></i>雪佛兰科鲁兹<em class="clr-red f-12">停产</em></span>
+		<span class="fr pr selectbox">
+			<span class="select-other f-14 f-yahei pr">同系列车型(18)<i class="pa"></i></span>
+			<ul class="pa hide selecttxt">
+				<li><a href="">朗行1.4</a></li>
+				<li><a href="">朗行1.4</a></li>					
+				<li><a href="">朗行1.4</a></li>
+				<li><a href="">朗行1.4</a></li>
+				<li><a href="">朗行1.4</a></li>
+			</ul>
+		</span>
+	</h3>
+	<div class="detail clearfix">
+		<div class="property">
+			<div class="infowrap f-14">
+				<ul>
+					<li class="mb32">经销商报价：<span class="clr-red f-16 f-b">17.98 - 26.80</span> 万元 <em class="pr">厂商指导价：<b> 28.80</b> 万元<a href="" class="ico-jsq pa"></a></em>  <a class="clr-yellow" href="">贷款购车&nbsp;&raquo;</a></li>
+					<li><span class="w238">油耗：6.9<em class="clr-7d7d7d">L/100km</em></span> 燃油标号：97<em class="clr-7d7d7d">#</em></li>
+					<li><span class="w238">排量：1.6<em class="clr-7d7d7d">L</em></span> 变速箱：手动</li>
+					<li><span class="w238">长/宽/高：4673<em class="clr-7d7d7d">/</em>1849<em class="clr-7d7d7d">/</em>1753<em class="clr-7d7d7d">mm</em></span> 车身形状：5门 5座 SUV</li>
+				</ul>
+				<div class="action">
+					<a href="#"><input class="btn btn1 mr-37" type="button" name="" value=""></a><a href="#"><input class="btn btn2" type="button" name="" value=""></a>
+					<!-- <p>各种状态需要说明的</p> -->
+
+				</div>
+			</div>
+		</div>			
+		<div class="gallery">
+			<a href="#"><img class="showcar" width="300" height="200" alt="科帕奇2013款2.4L自动城市版" src="../images/carModel-info/car.png"></a>
+			<p class="carcolor">
+				<img class="current" width="26" original-title="银色" rel-data="../images/carModel-info/car1.png" height="12" src="../images/carModel-info/color-1.png"/>
+				<img rel-data="../images/carModel-info/car.png" original-title="黑色"  width="26" height="12" src="../images/carModel-info/color-2.png"/>
+				<img rel-data="../images/carModel-info/car.png" original-title="红色"  width="26" height="12" src="../images/carModel-info/color-3.png">
+				<img rel-data="../images/carModel-info/car.png" original-title="黑色"  width="26" height="12" src="../images/carModel-info/color-2.png">
+				<img rel-data="../images/carModel-info/car.png" original-title="黑色"  width="26" height="12" src="../images/carModel-info/color-2.png">
+				<img rel-data="../images/carModel-info/car.png" original-title="黑色"  width="26" height="12" src="../images/carModel-info/color-2.png">
+				<img rel-data="../images/carModel-info/car.png" original-title="黑色"  width="26" height="12" src="../images/carModel-info/color-2.png">	
+			</p>
+		</div>
+	</div>
+</div>
+<!--carmodel-info.html END-->
+
+<!--补充切换栏-->
+<div class="w960 mb-30">
+	<ul id="carModel-tab" class="f-16 f-yahei carModel-tab">
+		<li class="hover"><a href="#dealer">经销商</a></li>
+		<li><a href="#action">促销活动</a></li>
+		<li><a href="#pic">图片</a></li>
+		<li><a href="#config">配置参数</a></li>
+	</ul>
+</div>
+<!--补充切换栏 END-->
+
+<!--？？？部分字段&询价按钮有差别？？？-->
+<!--dealerlist.html ？？？部分字段&询价按钮有差别？？？-->
+<div class="w960 mb-30">
+	<h3 class="title title-m"><a name="dealer"></a><span class="title-name"><i></i><span class="title-count">28</span>家经销商</span></h3>
+	<div class="c-dealer">
+		<div id="DealerNav" class="c-dealer-nav clearfix">
+			<ul>
+				<li><a href="../../dealer/dealer_4.htm">全部</a></li>
+				<li><a href="../../dealer/dealer_1.htm">徐汇</a></li>
+				<li><a href="../../dealer/dealer_2.htm">宝山</a></li>
+				<li><a href="../../dealer/dealer_3.htm">浦东新区</a></li>
+				<li><a href="#2">闵行</a></li>
+				<li><a href="#1">长宁</a></li>
+				<li><a href="#2">嘉定</a></li>
+				<li><a href="#1">崇明</a></li>
+				<li class="end"><a href="#2">金山</a></li>
+				<li><a href="#1">金山</a></li>
+				<li><a href="#2">金山</a></li>
+				<li><a href="#1">金山</a></li>
+			</ul>
+		</div>
+		<div class="c-dealer-content">
+			<div class="c-dealer-list" id="DealerList">
+				<div class="c-dealer-list-wrapper scroll-wrapper">
+					<div class="c-dealer-list-content scroll-content">
+						<h4>经销商</h4>
+						<ul>
+							<li class="odd">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司asdfasdf</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="even">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="odd">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="even">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="odd">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="even">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="odd">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="even">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+							<li class="odd">
+								<h5><a href="#" target="_blank">上海云层峰龙威汽车销售服务有限公司</a></h5>
+								<p>经销商报价：<b>17.98</b>-<b>20.68</b> 万元</p>
+								<a href="#" class="c-dealer-btn">询价</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="scrollbar">
+					<div class="scrollbar-narrow scrollbar-narrow-up"></div>
+					<div class="scrollbar-bg">
+						<div class="scrollbar-handler"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+					</div>
+					<div class="scrollbar-narrow scrollbar-narrow-down"></div>
+				</div>
+			</div>
+			<div class="c-dealer-map" id="DealerMap">
+			</div>
+		</div>
+	</div>
+</div>
+<!--dealerlist.html END-->
+
+<!--car-details.html-->
+<div class="w960 mb-30">
+	<h3 class="title title-m"><a name="action"></a><span class="title-name"><i></i>促销活动</span><span class="fr"><a href="#" target="_blank" class="title-more">更多</a></span></h3>
+    <div class="w960 promotions">
+        <div class="promotions-box">
+            <div class="promotions-pic">
+                <span><a href="#"><img src="../images/Promot-pic1.jpg" width="300" height="200" alt=""></a></span>
+                <em><a href="#">2011款科帕奇现车在售</a></em>
+            </div>
+            <div class="promotions-txt">
+                <p><span>时间：</span><em>2013.08.02-2013.08.21</em></p>
+                <p><span>主办方：</span><em>上海名流城</em></p>
+                <p>
+                    <span class="join-num">已有20000人参加</span>
+                    <a href="#">免费报名</a>
+                </p>
+            </div>
+        </div>
+        <div class="promotions-box">
+            <div class="promotions-pic">
+                <span><a href="#"><img src="../images/Promot-pic1.jpg" width="300" height="200" alt=""></a></span>
+                <em><a href="#">2011款科帕奇现车在售</a></em>
+            </div>
+            <div class="promotions-txt">
+                <p><span>时间：</span><em>2013.08.02-2013.08.21</em></p>
+                <p><span>主办方：</span><em>上海名流城</em></p>
+                <p>
+                    <span class="join-num">已有20000人参加</span>
+                    <a href="#">免费报名</a>
+                </p>
+            </div>
+        </div>
+        <div class="promotions-box">
+            <div class="promotions-pic">
+                <span><a href="#"><img src="../images/Promot-pic1.jpg" width="300" height="200" alt=""></a></span>
+                <em><a href="#">2011款科帕奇现车在售</a></em>
+            </div>
+            <div class="promotions-txt">
+                <p><span>时间：</span><em>2013.08.02-2013.08.21</em></p>
+                <p><span>主办方：</span><em>上海名流城</em></p>
+                <p>
+                    <span class="join-num">已有20000人参加</span>
+                    <a href="#">免费报名</a>
+                </p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--car-details.html END-->
+
+<!--car-showpic.html-->
+<div class="w960 mb-30">
+	<h3 class="title title-m"><a name="pic"></a>
+		<span class="title-name"><i></i>汽车图片</span>
+		<span class="fr">
+			<ul class="title-tab">
+				<li class="current"><a href="#" target="_blank">全部<i></i></a></li>
+				<li><a href="#" target="_blank">外观<i></i></a></li>
+				<li><a href="#" target="_blank">内饰<i></i></a></li>
+				<li><a href="#" target="_blank">活动<i></i></a></li>
+			</ul>
+		</span>
+	</h3>
+    <ul class="w960 car-showpic">
+        <li><a href="#"><img src="../images/carpic4.jpg" width="210" height="140" alt=""></a></li>
+        <li><a href="#"><img src="../images/carpic4.jpg" width="210" height="140" alt=""></a></li>
+        <li><a href="#"><img src="../images/carpic4.jpg" width="210" height="140" alt=""></a></li>
+        <li><a href="#"><img src="../images/carpic4.jpg" width="210" height="140" alt=""></a></li>
+        <div class="clear"></div>
+    </ul>
+</div>
+<!--car-showpic.html END-->
+
+<!--carModel-config.html-->
+<!--carmodel-config start-->
+<div class="carmodel-config w960 mb-30">
+	<h3 class="title title-m"><a name="config"></a><span class="title-name"><i></i>配置参数</span><span class="fr"><a href="#" class="title-more">同系列车型对比</a></span></h3>
+
+	<p class="carname f-18 f-yahei mt-20">科帕奇  2013t款 2.4L</p>
+	<h4 class="f-16 f-yahei"><i class="ico-hide pa"></i>基本参数</h4>
+	<table border="0" cellpadding="0" cellspace="0" width="100%">
+		<tr><td class="item">厂商指导价</td><td><strong class="clr-red">21.98</strong>万<a class="ico-jsq" href=""></a></td></tr>
+		<tr class="even"><td class="item">品牌</td><td>上海通用雪佛兰</td></tr>
+		<tr><td class="item">级别</td><td>suv</td></tr>
+		<tr class="even"><td class="item">发动机</td><td>2.4L 123kW</td></tr>
+		<tr><td class="item">变速箱</td><td>6挡AT</td></tr>
+		<tr class="even"><td class="item">车身结构</td><td>5门 5座 SUV</td></tr>
+		<tr><td class="item">上市年份</td><td>2013年</td></tr>
+		<tr class="even"><td class="item">最高车速(km/h)</td><td>175</td></tr>
+		<tr><td class="item">0-100加速时间(s)</td><td>11.3</td></tr>
+		<tr class="even"><td class="item">工信部油耗(L/100km)</td><td>9.9</td></tr>
+		<tr><td class="item">官方综合油耗(L/100km)</td><td>3年10万公里</td></tr>
+	</table>
+	<h4 class="f-16 f-yahei"><i class="ico-hide pa"></i>车身</h4>
+	<table border="0" cellpadding="0" cellspace="0" width="100%">
+		<tr><td class="item">厂商指导价</td><td><strong class="clr-red">21.98</strong>万<a class="ico-jsq" href=""></a></td></tr>
+		<tr class="even"><td class="item">品牌</td><td>上海通用雪佛兰</td></tr>
+		<tr><td class="item">级别</td><td>suv</td></tr>
+		<tr class="even"><td class="item">发动机</td><td>2.4L 123kW</td></tr>
+		<tr><td class="item">变速箱</td><td>6挡AT</td></tr>
+		<tr class="even"><td class="item">车身结构</td><td>5门 5座 SUV</td></tr>
+		<tr><td class="item">上市年份</td><td>2013年</td></tr>
+		<tr class="even"><td class="item">最高车速(km/h)</td><td>175</td></tr>
+		<tr><td class="item">0-100加速时间(s)</td><td>11.3</td></tr>
+		<tr class="even"><td class="item">工信部油耗(L/100km)</td><td>9.9</td></tr>
+		<tr><td class="item">官方综合油耗(L/100km)</td><td>3年10万公里</td></tr>
+	</table>
+	
+
+</div>
+<!--carmodel-config end-->
+<!--carModel-config.html END-->
+
+
+<script src="../js/header.js"></script>	<!--noticetopnav的js-->
+<script type="text/javascript" src="../js/carModel-info.js"></script>	<!--carModel-info的js-->
+<script type="text/javascript" src="../jslib/tipsy/tipsy.js"></script>	<!--carModel-info/carModel-config的tip的js-->
+<script src="../jslib/jquery.mousewheel.js"></script>	<!--dealerlist/jQuery支持鼠标滚轮事件-->
+<script src="../js/component/ECar.imitatescroll.js"></script>	<!--dealerlist/滚动条-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FD5f1e8f2ae7f944030091ce47cfee11"></script>	<!--dealerlist/百度地图-->
+<script src="../js/component/ECar.map.js"></script>	<!--dealerlist/百度地图扩展-->
+<script src="../js/dealer.js"></script>	<!--dealerlist的js-->
+<script type="text/javascript" src="../js/carModel-config.js"></script>		<!--carModel-config的tip的js-->
+
+<!--noticetopnav的js-->
+<script>
+	$("#box01").find('li:eq(0)').click(function(){
+		$("#box01").hide();
+		$("#box02").show();
+	});
+	$("#box02").find('li:eq(0)').click(function(){
+		$("#box02").hide();
+		$("#box01").show();
+	});
+
+	$(function(){
+		//锚点时点击样式
+		$('.carModel-tab li').click(function() {
+			$(this).siblings('.hover').removeClass('hover').end().addClass('hover');
+		});
+		var ECar=ECar||{};
+		ECar.fixFlow=function(param){
+			if(!param.obj) return;
+			var _this=param.obj;
+			var _top=param.totop;
+			var _width=param.width;
+			var top=_this.offset().top;
+			$(window).scroll(function(){
+				if($.browser.msie && $.browser.version <= 6){
+						_this.css({ "position": "absolute", "top":$(this).scrollTop()});
+					}						
+				if(top-_top<$(this).scrollTop()){			
+					_this.css({ "position": "fixed","top":_top,'width':_width,"z-index":"999"});
+					if($.browser.msie && $.browser.version <= 6){
+						_this.css({ "position": "absolute", "top":$(this).scrollTop()});
+					}
+				}else{
+					_this.css({ "position": ""});
+					}
+			});									
+		};		
+
+		ECar.fixFlow({obj:$('.carModel-tab'),totop:0,width:960}); //跟随滚动
+
+	});
+
+
+
+</script>
+
+</body>
+</html>

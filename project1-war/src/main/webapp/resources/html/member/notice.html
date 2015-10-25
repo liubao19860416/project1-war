@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息提醒</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/component/dialog.css" rel="stylesheet">
+<link href="../../css/member/notice.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div style="width:780px; margin:0 auto;">
+
+<div class="member">
+	<h3><span class="btn notice-btn-tip btn-yellow fr" id="unread">4条未读信息</span>消息提醒</h3>
+	<div class="member-box" style="padding-top:20px;">
+		<div class="notice-filter" id="notice-filter">
+			<input type="checkbox" name="checkedAll" value="" class="filter-checkbox" id="checkedAll"/>全选&nbsp;&nbsp;&nbsp;&nbsp;
+			<input class="btn notice-btn-med btn-blue" type="button" name="read_1" value="标记为已读">&nbsp;&nbsp;
+			<input class="btn notice-btn-med" type="button" name="removeAll" id="removeAll_1" value="删除选中项">
+		</div>
+		
+		<!-- 有数据 -->
+		<table class="notice-table" id="notice-table" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th width="48">&nbsp;</th>
+				<th width="110">消息来源</th>
+				<th>消息内容</th>
+				<th width="100">发生时间</th>
+				<th width="140">操作</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info noread">您对经销商“上海大众旗舰店”评价已经成功发布了，系统为您发放了5个成长值  您对经销商“上海大众旗舰店”评价已经成功发布了，系统为您发放了5个成长值</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info noread">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="items" value="" /></td>
+				<td>评价经销商</td>
+				<td class="info">您对经销商“上海大众旗舰店”评价已经成功发布了</td>
+				<td class="time">2013-10-08<br />11:33:54</td>
+				<td><input class="btn notice-btn-min" type="button" name="rem" value="删除"></td>
+			</tr>
+			
+		</table>
+		
+		<div class="notice-filter">
+			<input type="checkbox" name="checkedAll" value="" class="filter-checkbox" id="checkedAll_1"/>全选&nbsp;&nbsp;&nbsp;&nbsp;
+			<input class="btn notice-btn-med btn-blue" type="button" name="read_1" value="标记为已读">&nbsp;&nbsp;
+			<input class="btn notice-btn-med" type="button" name="removeAll" id="removeAll_2" value="删除选中项">
+		</div>
+		
+		
+		<!-- 没有数据 -->
+		<table class="notice-table hide" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th width="48">&nbsp;</th>
+				<th width="110">消息来源</th>
+				<th>消息内容</th>
+				<th width="100">发生时间</th>
+				<th width="140">操作</th>
+			</tr>
+			<tr>
+				<td colspan="5" class="nodate">没有数据记录</td>
+			</tr>
+		</table>
+	</div>
+</div>
+	
+</div>
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+ <script type="text/javascript" src="../../js/notice.js"></script>
+ <script type="text/javascript" src="../../js/component/ECar.dialog.js"></script>
+</body>
+</html>

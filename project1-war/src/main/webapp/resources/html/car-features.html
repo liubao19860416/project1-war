@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>车系-参数配置</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/car-features.css" rel="stylesheet">
+    <link href="../css/addCarStyle.css" rel="stylesheet">	<!--添加车系弹出层样式-->
+    <script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+    <script type="text/javascript" src="../js/addCarStyle.js"></script>
+</head>
+<body>
+	<div class="w960" style="margin:10px auto">
+		<h3 class="title title-m">
+			<span class="title-name"><i></i>6个车型</span>
+			<span class="fr">
+				<ul class="title-tab">
+					<li><a href="#" onClick="createCarDiv()">+添加车型</a></li>
+				</ul>
+			</span>
+		</h3>
+	</div>
+	
+	<!--车型筛选-->
+	<div class="w960 carmodel-filter-block clearfix">
+		<span class="fl f-14">车型筛选：</span>
+		<ul class="fl f-14 carmodel-filter">
+			<li><input type="checkbox" name="filterOne" class="carmodel-filter-input" value="1.6T" checked>1.6T</li>
+			<li><input type="checkbox" name="filterOne" class="carmodel-filter-input" value="1.8T" checked>1.8T</li>
+			<li><input type="checkbox" name="filterOne" class="carmodel-filter-input" value="2.0T" checked>2.0T</li>
+			<li><input type="checkbox" name="filterOne" class="carmodel-filter-input" value="2.4T" checked>2.4T</li>
+		</ul>
+		<ul class="fl f-14 carmodel-filter">
+			<li><input type="checkbox" name="filterTwo" class="carmodel-filter-input" value="手动" checked>手动</li>
+			<li><input type="checkbox" name="filterTwo" class="carmodel-filter-input" value="自动" checked>自动</li>
+		</ul>
+		<ul class="fl f-14 carmodel-filter carmodel-filterLast">
+			<li><input type="checkbox" name="filterThree" class="carmodel-filter-input" value="2012" checked>2012</li>
+			<li><input type="checkbox" name="filterThree" class="carmodel-filter-input" value="2013" checked>2013</li>
+		</ul>
+	</div>
+	
+	<!--详细配置参数-->
+	<div class="w960 carmodel-detail">
+		<!--定宽：超过4个车系-->
+		<div id="modelWidth" class="pr clearfix">
+
+		<!--配置菜单-->
+		<div class="carmodel-sidemenu pa f-14 f-yahei">
+			<ul>
+				<li class="current">基本参数<i class="ico-sidebar"></i></li>
+				<li>车身<i class="ico-sidebar"></i></li>
+				<li>发动机<i class="ico-sidebar"></i></li>
+				<li>变速箱<i class="ico-sidebar"></i></li>	
+				<li>底盘<i class="ico-sidebar"></i></li>			
+			</ul>	
+		</div>
+
+		<!--配置标题-->
+		<div class="fl detail-title">
+			<div class="detail-title-header">
+				<p class="header-name f-yahei"><i class="icon icon-32 icon-32-car mr-15">&nbsp;</i>配置参数</p>
+				<div class="header-select">
+					<input type="checkbox" name="different" class="carmodel-filter-input">高亮显示不同项<br />
+					<p class="hide"><input type="checkbox" name="same" class="carmodel-filter-input">隐藏相同项</p>
+				</div>
+			</div>
+			<dl class="detail-title-list clearfix">
+				<dt class="f-16 basic title">基本参数</dt>
+				<dd>厂商指导价</dd>
+				<dd>厂商</dd>
+				<dd>级别</dd>
+				<dd>发动机</dd>
+				<dd>变速箱</dd>
+				<dd>长×宽×高(mm)</dd>
+				<dd>车身结构</dd>
+				<dd>上市年份</dd>
+				<dd>0-100加速时间(s)</dd>
+				<dd>官方综合油耗(L/100km)</dd>
+			</dl>
+			<dl class="detail-title-list detail-filter-listBottom clearfix">
+				<dt class="body f-16">车<br />身</dt>
+				<dd>车长(mm)</dd>
+				<dd>车宽(mm)</dd>
+				<dd>车高(mm)</dd>
+				<dd>轴距(mm)</dd>
+				<dd>最小离地间隙(mm)</dd>
+			</dl>
+			<dl class="detail-title-list clearfix">
+				<dt class="f-16 basic">发动机</dt>
+				<dd>厂商指导价</dd>
+				<dd>厂商</dd>
+				<dd>级别</dd>
+				<dd>发动机</dd>
+				<dd>变速箱</dd>
+				<dd>长×宽×高(mm)</dd>
+				<dd>车身结构</dd>
+				<dd>上市年份</dd>
+				<dd>0-100加速时间(s)</dd>
+				<dd>官方综合油耗(L/100km)</dd>
+			</dl>
+			<dl class="detail-title-list clearfix">
+				<dt class="f-16 basic">变速箱</dt>
+				<dd>厂商指导价</dd>
+				<dd>厂商</dd>
+				<dd>级别</dd>
+				<dd>发动机</dd>
+				<dd>变速箱</dd>
+				<dd>长×宽×高(mm)</dd>
+				<dd>车身结构</dd>
+				<dd>上市年份</dd>
+				<dd>0-100加速时间(s)</dd>
+				<dd>官方综合油耗(L/100km)</dd>
+			</dl>
+			<dl class="detail-title-list clearfix">
+				<dt class="f-16 basic">底盘</dt>
+				<dd>厂商指导价</dd>
+				<dd>厂商</dd>
+				<dd>级别</dd>
+				<dd>发动机</dd>
+				<dd>变速箱</dd>
+				<dd>长×宽×高(mm)</dd>
+				<dd>车身结构</dd>
+				<dd>上市年份</dd>
+				<dd>0-100加速时间(s)</dd>
+				<dd>官方综合油耗(L/100km)</dd>
+			</dl>
+				
+		</div>
+
+
+		<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.6T|自动|2013">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.6T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.6T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.6T">科鲁兹<br />2013款 1.6T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用</li>
+				<li rel-line="line3">小型车</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="自动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2013">2013</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+
+
+		<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.8T|自动|2013">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.8T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.8T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.8T">科鲁兹<br />2013款 1.8T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.89万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="手动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2013">2013</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+
+
+		<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.6T|手动|2013">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.6T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.6T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.6T">科鲁兹<br />2013款 1.6T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用</li>
+				<li rel-line="line3">小型车</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="手动">手动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2013">2013</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+		
+		
+		<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款2.4T|自动|2012">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 2.4T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 2.4T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款2.4T">科鲁兹<br />2013款2.4T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="自动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2012">2012</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+		
+		<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 2.0T|自动|2012">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 2.0T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款2.0T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款2.0T">科鲁兹<br />2013款2.0T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="自动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2012">2012</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+
+<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.8T|手动|2012">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.8T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.8T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.8T">科鲁兹<br />2013款 1.8T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="手动">手动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2012">2012</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+
+<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 2.0T|手动|2013">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款2.0T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 2.0T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款2.0T">科鲁兹<br />2013款2.0T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="手动">手动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2013">2013</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+		
+		
+<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.6T|自动|2012">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.6T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.6T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.6T">科鲁兹<br />2013款1.6T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="自动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2013">2012</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+		
+		
+<!--具体车系配置-->
+		<div class="fl detail-filter" filterSelect="科鲁兹013款 1.8T|自动|2012">
+			<div class="detail-filter-header pr">
+				<a href="#" class="header-link" title="科鲁兹013款 1.8T">
+					<div class="header-img">
+						<img src="../images/pic1.jpg" width="180" height="120" alt="科鲁兹013款 1.8T" />
+					</div>
+					<div class="f-14 header-name" filterName="科鲁兹013款 1.8T">科鲁兹<br />2013款1.8T</div>
+				</a>	
+				<div class="header-img-delete hide clr-white" title="删除"><a href="javascript:void(0);">删除</a></div>
+			</div>
+			<ul class="detail-filter-list">
+				<li rel-line="line1"><strong class="clr-red">10.88万</strong><a href="#" target="_blank" class="icon icon-calc ml-5">&nbsp;</a></li>
+				<li rel-line="line2">上海通用1</li>
+				<li rel-line="line3">小型车2</li>
+				<li rel-line="line4">1.5L 82kW</li>
+				<li rel-line="line5" filterControl="自动">自动</li>
+				<li rel-line="line6">4545×1737×1495</li>
+				<li rel-line="line7">4门 5座 三厢轿车</li>
+				<li rel-line="line8" filterYear="2012">2012</li>
+				<li rel-line="line9">-</li>
+				<li rel-line="line10">-</li>
+			</ul>
+			<ul class="detail-filter-list detail-filter-listBottom">
+				<li rel-line="line11">-</li>
+				<li rel-line="line12">-</li>
+				<li rel-line="line13">1495</li>
+				<li rel-line="line14">-</li>
+				<li rel-line="line15">-</li>
+			</ul>
+		</div>
+
+
+		
+		<!--更多-->
+		<div class="detail-more clr-white hide" title="显示更多车系"><a href="javascript:void(0);">更<br />多</a></div>
+		
+		</div>
+		<!--定宽：超过4个车系 END-->
+	</div>
+	
+<script type="text/javascript" src="../js/car-features.js"></script>
+</body>
+</html>

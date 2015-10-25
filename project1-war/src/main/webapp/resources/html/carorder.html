@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>特殊车购买</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/carorder.css">
+</head>
+
+<body>
+	<div class="w960">
+    	<!-- 预定车型 -->
+    	<div class="od-cartype cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>预订车型</span></h3>
+        	<div class="car-odcon">
+            	<ul class="car-odinfo">
+                	<li>
+                    	<div class="lt-black1"><span class="lt-tit">品牌：</span>大众</div>
+                        <div class="lt-black2"><span>车系：</span>朗行</div>
+                    	<div class="lt-black3"><span>车型：</span>1.6自动舒适版自动舒适版自动舒适版-20字符</div>
+                    </li>
+  					<li>
+                    	<div><span class="lt-tit">颜色：</span>
+                        	<div class="car-color">
+                            	<span><img src="../images/temp/modelcolPic02.png" alt="黑色" /></span>黑色
+                            </div>
+                        </div>
+					</li>
+					<li>
+                    	<div><span class="lt-tit">经销商：</span>4S店 上海奥鸿汽车销售有限公司-上海大众</div>
+					</li>
+                </ul>
+            </div>
+        	
+        </div>
+        <!-- 填写个人信息 -->
+        <div class="us-info cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>填写个人信息</span><span class="tit-bmxx">(信息保密，请放心填写)</span></h3>
+        	<div class="usif car-odcon">
+            	<!-- 表单信息 -->
+                <form>
+               	<ul class="fm-list">
+                	<li>
+                    	<label>姓名：</label>
+                        <input type="text" class="m-member" name="" />
+                        <span class="m-notice m-err"><i></i><span>请输入姓名</span></span>
+                    </li>
+                    <li>
+                    	<label>手机号码：</label>
+                        <input type="text" class="m-member" name="" value="13818123456" />
+                        <span class="m-notice m-err"><i></i><span>手机号码有误，请核对</span></span>
+                    </li>
+                    <li>
+                    	<label>所在地区：</label>
+                        <div class="ads-sl fl">
+                            <select class="fl ads_select">
+                                <option>浙江</option>
+                                <option>浙江</option>
+                                <option>浙江</option>
+                            </select>
+                            <select class="fr ads_select">
+                                <option>请选择</option>
+                                <option>请选择</option>
+                                <option>请选择</option>
+                            </select>
+                        </div>
+                        <span class="m-notice m-err"><i></i><span>请选择所在地区</span></span>
+                    </li>
+                    <li>
+                    	<label>到店日期：</label>
+                        <input type="text" class="m-member Wdate" name="" id="date"  />
+                        <span class="m-notice m-err"><i></i><span>请选择到店日期</span></span>
+                    </li>
+                </ul>
+                <div class="sl-server">
+                	<label class="srv-lab">选择服务：</label>
+                    <ul class="srv-type">
+                    	<li><span></span><label>贷款购车</label></li>
+                        <li><span></span><label>车险服务</label></li>
+                        <li><span></span><label>上牌服务</label></li>
+                    </ul>
+                    <ul class="srv-cblist" style="display:none;">
+                    	<li><input type="checkbox" name="" value="1" /></li>
+                        <li><input type="checkbox" name="" value="1" /></li>
+                        <li><input type="checkbox" name="" value="1" /></li>
+                    </ul>
+                </div>
+                </form>
+                <div class="sub-type">
+                	<p><label class="srv-lab">支付方式：</label><span>在线支付</span></p>
+                </div>	
+            </div>
+        	<!-- 提交信息 -->
+            <p class="order-money"><span>支付金额：<strong>￥<b>500.00</b></strong></span></p>
+            <div class="clear"></div>
+            <p class="if-sub"><input type="button" class="carodr_sub" value="提交订单" /><label>*  促销车库存有限，请尽快提交订单!</label></p>
+        </div>
+    </div>
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../js/carorder.js"></script>
+<script src="../jslib/My97DatePicker/WdatePicker.js"></script> 
+<script>
+	document.getElementById("date").onclick=function(){WdatePicker();};
+	
+	//模拟checkbox 选中效果
+	$(function(){
+		$.ckboxChecked({
+			smchkbox:".srv-type li",	//替换的 checkbox 列表
+			chkboxlist:".srv-cblist input:checkbox",  //需要选中的checkbox
+			rpsClass:"check-ed"	 //替换样式表 选中的替换class
+		});	
+	});
+</script>   
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小工具-保险计算</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/Gadgets.css">
+
+
+<link href="../jslib/tipsy/tipsy.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../jslib/tipsy/tipsy.js"></script>
+</head>
+
+<body>
+	<div class="w960">
+<div class=" w960 tab_gadgets">      
+    <ul class="tabbutton">
+        <li><a href="Gadgets.html">全款购车</a></li>
+        <li><a  href="carLoans.html">贷款购车</a></li>
+        <li class="on"><a  href="safety_count.html">保险计算</a></li>
+        <div class="clear"></div>
+    </ul>
+</div>
+    <div class="tab_warp">
+    <!--小工具-保险计算--> 
+    
+    <div id="c3" class="tab_subwarp">
+        <table width="958" class="tab-Drop">
+            <tr class="td-Drop">
+                <td>
+                    <span>品牌</span>
+                    <select><option>雪佛兰</option><option>雪佛兰</option><option>雪佛兰</option><option>雪佛兰</option><option>雪佛兰</option><option>雪佛兰</option><option>雪佛兰</option></select>
+                </td>
+                <td>
+                    <span>车系</span>
+                    <select><option>科鲁兹</option><option>科鲁兹</option></select>
+                </td>
+                <td>
+                    <span>车型</span>
+                    <select><option>科鲁兹1.6SLMT天窗版</option></select>
+                </td>
+                <td class="text-r"><a><input type="button" value="清空数据"></a></td>
+          </tr>
+        </table>
+        
+        <table class="car-prices" border="2">
+            <tr>
+                <td width="156">购车价格</td>
+                <td width="252">&nbsp;</td>
+                <td width="224"> <input type="text" value="122569" class="intxt" > 元
+                    <br />
+                    <span class="td_hide"><input type="button" class="btn_01" value="确定">
+                    <input type="button" class="btn_02" value="取消"></span>
+                </td>
+                <td width="330">&nbsp;&nbsp; 可手动输入&nbsp;&nbsp; <em><input type="button" value="计算" class="btn01">&nbsp;</em></td>
+            </tr>
+        </table>
+        
+        <table class="total">
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>新车险指导价：<span>2,389</span> 元 &nbsp;&nbsp;新车险优惠价 <span>2,189</span> 元
+                    <em>（注：新车购买商业险享9折优惠）</em>
+                </td>
+            </tr>
+            <tr>
+                <td><em>此结果仅供参考，实际应缴费以当地为准</em></td>
+            </tr>
+        </table>
+        <table class="need-spend tab_public">
+              <th colspan="4"><span>强制保险</span></th>
+            <tr class="safety-tab tab_public tr_border_b">
+              <td>款项</td>
+              <td>选项</td>
+              <td>金额</td>
+              <td>明细</td>
+            </tr>
+            <tr class="tr_border_b">
+                <td width="156">交通事故责任强制保险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">
+                    &nbsp; &nbsp; 首付额度：
+                    <br />
+                  <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="2s" /> 家用6座以下 </span>
+                  <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="2s" /> 家用6座及以上              </span></td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">家用6座以下950元/年，家用6座及以上1100元/年</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            
+            
+            
+            
+        </table>
+        
+        <table class="safety-tab tab_public">
+            <th colspan="4"><span>商业保险</span><a>商业保险小计：11，236元</a></th>
+            <tr class="tr_border_b">
+                <td width="156">款项</td>
+                <td width="252">选项</td>
+                <td width="224">金额</td>
+                <td width="330">明细</td>
+            </tr>
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;第三者责任险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">
+                    &nbsp; &nbsp; 赔付额度：
+                    <br />
+                  <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="2s" /> 5万</span>
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="2s" /> 10万 
+                    <input type="radio" class="w_h"  name="2s" />
+    20万 
+    <input type="radio" class="w_h"  name="2s" />
+    50万</span>
+                    <br />
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="2s" />100万</span>
+                </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">&nbsp;</td>
+            </tr>
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;车辆损失险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">基础保费+裸车价格×1.0880%</td>
+            </tr>
+            <tr  class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;全车盗抢险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">基础保费+裸车价格×费率</td>
+            </tr>
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;玻璃单独破碎险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="3" /> 进口</span>
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="3" /> 国产</span>
+                </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">进口新车购置价×0.25%，国产新车购置价×0.15%</td>
+            </tr>
+            
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;自燃损失险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">新车购置价×0.15%</td>
+            </tr>
+            
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;不计免赔特约险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">(车辆损失险+第三者责任险)×20%</td>
+            </tr>
+            
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;无过责任险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">第三者责任险保险费×20%</td>
+            </tr>
+            
+            <tr class="tr_border_b">
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;车上人员责任险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">&nbsp; &nbsp; </td>
+                <td width="224"> <input type="text" value="122569" class="intxt" > 元
+                    <span class="td_hide"><input type="button" class="btn_01" value="确定">
+                    <input type="button" class="btn_02" value="取消"></span></td>
+                <td width="330">每人保费50元，可根据车辆的实际座位数填写</td>
+            </tr>
+            
+            <tr>
+                <td width="156"><input type="checkbox" />&nbsp;&nbsp;车身划痕险<a original-title="黑色"><img src="../images/help_pic.jpg" width="9" height="10" alt=""></a></td>
+                <td width="252">
+                    &nbsp; &nbsp; 赔付额度：
+                    <br />
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h" name="5" /> 2万</span>
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h"  name="5" /> 5万</span>
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h" name="5" /> 1万</span>
+                    <span>&nbsp;&nbsp; <input type="radio" class="w_h" name="5" /> 
+                    2万</span>
+                </td>
+                <td width="224"> <input type="text" value="122569" class="input_bg" readonly="readonly" > 元 </td>
+                <td width="330">&nbsp;</td>
+            </tr>
+        </table>
+        <table class="spendTotal">
+            <tr>
+                <td>新车险指导价 <span>2,389</span> 元 &nbsp;新车险优惠价<span>2,189</span> 元&nbsp;&nbsp; <em>（注：新车购买商业险享9折优惠）</em></td>
+            </tr>
+            <tr>
+                <td><em>此结果仅供参考，实际应缴费以当地为准</em></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>
+	
+<script>
+$(function(){
+ 	$('[original-title]').tipsy({trigger: 'hover',fade: true, gravity: 's',opacity: '0.8'});
+ 	$('[original-title]').hover(function() {
+ 		$('[original-title]').tipsy({trigger: 'hover',fade: true, gravity: 's',opacity: '0.8'});
+ 	});
+	});
+</script>
+
+
+</body>
+</html>

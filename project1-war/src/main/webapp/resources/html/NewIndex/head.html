@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<title>头部</title>
+		<meta charset="utf-8"/>
+		<link href="../../css/reset.css" rel="stylesheet">
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/NewIndex/index-head.css" rel="stylesheet">
+		<link href="../../css/NewIndex/indexpage.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="n-topnav">
+		  <div class="header clearfix">
+		  	<span class="city-t">城市站：</span>
+		    <h3>
+		    	<span id="currentCity" class="current" cityid="" name=""></span>
+		    	<span class="triangle drop"></span>
+		    	<div id="citychage" class="city hide"></div>
+		    </h3>
+		     <ul class="login-box" id="box01">
+		      <li><a class="login-bind" href="#">登录</a></li>
+		      <li class="site-nav-pipe">|</li>
+		      <li><a class="register-bind" href="#">注册</a></li>
+		    </ul>
+		    <ul class="login-box" id="box02" style="display:none;">
+		      <li style="color:#fff;"></li>
+		      <li><a class="logout-bind" href="#">注销</a></li>
+		      <li class="site-nav-pipe">|</li>
+		      <li class="mouse_over pr" id="userCenter"><a href="${memberBase}/member/member.htm"><span class="current">会员中心</span><span class="triangle drop"></span></a>
+		        <div class="group" id="useGroup">
+		          <a href="${memberBase}/member/myAllOrders.htm?currentPage=1">我的订单</a>
+		          <a href="${memberBase}/member/inquiry.htm?searchType=DEFAULT&currentPage=1&pageSize=10">我的询价</a>
+		          <a href="${memberBase}/member/testdrv.htm?searchType=DEFAULT&currentPage=1&pageSize=10">试乘试驾</a>
+		          <a href="${memberBase}/member/msg.htm?currentPage=1">消息提醒</a>
+		          <a href="${memberBase}/member/benefits/orderlist.htm">我的权益</a>
+		        </div>
+		      </li>
+		      <li class="site-nav-pipe site-nav-pipe-ml0">|</li>
+		      <li><a href="${memberBase}/inster/toQueryMineInter.htm" target="_blank">车主权益</a></li>
+		    </ul>
+		    
+		  </div>
+		</div>
+		
+		
+		<div class="n-subnav n-subnav-wider">
+		  <div class="subnav-cont subnav-cont-new clearfix">
+	        	<a href="${base}/index.htm" class="saiclogo">
+		            <img src="../../images/indexPage/s_logo.png" width="106" height="46" border="0">
+		            <img src="../../images/indexPage/s_slogan.gif" width="106" height="46" border="0">
+	            </a>    
+	            <div class="fr text-c">
+	            	<a href="#" class="l-blue-s">
+		            	<i class="icon_index icon-qst-mark"></i><br/>		            	
+		            	帮助中心
+	            	</a>
+	            </div> 
+		  </div>
+		</div>
+	</body> 
+</html>

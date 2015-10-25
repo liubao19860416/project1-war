@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>tab按钮切换</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="tab">
+     <ul class="tabbutton" id="tab">
+       <li class="on" rel="#c1"><a href="#">基本信息</a></li>
+       <li rel="#c2"><a  href="#">家庭工作情况</a></li>
+       <li rel="#c3"><a  href="#">更多其他信息</a></li>
+     </ul>
+     <div id="c1" class="cont">adf</div>
+     <div id="c2" class="cont">bgsdf</div>
+     <div id="c3" class="cont">aafrgdf</div>
+</div>  
+    <script src="../jslib/jquery_1_8_3.min.js"></script>
+    <script src="../js/component/ECar.tab.js"></script>
+    <script>
+ECar.tab({
+	selector : "#tab",
+	selected:"on"
+});
+    </script>
+</body>
+</html>

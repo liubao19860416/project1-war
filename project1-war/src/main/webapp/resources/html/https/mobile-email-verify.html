@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手机邮箱验证</title>
+<link href="../../css/member/reset.css" rel="stylesheet" />
+<link href="../../css/member/common.css" rel="stylesheet" />
+<link href="../../css/member/verify.css" rel="stylesheet" />
+</head>
+<body>
+<div style="width:920px;margin:10px auto">
+
+	<div class="verify">
+		<div class="successinfo pr clearfix">
+			<i class="icon icon-checked-m pa"></i><strong class="f-yahei"><span>Master</span>恭喜您注册成功！</strong>
+			<p>为保障您的账号安全，请继续完成信息验证。</p>
+			<a href="#">以后验证，回到首页&gt;&gt;</a>			
+		</div>
+
+		<div class="verify-inpt">
+			<ul id="tab" class="tabbtn f-yahei clearfix">
+				<li rel="#one" class="current"><i class="login-icon icon-32-mobile icon-32"></i>手机验证</li>
+				<li rel="#two"><i class="login-icon icon-32-email-gray icon-32"></i>邮箱验证</li>
+			</ul>
+			<div class="tabtxt">
+				<div id="one" class="mobile">
+						<form id="ver-mobile">
+							<ul>
+								<li class="mb-10"><label>手机号码：</label><input class="m-member" checkPath="/account/frontCheckPhone.htm" type="text" rel-required="true" validate="phone" name="phone" value=""><span class="txt m-notice">请输入您的手机号码</span></li>
+								<li class="mb-46"><label>&nbsp;</label><span class="getcode f-yahei">获取验证码</span></li>
+								<li class="mb-46"><label>验证码：</label><input class="m-member" checkPath="/account/frontCheckPhone.htm" type="text" rel-required="true" validate="yzm" name="yzm" value=""><span class="txt m-notice">请输入您的验证码</span></li>
+								<li><label>&nbsp;</label><input class="btn btnPhone" name="" type="button" value="提 交"></li>
+							</ul>							
+						</form>					
+
+				</div>
+				
+				<div id="two" class="mail" style="display:none">
+					<form id="ver-mail">
+						<ul>
+							<li class="mb-46"><label>电子邮箱：</label><input class="m-member" checkPath="/account/frontCheckPhone.htm" type="text" name="email"  validate="email" rel-required="true" value=""><span class="txt m-notice">请输入您的电子邮箱</span></li>							
+							<li><label>&nbsp;</label><input class="btn btnEmail" name="" type="button" value="提 交"></li>
+						</ul>
+					</form>					
+
+								
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+</div>
+
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script src="../../js/component/ECar.tab.js"></script>
+<script src="../../js/validate.js"></script>
+<script type="text/javascript" src="../../js/countDown.js"></script>
+<script type="text/javascript" src="../../js/verify.js"></script>
+</body>
+</html>

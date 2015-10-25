@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>车系活动列表页</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/component/dialog.css" rel="stylesheet">
+    <script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+    <script type="text/javascript" src="../js/component/ECar.dialog.js"></script>
+    
+    <script type="text/javascript">
+		$(function(){
+			$('button.1').click(function(event) {				
+				ECar.dialog.open({
+					title: '弹窗测试：T+C',
+					content: $('#test').html(),
+					height: 100,
+					top: 150
+				});
+			});
+
+
+			$('button.2').click(function(event) {				
+				ECar.dialog.showLoading({});
+				setTimeout(function() {
+					ECar.dialog.close();
+				}, 3000);
+			});
+
+			$('button.3').click(function(event) {				
+				ECar.dialog.showLoading({
+					title: '加入购物车',
+					loadingText: '正在提交内容…',
+					width: 300
+				});
+			});
+
+			$('button.4').click(function(event) {				
+				ECar.dialog.alert('提醒信息提醒信息');
+			});
+
+			$('button.5').click(function(event) { 				
+				ECar.dialog.alert({
+					message: '提醒信息提醒信息',
+					callback: function() {
+						alert('你已经关闭了提示');
+					}
+				});
+			});
+
+			$('button.6').click(function(event) { 				
+				ECar.dialog.alert({type:'success', message:'提醒信息提醒信息'});
+			});
+
+			$('button.7').click(function(event) { 				
+				ECar.dialog.alert({type:'error', message:'提醒信息提醒信息'});
+			});
+
+			$('button.8').click(function(event) { 				
+				ECar.dialog.confirm({
+					message: '确认××××××××？',
+					callback: function(){
+						alert('callback');
+					},
+					cancel:function(){
+						alert('cancel')
+					}
+					});
+			});
+
+			$('button.9').click(function(event) { 				
+				ECar.dialog.pop({
+					title: '领取礼物',
+					url: 'http://www.baidu.com',
+					width: 580,
+					height: 300
+				});
+			});
+
+			$('button.10').click(function(event) { 				
+				ECar.dialog.ajax({
+					title: '领取礼物',
+					url: 'http://www.baidu.com',
+					width: 500
+				});
+			});
+
+
+
+		})
+	</script>
+</head>
+
+<body>
+
+<button class="1">简单弹窗测试</button>
+<button class="2">弹窗测试 showLoading。。。。</button>
+<button class="3">标题+内容</button>
+<button class="4">alert提示</button>
+<button class="5">有回调的 alert提示</button>
+<button class="6">success成功提示</button>
+<button class="7">error提示</button>
+<button class="8">确定提示</button>
+<button class="9">弹框显示ifram</button>
+<button class="10">ajax 弹框内容</button>
+
+
+<div id="test" style="width:200px; height:200px; background-color: #cd0a0a; display: none;">
+    <h3>测试调用HTML引用</h3>
+    <a href="#">链接</a><br />
+    <input type="button" value="确定" />
+</div>
+
+</body>
+</html>

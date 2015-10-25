@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+/*
+ * @description:购买线;
+ * @author:Roseying;
+ * @data:20131127;
+*/
+/*setting*/
+.w960{padding:0 0 100px;} /*为底部间隔@Rose*/
+.w780{width:780px;}
+.w400{width:400px;}
+.purchaseWrap{width:960px; min-height:680px; margin:0 auto;}
+
+/*purchasefailed*/
+.c-purchasefailed{width:960px; min-height:700px; margin:80px auto 0;}
+.c-purchasefailed>dt{height:40px; padding:0 160px 15px; border-bottom:4px solid #f3f3f3; font:36px/40px 'microsoft yahei'; color:#ababab;}
+.c-purchasefailed>dt .icon-refuse-l{margin:0 32px 0 0;}
+.c-purchasefailed>dd{padding:35px 225px 0;}
+.c-purchasefailed>dd a.btn-yellow:hover{text-decoration:none;}
+/*修改按钮颜色*/
+.c-purchasefailed .btn-yellow{background-color:#ff9728;}
+
+/*purchasetestdrive*/
+.c-purchasetestdrive .m-notice{*top:0;}
+.c-purchasetestdrive .c-purchasetestdrive-tex01{width:348px; border-right:0;background: #fff; color:#000; cursor:default;}
+.c-purchasetestdrive .c-purchasetestdrive-dealerbtn01{float:left; width:98px; height:38px; margin:0; padding:0; border:1px solid #e4e4e4; background:#f6f6f6; font:bold 14px/38px 'simsun'; color:#6b6b6b; text-align:center; cursor:pointer;*display:inline;*zoom:1;}
+.c-purchasetestdrive .c-purchasetestdrive-dealerbtn01:hover, .c-purchasetestdrive .c-ptddbtn02,.c-purchasetestdrive .hover .c-purchasetestdrive-dealerbtn01{border:1px solid #ffdcb4; background:#fef1e1; color:#fe8605;}
+.c-purchasetestdrive .c-purchasetestdrive-tex02{width:762px; height:128px; padding:5px 8px; border:1px solid #e4e4e4; background:#fff; font:14px/22px 'simsun'; color:#999; overflow:hidden; resize:none;}
+.c-purchasetestdrive .c-purchasetestdrive-tex02:focus{border-color:#aaa;}
+.c-purchasetestdrive textarea.focus{border-color:#aaa;}
+.c-purchasetestdrive .heignone{height:auto;}
+                     .c-purchasetestdrive-tips{float:right; margin-top:8px; font:12px/16px 'simsun'; color:#999;}
+
+.c-purchasetestdrive .c-purchasetestdrive-tex01:focus{border-color:#e4e4e4;}
+.c-purchasetestdrive .c-purchasetestdrive-tex01.focus{border-color:#e4e4e4;}
+
+/*purchasedialog-ordersuc*/
+.c-purchasedialog-ordersuc{width:510px; height:215px; padding:0 10px;}
+.c-purchasedialog-ordersuc>dt{height:100px; padding:45px 20px 0; font:18px/32px 'microsoft yahei'; color:#000; overflow:hidden;}
+.c-purchasedialog-ordersuc>dt .icon-checked-l{margin:0 20px 0 0;}
+.c-purchasedialog-ordersuc>dd{padding:10px 0 0; text-align:center;}
+.c-purchasedialog-ordersuc>dd a{display:inline-block; margin:0 15px;}
+.c-purchasedialog-ordersuc>dd a:hover{text-decoration:none;}
+
+/*purchasedialog-choosedealer*/
+.c-purchasedialog-dealer{width:530px; height:400px; overflow:hidden;}
+.c-purchasedialog-dealerform{padding:4px 17px; height:28px; border-bottom:1px solid #d9d9d9; background:#e9e8e8;*position: relative;*z-index: 2}
+.c-purchasedialog-dealerform label{float:left; font:12px/28px 'simsun'; color:#7d7d7d; }
+.c-purchasedialog-dealerform .sel{float:left; width:110px; height:26px; margin:0 0 0 10px; padding:5px; border:1px solid #ccc; background:#fff; font:12px/16px 'simsun'; color:#000; }
+.c-purchasedealer{position:relative; width:530px; height:300px; margin:0 0 10px; overflow:hidden; }
+.c-dealerquestion-wrapper{height:100%; overflow:hidden;}
+			.c-purchasedealer-count{height:16px; width:490px; padding:5px 20px; background:#fff; font:normal 12px/16px 'simsun'; color:#000;}
+			.c-purchasedealer-countnum{float:left; display:block; height:16px; margin:0 0 0 5px; padding-left:5px; background:url(../../images/purchasedealerIco01.png) no-repeat 0 0;}
+			.c-purchasedealer-countnum b{display:inline-block; height:16px; margin:0 5px 0 0; padding-right:5px; background:url(../../images/purchasedealerIco01.png) no-repeat right bottom; font:bold 12px/16px 'simsun'; color:#fff;}
+			.c-purchasedealer-list>li{width:490px; padding:10px 20px 15px; *margin-bottom:-2px; font:12px/22px 'simsun'; color:#545454;}
+			.c-purchasedealer-list>li:hover, .c-purchasedealer-list>li.cur{background:#cdf0ff;}
+			.c-purchasedealer-list .oddlight{background:#f4f4f4;}
+			.c-purchasedealer-list>li .dealertipsTil{float:left; width:60px; text-align:right; }
+			.c-purchasedealer-list>li .dealertipsCon{float:left; width:400px;}
+			.c-purchasedealer-list-other div{padding:10px 30px 10px 20px;color: #000;}
+			.c-purchasedealer-list-other .dealername{display: none}
+.c-purchasedialog-dealer .btn{margin:0 5px;}
+.c-purchasedialog-dealer .btn-gray{cursor:default;}
+.c-purchasetestdrive .title{position: static}
+
+.pop-form-select{display:inline-block;*display:inline;*zoom:1;border:solid 1px #ccc;height: 26px;position: relative;cursor: pointer;background:#fff;margin-left:10px}
+.pop-form-select .form-select-handle{padding-top:3px;padding-bottom:3px;}
+.pop-form-select .form-select-handle i{top:11px}
+.pop-form-select .form-select-options{top:26px}
+
+#brandModel .form-select-handle{color:#000;}
+
+#trialDriveForm .c-purchasetestdrive-tex01:focus{border-color:#e4e4e4;}
+#trialDriveForm .c-purchasetestdrive-tex01.focus{border-color:#e4e4e4;}
+

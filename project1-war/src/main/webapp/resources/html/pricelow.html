@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>寻最低价</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/component/dialog.css">
+<link rel="stylesheet" type="text/css" href="../css/carorder.css">
+<link rel="stylesheet" type="text/css" href="../css/pricelow.css">
+<link rel="stylesheet" type="text/css" href="../css/component/purchaseStyle.css">
+</head>
+	
+<body>
+	<div class="w960">
+    	<!-- 预定车型 -->
+    	<div class="cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>选择询价车型信息</span></h3>
+        	<div class="car-odcon">
+            	<ul class="fm-list">
+                	<li class="fm-list-row">
+                    	<div class="lt-black1"><label class="flr-lbl">品牌：</label>
+                        	<select class="fl ads_select">
+                                <option>浙江</option>
+                                <option>浙江</option>
+                                <option>浙江</option>
+                            </select>
+                        </div>
+                        <div class="lt-black2"><span class="slt-lbl">车系：</span>
+                        	<select class="fl ads_select">
+                                <option>浙江</option>
+                                <option>浙江</option>
+                                <option>浙江</option>
+                            </select>
+                        </div>
+                    	<div class="lt-black3"><span class="slt-lbl">车型：</span>
+                        	<select class="fl ads_select w170">
+                                <option>浙江</option>
+                                <option>浙江</option>
+                                <option>浙江</option>
+                            </select>
+                        </div>
+                    </li>
+					<li class="fm-list-row">
+                        <label class="flr-lbl">经销商：</label>
+                        <input type="text" class="m-member c-purchasetestdrive-tex01" value="4S店 上海奥鸿汽车销售有限公司-上海大众上海" />
+                        <input type="button" class="c-purchasetestdrive-dealerbtn01" id="c-purchasebtn-choosedealer" value="选择经销商" />
+                        <div class="m-notice m-err"><i></i><span>请选择经销商</span></div>
+                    </li>
+                </ul>
+            </div>
+        	
+        </div>
+        <!-- 填写个人信息 -->
+        <form id="Form" class="validate-from">
+        <div class="cdi-m22">
+        	<h3 class="title title-m"><span class="title-name"><i></i>填写个人信息</span><span class="tit-bmxx">(信息保密，请放心填写)</span></h3>
+        	<div class="car-odcon">
+            	<!-- 表单信息 -->
+               	<ul class="fm-list">
+                	<li class="fm-list-row">
+                    	<label class="flr-lbl">姓名：</label>
+                        <input type="text" id="name" maxlength="30" data-required="true" data-msg-required="请输入姓名" class="m-member" name="" />
+						<span class="m-notice m-err"><i></i><span data-msg-for="name"></span></span>
+                    </li>
+                    <li class="fm-list-row">
+                    	<label class="flr-lbl">手机号码：</label>
+                        <input type="text" class="m-member" id="mobile" maxlength="11"
+										data-required="true" data-msg-required="请输入手机号码"
+										data-length-min="11" data-msg-length-min="手机号码位数有误"
+										data-regexp="1[3|4|5|8]\d{9}" data-msg-regexp="手机号码有误"
+										class="m-member" name="" value=""  />
+                        <span class="m-notice m-err"><i></i><span data-msg-for="mobile"></span></span>
+                    </li>
+                    <li class="fm-list-row">
+                    	<label class="flr-lbl">所在地区：</label>
+                        <div class="ads-sl fl">
+							<select class="fl ads_select">
+								<option>浙江</option>
+								<option>浙江</option>
+								<option>浙江</option>
+							</select>
+							<select id="area" class="fr ads_select" data-required="true" data-msg-required="请选择所在地区">
+								<option value="0">请选择</option>
+								<option value="1">请选择</option>
+								<option value="2">请选择</option>
+							</select>
+						</div>
+						<span class="m-notice m-err"><i></i><span data-msg-for="area"></span></span>
+                    </li>
+                </ul>
+               
+            </div>
+        	<!-- 提交信息 -->
+            <p class="if-sub"><input type="submit" class="css3-round5 carodr_sub"   id="purchaseOrderbtn" value="立即询价" /></p>
+        </div>
+        </form>
+    </div>
+<!--选择经销商-->     
+<div id="c-purchasedialog-choosedealer" class="hide">
+    <div class="c-purchasedialog-dealer">
+    	<div class="c-purchasedialog-dealerform">
+    		<label>城市</label>
+    		<select class="fl"> <option>上海</option> </select> 
+    		<select class="fl"> <option>区：可不选</option> </select>  
+    	</div>    	
+    	<div class="c-purchasedealer" id="c-purchasedealer">
+             <div class="c-purchasedealer-wrapper scroll-wrapper">
+                <div class="c-purchasedealer-content scroll-content">
+              	    <h2 class="c-purchasedealer-count">当前城市有 <span><b>6</b></span> 个经销商</h2>
+                </div>
+              </div>            
+             <div class="scrollbar">
+              <div class="scrollbar-narrow scrollbar-narrow-up"></div>
+              <div class="scrollbar-bg">
+                <div class="scrollbar-handler"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+              </div>
+              <div class="scrollbar-narrow scrollbar-narrow-down"></div>
+            </div>            
+       </div>
+        <div class="text-c">
+        	<input class="btn btn-med btn-gray" type="button" value="确定" name="">
+        	<input class="btn btn-med" type="button" value="取消" onclick="ECar.dialog.close();"  name="">        	
+        </div>
+    </div>   
+</div>
+        
+<!--未登录查询成功 -->    
+<div id="c-purchasedialog-login-ordersuc" class="hide">
+    <dl class="c-purchasedialog-ordersuc">
+            <dt><i class="icon icon-checked-l fl"></i><span class="fl w400">您的试驾信息已提交！<br/>xxx经销商将通过短信及时为您报价！</span></dt>
+            <dd><a href="###">继续浏览网站</a></dd>
+     </dl>
+</div>
+<!--已登录查询成功-->    
+<div id="c-purchasedialog-nologin-ordersuc" class="hide">
+     <dl class="c-purchasedialog-ordersuc">
+       <dt><i class="icon icon-checked-l fl"></i><span class="fl w400">您的试驾信息已提交！<br/>xxx经销商将通过短信及时为您报价！</span></dt>
+       <dd><a href="###">继续浏览网站</a><a href="###" class="clr-orange">查看我的询价</a></dd>
+     </dl>
+</div>
+
+<script src="../jslib/jquery_1_8_3.min.js"></script>
+<script src="../jslib/jquery.mousewheel.js"></script>
+<script src="../js/component/ECar.imitatescroll.js"></script>
+<script type="text/javascript" src="../js/component/ECar.dialog.js"></script>
+<script src="../js/purchase.js"></script>
+
+<script type="text/javascript" src="../js/component/ECar.validate.js"></script>
+<script type="text/javascript" src="../js/carorder.js"></script>
+<script src="../jslib/My97DatePicker/WdatePicker.js"></script>
+		
+</body>
+</html>

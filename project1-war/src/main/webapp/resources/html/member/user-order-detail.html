@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>会员中心首页</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/component/dialog.css" rel="stylesheet">
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/member/user-order.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="w960">
+	<div class="member">
+		<h3>50454159847&nbsp;&nbsp;订单详情</h3>
+	</div>
+	<div class="user-order-detail clearfix">
+		<!-- 订单类型 -->
+		<ul class="order-detail-status f-14 f-yahei clearfix">
+			<li>订单类型：促销车预订</li>
+			<li>订单状态：<span class="clr-orange">跟进中</span></li>
+			<li>支付状态：<span class="clr-light-green">已支付</span>
+				<a href="#" class="btn btn-min btn-yellow order-detail-btn">去支付</a>
+				<a href="#" id="popCanselBox" class="order-grayc-word">取消订单</a>
+			</li>
+		</ul>
+		
+		<!-- 订单信息 -->
+		<h4 class="order-detail-subtitle f-16 f-yahei">订单信息</h4>
+		<table class="order-detail-info">
+			<tr>
+				<td class="text-r" width="120">订单编号：&nbsp;&nbsp;</td>
+				<td class="clr-gray3" width="340">14121451</td>
+				<td class="text-r" width="120">订单生产日期：&nbsp;&nbsp;</td>
+				<td class="clr-gray3" width="340">2012-12-25 10:25</td>
+			</tr>
+			<tr>
+				<td class="text-r">车贷产品：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">贷贷无忧轻松购车</td>
+				<td class="text-r">订单支付日期：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">2012-12-25 10:25</td>
+			</tr>
+			<tr>
+				<td class="text-r">车贷服务：&nbsp;&nbsp;</td>
+				<td class="clr-gray3"><a class="icon icon-checked-s" href="#"></a></td>
+				<td class="text-r">计划到店时间：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">2012-12-25 10:25</td>
+			</tr>
+			<tr>
+				<td class="text-r">车险服务：&nbsp;&nbsp;</td>
+				<td class="clr-gray3"><a class="icon icon-checked-s" href="#"></a></td>
+				<td class="text-r">地区：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">上海</td>
+			</tr>
+			<tr>
+				<td class="text-r">上牌服务：&nbsp;&nbsp;</td>
+				<td class="clr-gray3"><a class="icon icon-refuse-gray-s" href="#"></a></td>
+				<td class="text-r">&nbsp;</td>
+				<td class="clr-gray3">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="text-r">申请者：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">某某某</td>
+				<td class="text-r">联系手机：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">1531561644</td>
+			</tr>
+			<tr>
+				<td class="text-r">证件类型：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">身份证</td>
+				<td class="text-r">证件号码：&nbsp;&nbsp;</td>
+				<td class="clr-gray3">31045611648948945</td>
+			</tr>
+		</table>
+		
+		<!-- 车型信息 -->
+		<table class="order-detail-table">
+			<tr>
+				<th width="245">车型</th>
+				<th width="290">试驾店铺联系方式</th>
+				<th>数量</th>
+				<th>颜色</th>
+				<th>定金</th>
+			</tr>
+			<tr>
+				<td class="td-height"><a href="#" target="_blank" class="order-gray6-word"><img src="../../images/stylepic.png" width="120" height="80" /><br />科帕奇2014款 2.4L自动5座</a></td>
+				<td><a href="#" target="_blank" class="order-gray6-word">上海雪佛兰旗舰店</a></td>
+				<td>1</td>
+				<td>黑色</td>
+				<td>￥300</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="reasonForCansel" style="display:none;">
+	<div class="cansel-reason">
+		<h3 class="tit"><i></i>订单取消后将无法恢复,确认取消该订单吗?</h3>
+		<form id="canselReasonForm" autocomplete="off" method="post" action="head.htm">
+		<dl class="list">
+			<dt>请选择取消订单的理由</dt>
+			<dd><label><input type="radio" value="0" checked="true" name="canselReason" />改变想法，不想购买</label></dd>
+			<dd><label><input type="radio" value="1" name="canselReason" />订单信息填写错误</label></dd>
+			<dd><label><input type="radio" value="2" name="canselReason" />经销商原因最终未完成交易</label></dd>
+			<dd><label><input type="radio" value="3" name="canselReason" />已经通过其他渠道买车</label></dd>
+			<dd>
+				<label><input type="radio" value="4" name="canselReason" />其他原因</label>
+				<div class="cansel-reason-other">
+					<span class="tips tips-max">（最多可输入100个字）</span>
+					<i class="triangle triangle-b"></i>
+					<i class="triangle triangle-b triangle-b-cover"></i>
+					<textarea id="otherReason" class="other-reason"></textarea>
+					<span id="otherErr" class="m-notice m-user-tip m-err errclass"><i></i><span>不能少于15个字符</span></span>
+					<span id="otherTips" class="tips tips-min">至少输入15个汉字</span>
+				</div>
+			</dd>
+		</dl>
+		<div class="text-c">
+			<input id="reasonSubmit" type="button" class="btn btn-med" value="确认" />
+		</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../../js/component/ECar.dialog.js"></script>
+<script type="text/javascript" src="../../js/user-order.js"></script>
+</body>
+</html>

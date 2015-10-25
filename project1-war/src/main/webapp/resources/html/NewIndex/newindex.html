@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>主站新首页</title>
+		<meta charset="utf-8"/>
+		<link href="../../css/reset.css" rel="stylesheet">
+		<link href="../../css/common.css" rel="stylesheet">
+		<link href="../../css/index/index-head.css" rel="stylesheet">
+		<link href="../../css/index/indexpage.css" rel="stylesheet">
+		<script src="../../jslib/jquery_1_8_3.js"></script>	
+		<!--[if lt IE 8]>
+	    <link rel="stylesheet" type="text/css" href="../../css/index/ie7.css" media="all">
+	    <![endif]-->
+	</head>
+	<body>
+		<!--=========================头部  start==============================-->
+		<div class="n-topnav">
+		  <div class="header clearfix">
+		  	<span class="city-t">城市站：</span>
+		    <h3>
+		    	<span id="currentCity" class="current" cityid="" name=""></span>
+		    	<span class="triangle drop"></span>
+		    	<div id="citychage" class="city hide"></div>
+		    </h3>
+		     <ul class="login-box" id="box01">
+		      <li><a class="login-bind" href="#">登录</a></li>
+		      <li class="site-nav-pipe">|</li>
+		      <li><a class="register-bind" href="#">注册</a></li>
+		    </ul>
+		    <ul class="login-box" id="box02" style="display:none;">
+		      <li style="color:#fff;"></li>
+		      <li><a class="logout-bind" href="#">注销</a></li>
+		      <li class="site-nav-pipe">|</li>
+		      <li class="mouse_over pr" id="userCenter"><a href="${memberBase}/member/member.htm"><span class="current">会员中心</span><span class="triangle drop"></span></a>
+		        <div class="group" id="useGroup">
+		          <a href="${memberBase}/member/myAllOrders.htm?currentPage=1">我的订单</a>
+		          <a href="${memberBase}/member/inquiry.htm?searchType=DEFAULT&currentPage=1&pageSize=10">我的询价</a>
+		          <a href="${memberBase}/member/testdrv.htm?searchType=DEFAULT&currentPage=1&pageSize=10">试乘试驾</a>
+		          <a href="${memberBase}/member/msg.htm?currentPage=1">消息提醒</a>
+		          <a href="${memberBase}/member/benefits/orderlist.htm">我的权益</a>
+		        </div>
+		      </li>
+		      <li class="site-nav-pipe site-nav-pipe-ml0">|</li>
+		      <li><a href="${memberBase}/inster/toQueryMineInter.htm" target="_blank">车主权益</a></li>
+		    </ul>
+		    
+		  </div>
+		</div>
+		<div class="n-subnav n-subnav-wider">
+		  <div class="subnav-cont subnav-cont-new clearfix">
+	        	<a href="${base}/index.htm" class="saiclogo">
+		            <img src="../../images/indexPage/s_logo.png" width="106" height="46" border="0">
+		            <img src="../../images/indexPage/s_slogan.gif" width="106" height="46" border="0">
+	            </a>    
+	            <div class="fr text-c">
+	            	<a href="#" class="l-blue-s" title="帮助中心">
+		            	<i class="icon_index icon-qst-mark"></i><br/>		            	
+		            	帮助中心
+	            	</a>
+	            </div> 
+		  </div>
+		</div>
+		<!--==========================头部  end===============================-->
+		<!--==========================nav start============================-->
+		<div id="navigation" class="clearfix">
+			<ul class="nav-sub nav-see pr">
+				<!-- todo: 看icon -->
+				<i class="icon_index icon-nav-look look-pa"></i>				
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">车型大全</a></li>
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">精美图库</a></li>
+			</ul>
+			<ul class="nav-sub nav-buy pr">
+				<!-- todo: 买icon -->	
+				<i class="icon_index icon-nav-buy look-pa"></i>			
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">促销活动</a></li>
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">经销商</a></li>
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">购车计算器</a></li>
+			</ul>
+			<ul class="nav-sub nav-use pr">
+				<i class="icon_index icon-nav-use look-pa"></i>	
+				<li class="nav-btn nav-cxh"><i class="triangle triangle-r"></i><a href="" title="车享汇" class="icon_index icon-nav-cxh">车享汇</a></li>
+				<li class="nav-btn"><i class="triangle triangle-r"></i><a href="" title="" class="nav-link">车享社区</a></li>
+			</ul>
+			<div class="help-dial pr">
+				<!-- 电话图标 -->	
+				<i class="icon_index icon-tel tel-pa"></i>			
+				<span class="num">4008 020 666</span>
+			</div>
+		</div>
+		<!--============================nav end============================-->
+		<!--============================banner轮播 start============================-->
+		<div class="arrow-slider-content" id="J_arrowSlider">
+		    <div class="arrow-slider">
+		        <ul class="arrow-slider-box fn-clear">
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="aa" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="bbb" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="ss" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="ss" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="aa" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <img width="990" height="335" alt="aa" src="../../images/index/banner.jpg">
+		                </a>
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+		<!--============================banner轮播 end============================-->
+		<!--============================1F start============================-->
+				<div id="kan" class="pr">
+			<div class="floor-one clearfix">
+	            <i class="icon_index icon-look-car floor-img"></i>
+	            <h3 class="clr-white fr floor-tit">
+	                <a href="#" class="clr-white ">热门车型</a>
+	                &nbsp;|&nbsp;
+	                <a href="#" class="clr-white ">精美图库</a>
+	            </h3>
+	        </div>
+			<!-- ----------------------------- 标题1F 看车 ----------------------------- -->	
+			<ul class="brand clearfix">
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-rw first">
+					<i class="icon_logos index-logo-rw"></i>
+					<p class="brand-name">荣威</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-mg">
+					<i class="icon_logos index-logo-mg"></i>
+					<p class="brand-name">MG</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-bk">
+					<i class="icon_logos index-logo-bk"></i>
+					<p class="brand-name">别克</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-xf">
+					<i class="icon_logos index-logo-clt"></i>
+					<p class="brand-name">雪佛兰</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-kd">
+					<i class="icon_logos index-logo-cdl"></i>
+					<p class="brand-name">凯迪拉克</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-dz">
+					<i class="icon_logos index-logo-vw"></i>
+					<p class="brand-name">大众</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-sk">
+					<i class="icon_logos index-logo-skd"></i>
+					<p class="brand-name">斯柯达</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-wl">
+					<i class="icon_logos index-logo-wl"></i>
+					<p class="brand-name">五菱</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-bj">
+					<i class="icon_logos index-logo-bj"></i>
+					<p class="brand-name">宝骏</p>
+				</a></li>
+				<li class="brand-item"><a href="" target="blank" class="brand-one brand-dt last">
+					<i class="icon_logos index-logo-dt"></i>
+					<p class="brand-name">上汽大通</p>
+				</a></li>
+			</ul>
+			<!-- ----------------------------- 热门车型 ----------------------------- -->
+			<div class="models">
+				<div class="hot-cars-models"> <!-- 标题 -->
+                    <h3 class="hot-cars-tit"><i class="icon_index icon-hot-car mark-i"></i>热门车型</h3>
+                    <div class="fr hot-car-fr">
+                        <a href="#">
+                            <i class="icon_index icon-cxku va-m"></i>
+                            <i class="icon_index icon-arrow-blue"></i>
+                        </a>
+                    </div>
+                </div>
+				<div class="model-contents"> <!-- 内容  -->
+					<div class="model-contents-tabswrapper">
+						<ul class="model-contents-tabs clearfix">
+							<li class="model-tab selected" rel="#lt8">8万以下</li>
+							<li class="model-tab" rel="#btw812">8-12万</li>
+							<li class="model-tab" rel="#btw1218">12-18万</li>
+							<li class="model-tab" rel="#btw1825">18-25万</li>
+							<li class="model-tab" rel="#btw2535">25-35万</li>
+							<li class="model-tab" rel="#gt35">35万+</li>
+							<li class="model-tab" rel="#spSUV">SUV</li>
+						</ul>	
+					</div>
+					<div class="model-contents-models clearfix" id="lt8">
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-rws model-icon">荣威</i></p>
+						</div>
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-mgs model-icon">MG</i></p>
+						</div>
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-bks model-icon">别克</i></p>
+						</div>
+						<div class="model last">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-clts model-icon">雪佛兰</i></p>
+						</div>
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-cdls model-icon">凯迪拉克</i></p>
+						</div>
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-vws model-icon">大众</i></p>
+						</div>
+						<div class="model">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-skds model-icon">斯柯达</i></p>
+						</div>
+						<div class="model last">
+							<p class="model-title-eng">Jetta</p>
+							<div class="model-pic-wrapper"><a href="#"><img src="../../images/index/model.png" alt="大众捷达豪华三厢" class="model-pic" width="210" height="140"></a></div>
+							<p class="model-title-ch">大众捷达</p> 
+							<p class="model-info"><span class="model-info-spec">豪华三厢</span><i class="icon_logosmall index-logo-wls model-icon">五菱</i></p>
+						</div>
+					</div>
+					<div class="model-contents-models clearfix" id="btw812"></div>
+					<div class="model-contents-models clearfix" id="btw1218"></div>
+					<div class="model-contents-models clearfix" id="btw1825"></div>
+					<div class="model-contents-models clearfix" id="btw2535"></div>
+					<div class="model-contents-models clearfix" id="gt35"></div>
+					<div class="model-contents-models clearfix" id="spSUV"></div>
+				</div>
+			</div>
+			<!-- ----------------------------- 精美图库 ----------------------------- -->
+			<div class="gallery">
+				<div class="hot-cars-models clearfix">
+	                <h3 class="hot-cars-tit"><i class="icon_index icon-hot-pic mark-i"></i>精美图库&nbsp;<i class="icon_index icon-hot-small sup-i"></i></h3>
+	                <div class="fr">
+	                    <a href="#" class="f-12 f-yahei clr-gray6">
+	                        查看更多
+	                        <i class="icon_index icon-arrow-blue"></i>
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="gallery-content clearfix">
+					<div class="gallery-l">  <!-- 左栏 -->
+						<div class="gallery-l-u ovf-h gallery-ad-window">
+							<a href=""><img src="../../images/index/gallery-l-u.jpg" class="gallery-l-u-img gallery-img"></a>
+							<div class="gallery-banner">
+								<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								<p class="activity-timespan">活动时间：2022年7月24日-8月5日</p>
+							</div>
+						</div>
+						<div class="gallery-l-l clearfix">
+							<div class="gallery-l-l-l ovf-h gallery-window">							
+								<a href=""><img src="../../images/index/gallery-l-l-l.jpg" class="gallery-l-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+							<div class="gallery-l-l-r ovf-h gallery-window">							
+								<a href=""><img src="../../images/index/gallery-l-l-l.jpg" class="gallery-l-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery-r"> <!-- 右栏 -->
+						<div class="gallery-r-u clearfix">
+							<div class="gallery-r-u-l ovf-h gallery-window">
+								<a href=""><img src="../../images/index/gallery-l-l-l.jpg" class="gallery-l-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+							<div class="gallery-r-u-r ovf-h gallery-window">
+								<a href=""><img src="../../images/index/gallery-l-l-l.jpg" class="gallery-l-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+						</div>	
+						<div class="gallery-r-l clearfix">
+							<div class="gallery-r-l-l ovf-h gallery-window">
+								<a href=""><img src="../../images/index/gallery-r-l.jpg" class="gallery-r-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+							<div class="gallery-r-l-r ovf-h gallery-window">
+								<a href=""><img src="../../images/index/gallery-r-l.jpg" class="gallery-r-l-img gallery-img"></a>
+								<div class="gallery-banner height0">
+									<p class="activity-title">荣威550Plug-in 壁纸下载</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="ui-ads-box w960 mt-15">
+		        <img src="../../images/index/ads.jpg" height="96" width="958" alt="" >
+		    </div>
+			
+			<!-- 阴影 -->
+			<p class="shadow_bot">
+				<img width="960" height="12" src="../../images/index/shadow_bot.png" class="dsp-b">
+			</p>			
+		</div>
+
+		<!--============================1F end============================-->
+
+
+		<!--============================2F start============================-->
+		<div id="buy">
+			<!--标题-->
+			<div class="floor-two clearfix">
+		        <i class="icon_index icon-buy-car floor-img"></i>
+		        <h3 class="clr-white fr floor-tit">
+		            <a href="#" class="clr-white ">促销活动</a>
+		            &nbsp;|&nbsp;
+		            <a href="#" class="clr-white ">经销商</a>
+		        </h3>
+		    </div>
+		    
+			<div class="ui-grid-box mt-20 pr">
+		    <!-- 2F -->
+		    <div class="ui-ads-box">
+		        <img alt="" width="958" height="272" src="../../images/index/cxh.png">
+		        <a class="ui-button ui-button-mred ui-button-mred-next" href="#"><span class="ui-button-text">查看详情</span><span class="ui-button-icon"></span></a>
+		    </div>
+			
+			    <!-- 促销活动 -->
+			<div class="hot-sales mt-25 clearfix">
+		        <h1 class="hot-cars-tit">
+		            <i class="icon_index icon-hot-sale mark-i"></i>促销活动                        
+		        </h1>
+		        <div class="fl hot-sales-tit">
+		            当前有<strong class="clr-red-two">189</strong>个活动正在火爆进行中
+		        </div>
+		        <div class="fr">
+		            <a href="#" class="f-12 f-yahei clr-gray6">
+		                查看更多
+		                <i class="icon_index icon-arrow-ora"></i>
+		            </a>
+		        </div>
+		    </div>
+		    <ul class="ui-figure-list ui-figure-list-sales mt-10 clearfix">
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                	<a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		
+		        <li class="ui-figure-item ">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		        <li class="ui-figure-item ui-figure-item-odd">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		           
+		        </li>
+		
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		        <li class="ui-figure-item ui-figure-item-odd">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/car.jpg" width="229" height="130"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼宝骏五菱六月激情献礼</a>
+		            </div>
+		            
+		        </li>
+		    </ul>
+		    <!-- 经销商 -->
+			<div class="hot-sales clearfix">
+			    <h1 class="hot-cars-tit">
+			        <i class="icon_index icon-hot-dealer mark-i"></i>经销商
+			    </h1>                    
+			    <div class="fr">
+			        <a href="#" class="f-12 f-yahei clr-gray6">
+			            查看更多
+			            <i class="icon_index icon-arrow-ora"></i>
+			        </a>
+			    </div>
+			</div>
+		
+		    <ul class="ui-figure-list ui-figure-desc mt-10 clearfix">
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/dealer.jpg" width="231" height="230"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼 </a>
+		            </div>
+		            <div class="figure-item-fd">
+		                <div class="figure-fd-grid">
+		                    <p>经营品牌：荣威</p>
+		                    <p class="figure-fd-tel"><i class="icon_index icon-tel-small va-m"></i>&nbsp;400-920-2682</p>
+		                </div>
+		                <div class="figure-fd-wrap">
+		                    <p class="figure-fd-prom"><i class="icon_index icon-sale-small va-m"></i><a href="#" class="cux">车享购第一季:裸价购荣威 ...</a></p>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/dealer.jpg" width="231" height="230"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼 </a>
+		            </div>
+		            <div class="figure-item-fd">
+		                <div class="figure-fd-grid">
+		                    <p>经营品牌：荣威</p>
+		                    <p class="figure-fd-tel"><i class="icon_index icon-tel-small va-m"></i>&nbsp;400-920-2682</p>
+		                </div>
+		                <div class="figure-fd-wrap">
+		                    <p class="figure-fd-prom"><i class="icon_index icon-sale-small va-m"></i><a href="#" class="cux">车享购第一季:裸价购荣威 ...</a></p>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="ui-figure-item">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/dealer.jpg" width="231" height="230"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼 </a>
+		            </div>
+		            <div class="figure-item-fd">
+		                <div class="figure-fd-grid">
+		                    <p>经营品牌：荣威</p>
+		                    <p class="figure-fd-tel"><i class="icon_index icon-tel-small va-m"></i>&nbsp;400-920-2682</p>
+		                </div>
+		                <div class="figure-fd-wrap">
+		                    <p class="figure-fd-prom"><i class="icon_index icon-sale-small va-m"></i><a href="#" class="cux">车享购第一季:裸价购荣威 ...</a></p>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="ui-figure-item ui-figure-item-odd">
+		            <div class="figure-item-hd">
+		                <a href="#" target="_blank"><img alt="" src="../../images/index/dealer.jpg" width="231" height="230"/></a>
+		            </div>
+		            <div class="figure-item-bd">
+		                <a href="#" class="l-gray">宝骏五菱六月激情献礼 </a>
+		            </div>
+		            <div class="figure-item-fd">
+		                <div class="figure-fd-grid">
+		                    <p>经营品牌：荣威</p>
+		                    <p class="figure-fd-tel"><i class="icon_index icon-tel-small va-m"></i>&nbsp;400-920-2682</p>
+		                </div>
+		                <div class="figure-fd-wrap">
+		                    <p class="figure-fd-prom"><i class="icon_index icon-sale-small va-m"></i><a href="#" class="cux">车享购第一季:裸价购荣威 ...</a></p>
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+		
+		    <div class="ui-ads-box mt-10">
+		        <img src="../../images/index/ads.jpg" height="96" width="958" alt="" >
+		    </div>
+			<!-- 阴影 -->
+			<p class="shadow_bot">
+				<img width="960" height="12" src="../../images/index/shadow_bot.png" class="dsp-b">
+			</p>	
+		</div>
+		</div>
+		<!--============================2F end============================-->
+		
+		<!--============================3F start============================-->
+				<div id="use" class="pr">
+					<div class="floor-three">
+		                <i class="icon_index icon-use-car floor-img"></i>     
+		            </div>
+		            <div class="use-contents">
+		            	<div class="cxhintro">
+			            	<img src="../../images/index/chexianghuilogo.png">
+			            	<p class="intro-words">无论是在旅途中还是日常消费，车享汇都提供您便捷的服务和会员专享权益，
+		让您享受与众不同的服务体验。</p>
+			            </div>
+						<div class="benefit-list clearfix">
+							<ul>
+								<li>
+									<a href="showBenefitsDetail_1.htm" target="_blank">
+										<span class="benefit-ico benefit-1"> </span>
+										<span class="benefit-t">道路救援</span>
+									</a>
+								</li>
+								<li>
+									<a href="showBenefitsDetail_2.htm" target="_blank">
+										<span class="benefit-ico benefit-2"> </span>
+										<span class="benefit-t">代驾服务</span>
+									</a>
+								</li>
+								<li>
+									<a href="showBenefitsDetail_3.htm" target="_blank">
+										<span class="benefit-ico benefit-3"> </span>
+										<span class="benefit-t">免费洗车</span>
+									</a>
+								</li>
+								<li>
+									<a href="showBenefitsDetail_4.htm" target="_blank">
+										<span class="benefit-ico benefit-4"> </span>
+										<span class="benefit-t">加油优惠</span>
+									</a>
+								</li>
+								<li class="last">
+									<a href="showBenefitsDetail_5.htm" target="_blank">
+										<span class="benefit-ico benefit-5"> </span>
+										<span class="benefit-t">租车优惠</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="benefit-package clearfix">
+							<ul id="PakageList">
+					            <form method="post" id="packageThree" name="" action="">
+					                <input type="hidden" id="typeNum" name="typeNum" value="N">
+					                <li class="b-package b-package-1">
+					                    <dl>
+					                        <dt><i><b> </b></i>乐享礼遇套餐</dt>
+					                        <dd class="b-item">
+					                            <ul>
+					                                <li class="clearfix"><label>道路救援：</label><div><i>6</i>次/年</div></li>
+					                                <li class="clearfix"><label>加油优惠：</label><div><i>98</i>折加油卡</div></li>
+					                                <li class="clearfix"><label>租车优惠：</label><div><i>9</i>折优惠<br><i>100</i>元免费租车券<br>(限1张/人)</div></li>
+					                            </ul>
+					                        </dd>
+					                        <dd class="b-op">
+					                            <i class="b-op-tr"> </i>
+					                            <div class="b-price"><span>8000</span>积分兑换</div>
+					                            <div class="b-btnset clearfix">
+					                                <i class="b-btnset-tr"> </i>
+					                                <i class="b-btnset-tail"> </i>
+					                                    <a data-href="/inster/validType.htm?typePackage=C" class="btn btn-yellow">立即兑换</a>
+					                            </div>
+					                        </dd>
+					                    </dl>
+					                </li>
+					            </form> 
+								<form method="post" id="packageScound" name="" action="">
+									<input type="hidden" id="typeNum" name="typeNum" value="N">
+									<li class="b-package  b-package-2">
+										<dl>
+											<dt><i><b> </b></i>畅享礼遇套餐</dt>
+											<dd class="b-item">
+												<ul>
+													<li><label>道路救援：</label><div><i>12</i>次/年</div></li>
+													<li><label>代驾服务：</label><div><i>1</i>次/年</div></li>
+													<li><label>加油优惠：</label><div><i>98</i>折油卡</div></li>
+													<li><label>租车优惠：</label><div><i>9</i>折优惠<br><i>100</i>元免费租车券<br>(限1张/人)</div></li>
+													<li><label>免费洗车：</label><div><i>6</i>次/年</div></li>
+												</ul>
+											</dd>
+											<dd class="b-op">
+												<i class="b-op-tr"> </i>
+												<div class="b-price"><span>15000</span>积分兑换</div>
+												<div class="b-btnset clearfix">
+													<i class="b-btnset-tr"> </i>
+													<i class="b-btnset-tail"> </i>
+														<a data-href="/inster/validType.htm?typePackage=B" class="btn btn-yellow">立即兑换</a>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</form>
+								<form method="post" id="packageFrist" name="" action="">
+					                <input type="hidden" id="typeNum" name="typeNum" value="N">
+					                <li class="b-package  b-package-3 last">
+					                    <dl>
+					                        <dt><i><b> </b></i>尊享礼遇套餐</dt>
+					                        <dd class="b-item">
+					                            <ul>
+					                                <li><label>道路救援：</label><div><i></i>无限次/年</div></li>
+					                                <li><label>代驾服务：</label><div><i>3</i>次/年</div></li>
+					                                <li><label>加油优惠：</label><div><i>98</i>折油卡</div></li>
+					                                <li><label>租车优惠：</label><div><i>9</i>折优惠<br><i>100</i>元免费租车券<br>(限1张/人)</div></li>
+					                                <li><label>免费洗车：</label><div><i>12</i>次/年</div></li>
+					                            </ul>
+					                        </dd>
+					                        <dd class="b-op">
+					                            <i class="b-op-tr"> </i>
+					                            <div class="b-price"><span>25000</span>积分兑换</div>
+					                            <div class="b-btnset clearfix">
+					                                <i class="b-btnset-tr"> </i>
+					                                <i class="b-btnset-tail"> </i>
+					                                    <a data-href="/inster/validType.htm?typePackage=A" class="btn btn-yellow">立即兑换</a>
+					                            </div>
+					                        </dd>
+					                    </dl>
+					                </li>
+					            </form> 
+							</ul>
+						</div>
+		            </div>
+					<!-- 阴影 -->
+					<p class="shadow_bot">
+						<img width="960" height="12" src="../../images/index/shadow_bot.png" class="dsp-b">
+					</p>
+				</div>
+		<!--============================3F end============================-->
+
+
+
+		<script src="../../js/component/ECar.tab.js"></script>
+		<script src="../../js/index/newIndexPage.js"></script>
+	</body> 
+</html>

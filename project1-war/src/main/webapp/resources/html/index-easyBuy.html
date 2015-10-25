@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页--轻松购车</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <script src="../jslib/jquery_1_8_3.min.js"></script>
+</head>
+
+<body>
+<div class="w1030">
+<div class="index-easy clearfix">
+	<div class="easy-title f-yahei fl">
+		<h2 class="easy-name">轻松购车</h2>
+		<p class="easy-tip">只需<span class="clr-orange"><span class="f-24">3</span>步</span>，拥有您的爱车和高品质生活！</p>
+	</div>
+	<div class="easy-step fl">
+		<!-- 步骤图 -->
+		<div class="easy-step-pic"></div>
+		
+		<!-- 所需的车系 -->
+		<div class="easy-step-one fl">
+			<p class="step-name-one f-yahei">输入您所需的车系</p>
+			<div class="step-operate">
+				<div class="operate-model-enter fl">
+					<!-- 需要填入默认车系，名字+id -->
+					<input type="text" value="" class="operate-model-input" maxlength="15" id="chooseCarSeries" data-default='2013款科鲁兹 豪华版' data-id="cruz" />
+					<div id="carSeriesDropDown" class="hide">
+				  	  	<div class="scroll-wrapper">
+				  	  		<div class="scroll-content">
+				  	  			<!--
+						  	  	<ul>
+						  	  		<li>Polo</li>
+						  	  		<li>Polo</li>
+						  	  		<li>Polo</li>
+						  	  		<li>Polo</li>
+									<li>Polo</li>
+									<li>Polo</li>
+									<li>Polo</li>
+									<li>Polo</li>
+						  	  		<li>Polo</li>
+						  	  		<li>Polo</li>
+						  	  		<li>Polo</li>
+									<li>Polo</li>
+									<li>Polo</li>
+									<li>Polo</li>
+								</ul> -->
+							</div>
+						</div>
+						<div class="scrollbar">
+			              <div class="scrollbar-narrow scrollbar-narrow-up"></div>
+			              <div class="scrollbar-bg" style="height: 274px; margin: 13px 0px;">
+			                <div class="scrollbar-handler" style="height: 143.7062937062937px; top: 0px; display: block;"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+			              </div>
+			              <div class="scrollbar-narrow scrollbar-narrow-down"></div>
+			            </div>
+			  	  	</div>
+					<p class="hint hint-normal mt-10 clr-gray6">请输入您要查找的车型的关键字，如：别克昂科拉</p>
+					<!-- 没有匹配 -->
+					<p class="hint hint-nodata operate-model-none hide">没有匹配您输入的车型，请重新输入...</p>
+				</div>
+				<div class="operate-model-show fl" id="basicInfo">
+					<div class="show-pic"><img src="../images/stylepic.png" width="120" height="80" /></div>
+					<p class="operate-model-name"><span class="carSeriesName">2013款科鲁兹 豪华版</span><br /><span class="lowerPrice">15.5</span>万-<span class="higherPrice">19.8</span>万</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 选择经销商 -->
+		<div class="easy-step-two fl">
+			<p class="step-name-two f-yahei">选择经销商</p>
+			<div class="step-operate">
+				<!-- 有经销商 -->
+				<div class="operate-dealer" id="normalDisplay">
+					<div class="operate-dealer-enter"><i class="triangle triangle-operate-t fr"></i><span class="hint">请选择经销商</span></div>
+					<span class="clr-gray6">请选择<span class="clr-light-blue carSeriesName">2013款科鲁兹 豪华版</span>的经销商</span>
+				</div>
+				<!-- 经销商弹层 --><!-- 需要填入默认车系对应的经销商数据 -->
+				<div class="operate-dealer-win hide" id="floater">
+					<!----  ajax 返回的html 开始  ---->
+					<dl class="dealer-win-area">
+						<dt class="f-b">上海：</dt>
+						<dd class="select" data-area="area0"><span>徐汇</span></dd>
+						<dd data-area="area1"><span>闵行</span></dd>
+						<dd data-area="area2"><span>浦东</span></dd>
+						<dd data-area="area3"><span>宝山</span></dd>
+						<dd data-area="area4"><span>徐汇</span></dd>
+						<dd data-area="area5"><span>闵行</span></dd>
+						<dd data-area="area6"><span>浦东</span></dd>
+						<dd data-area="area7"><span>宝山</span></dd>
+					</dl>
+					<ul class="dealer-win-list clearfix" id="area0">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司...</a></h4><!-- 截字 -->
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海安吉汽车销售服务有限公司"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海安吉汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司...</a></h4><!-- 截字 -->
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area1">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="3"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="4">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="5">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="6" class="hide"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="7" class="hide">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="8" class="hide">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area2">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area3">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area4">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area5">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area6">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<ul class="dealer-win-list clearfix hide" id="area7">
+						<li data-id="0"><!-- class="hover"  -->
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="1">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+						<li data-id="2">
+							<h4 class="dealerName" title="上海逸隆新虹桥汽车销售服务有限公司上海逸隆新虹桥"><a href="#" target="_blank" ><a href="#" target="_blank" class="link-deepblue">上海逸隆新虹桥汽车销售服务有限公司</a></h4>
+							<p>地址：上海市闵行区北青公路688号［<a href="#" target="_blank" class="link-blue">地图</a>］<br />
+								报价：<strong class="clr-red">8.98－11.98万</strong>
+							</p>
+						</li>
+					</ul>
+					<div class="dealer-win-more f-14">
+						<div class="mr-20 fr"><i class="dealer-win-pages dealer-win-prev">&nbsp;</i><i class="dealer-win-pages dealer-win-next">&nbsp;</i></div>
+						上海市 POLO&nbsp;在售&nbsp;经销商&nbsp;共55家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank" class="link-darkblue">展开查看 <span class="dealer-win-arrow">&gt;</span></a>
+					</div>
+					<!----  ajax 返回的html 结束  ---->
+				</div>
+				<!-- 无经销商 -->
+				<div class="operate-dealer hide" id="noCarDisplay">
+					<div class="operate-dealer-enter operate-dealer-disable"><i class="triangle triangle-operate-t fr"></i>请选择经销商</div>
+					<span class="clr-gray6">暂无可选的经销商</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 预订车系 -->
+		<div class="easy-step-three fl">
+			<p class="step-name-three f-yahei">预订车系</p>
+			<div class="step-operate" id="submitter">
+				<div class="operate-contact">
+					<h3 class="operate-contact-word choosenCarSeries" data-default-carSeriesId="cruz">2013款科鲁兹 豪华版</h3><!-- 默认的车系名字 -->
+					<h4 class="clr-gray6 choosenDealerInfo">经销商：<span class="f-n choosenDealer">未选择经销商</span></h4>
+					<a class="btn btn-med btn-med-price operate-contact-btn btn-disable enquirePrice" href="http://www.baidu.com">在线询价</a>
+					<a class="btn btn-med btn-blue btn-med-drive btn-disable bookDrive" href="http://www.baidu.com">预约驾驶</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</div>
+<script src="../jslib/jquery.mousewheel.js"></script>
+    <script src="../js/component/ECar.imitatescroll.js"></script>
+    <script src="../js/fastChooseCar.js">
+    </script>
+</body>
+</html>

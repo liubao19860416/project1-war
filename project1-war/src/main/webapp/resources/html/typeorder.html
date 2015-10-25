@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/member/common.css" />
+	<script type="text/javascript">window.base="/saic-ebiz-web-front"; var orderBase="/saic-ebiz-web-orderItems";</script>
+	<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+	
+	<script type="text/javascript" src="../jslib/tipsy/tipsy.js"></script>
+	<link href="../jslib/tipsy/tipsy.css" rel="stylesheet" type="text/css"><!-- 颜色hover -->
+
+	<link href="../css/component/dealer.css" type="text/css" rel="stylesheet">
+	<link href="../css/carorder.css?t=201401160854" type="text/css" rel="stylesheet">
+	<link href="../css/component/form.css?t=201401160854" type="text/css" rel="stylesheet">
+
+	<link href="../css/dealerpolymeric.css" type="text/css" rel="stylesheet">
+    <link href="../css/typeorder.css" type="text/css" rel="stylesheet">
+	<title>经销商聚合页</title>
+</head>
+<body>
+
+<div class="w960">
+	<!-- -->
+	<form autocomplete="off" action="ajax/submitPriceLower.htm" method="post" id="trialDriveForm">
+		<div class="od-cartype cdi-m22 type-orderItem">
+            <h3 class="title title-m"><span class="title-name"><i></i>预定车型</span></h3>
+            <div class="usif car-odcon">
+                <ul class="fm-list mb-20 clearfix">
+                    <!--车型信息-->
+                    <li id="brandModel" class="fm-list-row">
+                        <label class="flr-lbl">品牌：</label>
+                    	<select data-title="请选择品牌" data-val="1" name="brandId" id="brand" class="fl ads_select brand_sel">
+                    		<option value="0">请选择品牌</option>
+                    		<option value="1">大众</option>
+                    	</select>
+                        <label class="flr-lbl s">车系：</label>
+							<select data-title="请选择车系" data-val="1" name="seriesId" id="series" class="fl ads_select series_sel" disabled="disabled">
+								
+							</select>
+                        <label class="flr-lbl model_sel s">车型：</label>
+                    		<select data-title="请选择车型" data-msg-required="请选择车型" data-required="true" data-val="1" name="productId" id="model" class="fl ads_select product_sel" disabled="disabled">
+                    		</select>                                            
+                        <div class="m-notice m-err"><i></i>
+                            <span data-msg-for="model"></span>
+                        </div>
+                        
+                    </li>
+                    <!-- 车型颜色 -->
+					<li class="fm-list-row car-color">
+						<label class="flr-lbl">颜色：</label>
+						<p class="carcolor text-c" id="carcolor"></p>
+						
+						<input type="hidden" class="m-member" name="" id="carcolortxt" 
+                                   value="" 
+                                   maxlength="30" data-required="true" data-msg-required="请选择颜色" />
+                        <span class="m-notice m-err"><i></i>
+                            <span data-msg-for="carcolortxt"></span>
+                        </span>					
+                        
+					</li>	
+					<!--经销商信息-->
+					<li class="fm-list-row" >
+						<label class="flr-lbl">经销商：</label>
+                		<select data-title="请选择城市" data-msg-required="请选择城市" data-required="true" id="jxs-city"  data-val="1" name="jsx-city" id="jsx-city"  class="fl ads_select " style="display: none;" disabled="disabled">
+                			<option value="0" >请选择城市</option>
+                			<option value="310100" >上海</option>
+                			<option value="330100" >杭州</option>
+							<option value="330200" >宁波</option>
+							<option value="320100" >南京</option>
+							<option value="320500" >苏州</option>
+							<option value="510100" >成都</option>
+							<option value="120100" >天津</option>
+							<option value="440300" >深圳</option>               			
+                		</select>
+					</li>	
+                </ul>				
+				<!-- 经销商列表 -->
+                <div class="dealer-maintoo clearfix" style="display:none;">
+					<div id="DealerNav" class="c-dealer-nav clearfix">
+						<ul>
+							<li class="disabled current"><a href="">全部</a></li>
+							<li><a href="">浦东</a></li>						
+							<li class="disabled"><a href="">昌宁</a></li>
+							<input type="hidden" id="citylng" name="longitude" value=""/>
+							<input type="hidden" id="citylat" name="latitude" value=""/>					
+						</ul>
+					</div>
+					<div class="c-dealer-content">
+						<div class="c-dealer-list" id="DealerList">
+							<div class="c-dealer-list-wrapper scroll-wrapper">
+								<div class="c-dealer-list-content scroll-content">
+									<h4>经销商</h4>
+									<ul class="de-listcent dealer-list-content-list">
+										<li class="evl">
+											<h3>上海云层峰龙威汽车销售服务有限公司</h3>
+											<p>地址：上海闸北区江杨南路江杨南路江杨南路208号（近临汾路）</p>	
+										</li>
+										<li >
+											<h3>上海云层峰龙威汽车销售服务有限公司</h3>
+											<p>地址：上海闸北区江杨南路江杨南路江杨南路208号（近临汾路）</p>	
+										</li>
+									<!--
+										<li class="null">
+											<i class="icon icon-alert-gray-m"></i><div>暂无经销商</div>
+										</li>
+									-->
+									</ul>
+								</div>
+							</div>
+							<div class="scrollbar">
+								<div class="scrollbar-narrow scrollbar-narrow-up"></div>
+								<div class="scrollbar-bg">
+									<div class="scrollbar-handler"><div class="scrollbar-handler-top"></div><div class="scrollbar-handler-bottom"></div></div>
+								</div>
+								<div class="scrollbar-narrow scrollbar-narrow-down"></div>
+							</div>
+						</div>
+						<div class="c-dealer-map" id="DealerMap">
+						</div>
+					</div>
+				</div>
+                
+            </div>
+        </div>
+        <!-- 基本信息 -->
+        <!--个人信息模块-->
+        <div class="us-info" id="us-info">
+            <h3 class="title title-m"><span class="title-name"><i></i>填写个人信息</span><span class="tit-bmxx">(信息保密，请放心填写)</span></h3>
+            <div class="usif car-odcon">
+                   <ul class="fm-list">
+                        <!--名称和电话号码-->                        
+                        <input type="hidden" name="" value="" />
+                        <li class="fm-list-row">                            
+                            <label class="flr-lbl">姓名：</label>
+                            <input type="text" class="m-member" name="" id="fullname" 
+                                   value="" 
+                                   maxlength="30" data-required="true" data-msg-required="请输入姓名"
+                                   data-regexp="^[0-9a-zA-Z\s\u4e00-\u9fa5]+$" data-msg-regexp="姓名格式有误"/>
+                            <span class="m-notice m-err"><i></i>
+                                <span data-msg-for="fullname"></span>
+                            </span>
+                        </li>
+                        <li class="fm-list-row">
+                            <label class="flr-lbl">手机号码：</label>
+                            <input type="text" class="m-member" id="mobile" name="" maxlength="11" value=""
+                                 data-required="true" data-msg-required="请输入手机号码"
+                                 data-length-min="11" data-msg-length-min="手机号码位数有误，请核对"
+                                 data-regexp="^1[3,5,8]\d{9}$" data-msg-regexp="手机号码有误，请核对"/>
+                            <span class="m-notice m-err"><i></i>
+                                <span data-msg-for="mobile"></span>
+                            </span>
+                        </li>
+                        <li class="fm-list-row">
+                            <label class="flr-lbl">所在地区：</label>
+                            <div class="ads-sl fl" id="City">
+                                <select class="fl ads_select province" name="" data-val="">
+                                </select>
+                                <select class="fr ads_select city" id="selCity" data-title="请选择" 
+                                    data-required="true" data-msg-required="请选择所在地区" 
+                                    name="${spring.status.expression}" data-val="">
+                                </select>
+                            </div>
+                            <span class="m-notice m-err"><i></i>
+                                <span data-msg-for="selCity"></span>
+                            </span>
+                        </li>
+                        <!--其他信息-->
+                        <li class="fm-list-row">
+                            <label class="flr-lbl">到店日期：</label>
+                            <input type="text" class="m-member Wdate" name="" value="" id="date" data-required="true" data-msg-required="请选择到店日期" />
+                            <span class="m-notice m-err"><i></i><span data-msg-for="date"></span></span>
+                        </li class="fm-list-row">
+                    </ul>
+                    <div class="sl-server">
+                        <label class="srv-lab">选择服务：</label>
+                        <ul class="srv-type">
+                            <li><label for="serv1">
+                            <input type="checkbox" name="" id="serv1" value="Y" /> 贷款购车</label></li>
+                            <li><label for="serv2">
+                            <input type="checkbox" name="" id="serv2" value="Y"/> 车险服务</label></li>
+                            <li><label for="serv3">
+                            <input type="checkbox" name="" id="serv3" value="Y" checked="checked" />上牌服务</label></li>
+                        </ul>
+                    </div>
+                
+                <div class="sub-type">
+                    <p><label class="srv-lab">支付方式：</label><span>在线支付</span></p>
+                </div>                
+            </div>
+		<!-- 礼包 -->
+		<div class="lb-msg">
+			<p>礼包信息： 提车赠送iphone5S土豪金礼包</p>
+		</div>	
+		<p class="order-money clearfix"><span>支付金额：<strong>￥<b>500</b></strong></span></p>
+        <p class="if-sub"><input type="submit" id="SubmitBtn" class="carodr_sub" value="提交订单" /><label>*  促销车库存有限，请尽快提交订单!</label></p>
+		<!-- END -->	
+	</form>	
+</div>			
+<script src="../jslib/My97DatePicker/WdatePicker.js"></script>
+<script src="../js/component/ECar.imitatescroll.js?t=201401171237" type="text/javascript"></script><!-- 自定义滚动条 -->
+<script src="../js/component/ECar.seriesSelect.js?t=201401171237" type="text/javascript"></script><!-- 绑定select -->
+<script src="../js/component/ECar.validate.js?t=201401171237" type="text/javascript"></script><!-- 表单验证 -->
+<script src="../js/component/ECar.uiform.js?t=201401171237" type="text/javascript"></script><!-- 表单美化 -->
+<script type="text/javascript" src="../jslib/jquery.mousewheel.js" ></script>
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=FD5f1e8f2ae7f944030091ce47cfee11&services=&t=20140120182842"></script>
+<script type="text/javascript" src="../js/component/ECar.map" type="text/javascript"></script>
+
+<script type="text/javascript" src="../js/dealer.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/typeorder.js"></script>
+
+<!--
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FD5f1e8f2ae7f944030091ce47cfee11"></script>
+<script type="text/javascript" src="http://10.32.17.56:8080/saic-ebiz-web-front/resources/js/component/ECar.map.js" ></script>
+
+-->
+<!--<script type="text/javascript" src="http://10.32.17.56:8080/saic-ebiz-web-front/resources/js/dealerpolymeric.js" ></script>-->
+
+</body>
+</html>
+
+

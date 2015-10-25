@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员中心-我参与的活动</title>
+<meta name="keywords" content="我参与的活动" />
+<meta name="description" content="我参与的活动" />
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/user-deal-activity.css" />
+<link href="../css/component/dialog.css" rel="stylesheet">
+<script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+</head>
+
+<body>
+	<!-- 我参与的活动 start -->
+    <div class="user-deal-actibity">
+        <h3>我参与的活动</h3>
+        <div class="actibity-cont">
+        	<!-- 根据活动始末日期查询 start -->
+            <div class="cont-search">
+            	<form method="post" action="">
+                	<label for="actibity-start">活动开始时间</label>
+                    <input type="text" id="actibity-start" class="search-txt-btn" value="" />
+                    <label for="actibity-end">活动结束时间</label>
+                    <input type="text" id="actibity-end" class="search-txt-btn" value="" />
+                    <input type="submit" class="search-sub-btn btn btn-sml" value="查询" />
+                </form>
+            </div>
+            <!-- 根据活动始末日期查询 end -->
+            <ul class="cont-col">
+            	<li class="col-width-140">信息</li>
+                <li class="col-width-140">主办方</li>
+                <li class="col-width-170">活动地址</li>
+                <li class="col-width-100">活动日期</li>
+                <li class="col-width-183">活动内容</li>
+            </ul>
+          	<!-- 促销活动列表 start -->
+            <div class="sale-list-no">没有参与记录</div>
+            <!-- 促销活动列表 end -->
+        </div>
+    </div>
+    <!-- 我参与的活动 end -->
+    
+<a href="#" id="pop">触发弹层</a>  
+<!-- 发送地址到手机 -->
+<div id="pop_mobile" class="hide">
+<form id="activity_mobile_form" action="http://www.baidu.com" method="post" autocomplete="off">
+<ul class="activity-mobile-list clr-gray6">
+	<li><label for="mobile_number">手机号：</label><br />
+		<input id="mobile_number" class="m-member" type="text" value="" />
+	</li>
+	<li class="clearfix"><label for="mobile_captcha">验证码：</label><br />
+		<input id="mobile_captcha" class="m-member fl" type="text" value="" maxlength="4" style="width:90px;">
+		<label for="mobile_captcha" class="img fl"><img src="../images/member/verify.jpg" width="100px" height="46px" alt="" border="0"></label>&nbsp;&nbsp;
+		<span class="activity-mobile-word">看不清？<a href="javascript:void(0);" class="activity-mobile-link">换一张</a></span>
+	</li>
+	<li><input id="activity_mobile_submit" class="btn activity-mobile-btn" type="submit" value="发送地址到手机" name="" /></li>
+</ul>
+</form>
+</div>
+<!-- 发送地址到手机 END -->
+
+
+<script type="text/javascript" src="../js/component/ECar.dialog.js"></script>
+<script>
+$(function(){
+	
+$('#pop').click(function(event) {				
+	ECar.dialog.open({
+		mode: 'id',
+		title: '发送地址到手机',
+		id: 'pop_mobile',
+		width:460,
+		height: 320
+	});
+});
+
+
+//手机发送验证
+$('form#activity_mobile_form').on('submit', function(){
+	if($('input#activity_mobile_submit').val()=='发送中...') return false;		
+	
+	var mobileNum = $('input#mobile_number'),
+		mobileCap = $('input#mobile_captcha'),
+		numValue = mobileNum.val(),
+		codeValue = mobileCap.val(),
+		mobileTip = $("ul.activity-mobile-list"),
+		phone = /^1\d{10}$/,
+		flag = true;
+    
+    //报错
+    function error(text){
+    	$('.activity-mobile-tip').remove();
+    	var $tag = $('<p class="activity-mobile-tip"><i class="icon icon-refuse-s"></i>&nbsp;&nbsp;'+ text +'</p>');
+    	mobileTip.before($tag);
+    }
+
+    //手机&验证码为空
+    if( numValue=="" && codeValue=="" ){
+    	error("请您输入正确的手机号和验证码！");
+    	mobileNum.addClass('m-member-orange');
+    	mobileCap.addClass('m-member-orange');
+		flag=false;
+    };
+  	//手机为空
+    if(numValue=="" && codeValue!=""){
+    	error("请您输入正确的手机号！");
+		mobileNum.addClass('m-member-orange');
+		mobileCap.removeClass('m-member-orange');
+		flag=false;
+	};
+	//验证码为空
+	if(numValue!="" && codeValue==""){
+		//手机格式错误
+		if( $.trim(numValue).match(phone) == null ){
+			error("请您输入正确的手机号和验证码！");
+			mobileNum.addClass('m-member-orange');
+			mobileCap.addClass('m-member-orange');
+			flag=false;
+		} else{
+			error("请您输入正确的验证码！");
+			mobileNum.removeClass('m-member-orange');
+			mobileCap.addClass('m-member-orange');
+			flag=false;
+		}
+	};
+	//手机格式验证
+	if(numValue!="" && codeValue!=""){
+		//手机格式错误
+		if( $.trim(numValue).match(phone) == null ){
+			error("请您输入正确的手机号！");
+			mobileNum.addClass('m-member-orange');
+			mobileCap.removeClass('m-member-orange');
+			flag=false;
+		}
+	};
+	
+	//判断是否发送
+	if(!flag){
+		return false;
+	}else{
+		$('#mobile_number').removeClass('m-member-orange');
+		$('#mobile_captcha').removeClass('m-member-orange');
+		$('input#activity_mobile_submit').val('发送中...');
+	}
+	
+	
+	//发送成功
+	//发送失败（超过次数）
+});
+	
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>车系详情_首页信息</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/component/carStyle.css" rel="stylesheet">    
+    <link href="../jslib/tipsy/tipsy.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="c-container">
+     <div class="c-modelInfo">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="c-modelInfo-table01 line f-14">
+          <tr>
+            <td width="310">经销商报价：<b class="f-20 clr-red">17.98 <span class="clr-black">-</span> 26.80</b> 万元</td>
+            <td width="250"><span class="pr">厂商指导价： <b>21.55 - 28.80</b> 万元 <a href="#" class="modelIco ico01" target="_blank"></a></span></td>
+            <td><a href="#" class="clr-orange" target="_blank"><b>金融方案 &gt;&gt;</b></a></td>
+            <td align="right"><a href="#" class="clr-blue"><b>详细配置参数 &gt;&gt;</b></a></td>
+          </tr>
+        </table>
+
+        <dl class="fl c-modelInfo-oil">
+          <dt><span class="modelIco ico02">油耗</span></dt>
+          <dd><b class="f-18">6.9 -7.8 L</b> /100km</dd>
+        </dl>
+        <dl class="fl c-modelInfo-output">
+          <dt><span class="modelIco ico03">排量</span></dt>
+          <dd class="clr-gray9"><b class="f-18 clr-gray3">1.6L</b> <span class="clr-borgray">|</span> <b class="f-18 clr-gray3">1.8L</b> <span class="clr-borgray">|</span> <b class="f-18 clr-gray3">1.6L</b> <span class="clr-borgray">|</span> <b class="f-18 clr-gray3">1.8L</b></dd>
+        </dl>
+        <div class="fl pdt-15">
+          <table width="475" border="0" cellspacing="0" cellpadding="0" class="c-modelInfo-table02">
+          <tr>
+            <td width="60" height="30" align="right">变速箱：</td>
+            <td width="210"><b>手动</b><span class="clr-borgray">|</span><b>自动</b><span class="clr-borgray">|</span><b>手自一体</b></td>
+            <td width="205">类型级别：<b>SUV</b></td>
+          </tr>
+          <tr>
+            <td align="right"><span class="fr">颜色：</span></td>
+            <td colspan="2">
+              <img src="../images/temp/modelcolPic01.png" class="fl pdr-10" alt="" original-title="象牙白" />
+              <img src="../images/temp/modelcolPic02.png" class="fl pdr-10" alt="" original-title="黑色" />
+              <img src="../images/temp/modelcolPic03.png" class="fl pdr-10" alt="" original-title="深蓝" />
+              <img src="../images/temp/modelcolPic04.png" class="fl pdr-10" alt="" original-title="褐色" />
+              <img src="../images/temp/modelcolPic05.png" class="fl pdr-10" alt="" original-title="浅金色" />
+              <img src="../images/temp/modelcolPic06.png" class="fl pdr-10" alt="" original-title="墨绿" />
+              <img src="../images/temp/modelcolPic07.png" class="fl pdr-10" alt="" original-title="浅蓝" />
+              <img src="../images/temp/modelcolPic08.png" class="fl pdr-10" alt="" original-title="深红" />
+              <img src="../images/temp/modelcolPic09.png" class="fl pdr-10" alt="" original-title="紫色" />
+              <img src="../images/temp/modelcolPic10.png" class="fl pdr-10" alt="" original-title="金色" />
+            </td>
+          </tr>
+        </table>
+        </div>
+        <div class="clear"></div>
+     </div>
+  </div>
+  <script type="text/javascript" src="../jslib/jquery_1_8_3.min.js"></script>
+  <script type="text/javascript" src="../jslib/tipsy/tipsy.js"></script>
+  <script>
+    $(function(){
+	    $('.c-modelInfo img[original-title]').tipsy({trigger: 'hover',fade: true, gravity: 's',opacity: '0.8'});
+	 	$('.c-modelInfo img[original-title]').hover(function() {
+	 		$(' img[original-title]').tipsy({trigger: 'hover',fade: true, gravity: 's',opacity: '0.8'});
+	 	});
+    });
+  </script>
+</body>
+</html>

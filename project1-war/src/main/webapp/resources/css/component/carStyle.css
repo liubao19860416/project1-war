@@ -1,0 +1,320 @@
+/*
+ * @description:;
+ * @author:roseying;
+ * @data:20131113;
+*/
+/*setting*/
+.c-container{width:960px; margin:0 auto;}
+.pdt-15{padding-top:15px;}
+.pdt-8{padding-top:8px;}
+.pdb-8{padding-bottom:8px;}
+.pdb-5{padding-bottom:5px;}
+.pdb-15{padding-bottom:15px;}
+.w700{width:700px;}
+.w240{width:240px;}
+.w244 {width:244px;}
+
+/*_modelNav*/
+    .c-modelNav-logo{width:300px; font:20px/50px 'microsoft yahei'; color:#353535;overflow: hidden;white-space: nowrap}
+    .c-modelNav-logo:hover{text-decoration: none;}
+    .c-modelNav-logo img{padding:0 15px 0 10px;}
+    .c-modelNav-logo .logo-l{margin:0 15px 0 10px}
+    .c-modelNav>ul{width:660px; height:100%; background:#3f67c0;}
+    .c-modelNav>ul>li{float:left; height:100%;}
+    .c-modelNav>ul>li>a{display:block; padding:0 35px; font:16px/50px 'microsoft yahei'; color:#fff;}
+    .c-modelNav>ul>li>a.current{background:#003071;}
+    .c-modelNav>ul>li>a:hover{text-decoration:underline; /*background:#003071;*/}
+/*_modelInfo*/
+.modelIco{background-image:url(../../images/model_ico001.png); background-repeat:no-repeat;}
+.ico01{display:inline-block; position:absolute; top:2px; right:-16px; width:16px;height:16px; background:url(../../images/sprites.png) no-repeat;background-position:-3px -4px;}
+.ico01:hover{ background:url(../../images/sprites.png) no-repeat;background-position: -3px -20px}
+.c-modelInfo{padding:10px 0 10px 24px; border:1px solid #bfbfbf; border-bottom-width:2px;}
+   .c-modelInfo .line{border-bottom:1px solid #c7c7c7;}
+   .c-modelInfo-table01 {margin-right:24px;display: block;width:auto;table-layout: fixed}
+   .c-modelInfo-table01 td{height:45px; padding:0 15px; line-height:45px;}
+   .c-modelInfo-table01 .clr-orange{color:#ff8e42;}
+   .c-modelInfo-table01 .clr-blue{color:#3f67c0;}
+   .c-modelInfo-table01 .clr-red{color: #D70000;}
+   .c-modelInfo-table01 .clr-black{color: #000;}
+   .c-modelInfo-oil, .c-modelInfo-output{height:70px; padding:10px 0px 0 0; margin:10px 0px 0 0; background:url(../../images/line001.png) no-repeat right center;text-align:center}
+   .c-modelInfo-oil{width:194px;}
+   .c-modelInfo-output{width: 236px}
+   .c-modelInfo-oil>dt, .c-modelInfo-output>dt{text-align:center; padding:0 0 8px; }
+   .c-modelInfo-oil>dt>span, .c-modelInfo-output>dt>span{display:inline-block; height:30px; font:bold 16px/30px 'microsoft yahei'; color:#000;}
+   .c-modelInfo-oil>dt>span.ico02{padding:0 0 0 50px;background-position:0 -32px;}  
+   .c-modelInfo-output>dt>span.ico03{padding:0 0 0 50px;background-position:0 -75px;}
+   .c-modelInfo-table02{margin-left:10px}
+   .c-modelInfo-table02 td{padding:5px; word-break: break-all; word-wrap:break-word;font-weight:bold;}
+   .c-modelInfo-table02 img{width:28px; height:13px; border:1px solid #c7c7c7; padding-right:0; margin-right:10px;}
+   .c-modelInfo-table02 img:hover{border:1px solid #ff8e42;}
+   .c-modelInfo .clr-borgray{color:#c7c7c7;}
+   .c-modelInfo-table02 .clr-borgray{display:inline-block; margin:0 12px;}
+   /* added by cd */
+  /* 左右小箭头 */
+
+.c-modelInfo .triangle-l {
+	border-right-color: #545454;
+	position: static;
+	border-width: 5px 10px 5px 0;
+	margin-right: 15px;
+	margin-top: 3px;
+}
+
+.c-modelInfo .triangle-l:hover {
+	border-right-color: #ababab;
+}
+
+.c-modelInfo .triangle-l.disable {
+	visibility: hidden;
+	border-right-color: #ababab;
+}
+
+.c-modelInfo .triangle-l.disable:hover {
+	visibility: hidden;
+	border-right-color: #ababab;
+}
+
+.c-modelInfo .triangle-r {
+	border-left-color: #545454;
+	position: static;
+	border-width: 5px 0 5px 10px;
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+.c-modelInfo .triangle-r:hover {
+	border-left-color: #ababab;
+}
+
+.c-modelInfo .triangle-r.disable {
+	visibility: hidden;
+	border-left-color: #ababab;
+}
+
+.c-modelInfo .triangle-r.disable:hover {
+	visibility: hidden;
+	border-left-color: #ababab;
+}
+
+/* added by CD */
+.c-modelstylelist .btn {width:76px;height:17px;line-height:17px;text-align:center;margin-right:11px;}
+
+.c-modelstylelist .btn-yellow {
+	color: #fff;
+	/*margin-left: 15px;*/
+}
+
+
+/*_modelstylelist*/
+  .c-modelstylelist-table01{width:100%; border:1px solid #c7c7c7; border-top:0;table-layout: fixed;*table-layout:auto}
+  .c-modelstylelist-table01 thead th{height:40px; padding:0 20px; border-bottom:1px solid #c7c7c7; font:16px/40px 'microsoft yahei'; color:#545454; }
+    .c-modelstylelist-table01 thead th .icon{vertical-align:text-top;margin-right:5px}
+  .c-modelstylelist-table01 thead th .ico04{display:inline-block; padding:0 0 0 40px; background-position:0 -116px;}
+  .c-modelstylelist-table01 tbody td{padding:0 15px;  background: #fff;  font:14px/36px 'simsun'; color:#535353;white-space: nowrap;overflow:visible }
+  .c-modelstylelist-table01 td span{white-space: nowrap}
+    .c-modelstylelist-table01 tbody .even td{background:#f6f6f6;}
+  .c-modelstylelist-table01 tbody td.calculator{padding-right:60px}
+   .c-modelstylelist-table01 tbody td.modelname{width: 310px}
+  .c-modelstylelist-table01 .line01{border-right:1px dashed #d3d3d3;}
+  .c-modelstylelist-table01 .clr-red{color:#D70000;}
+  .c-modelstylelist-table01 .ico01{top:-2px; right:-25px;}
+  .c-modelstylelist-table01 a{color:#545454;}
+  .c-modelstylelist-table01 .btn_inq, .c-modelstylelist-table01 .btn_drive, .c-modelstylelist-table01 .btn_argument{display:inline-block; width:64px; height:17px; /*margin:0 12px; */border:0; background:#ff8e42; font:12px/17px 'simsun'; color:#fff; text-align:center; cursor:pointer;}
+  .c-modelstylelist-table01 .btn_drive{width:62px; height:15px; border:1px solid #cfcfcf; background:#e8e8e8; color:#000; line-height:15px;}
+  .c-modelstylelist-table01 .btn_argument{width:auto; border:0; background:none; color:#3c4d7b;}
+  .c-modelstylelist-table01 .btn_inq:hover, .c-modelstylelist-table01 .btn_drive:hover, .c-modelstylelist-table01 .btn_argument:hover{text-decoration:underline;}
+  .c-modelstylelist-table01 .btn_disable{display:inline-block; width:76px; height:17px; margin:0 11px 0 0; border:0; background:#e8e8e8; font:12px/22px 'simsun'; color:#fff; 
+  text-align:center; cursor:default;line-height:17px;}
+
+/*_modelmarketbanner*/
+.c-modelmarketbanner{width:960px; height: 90px;overflow: hidden }
+
+/*_modeldealerlist*/
+.c-modeldealerlist-city{width:698px; border:1px solid #bfbfbf; border-top:0; table-layout: fixed;}
+.c-modeldealerlist-city>li{float:left; width:76px; height:38px; border-top:1px solid #fff; border-right:1px solid #fff; text-align:center; font:14px/38px 'microsoft yahei'; color:#545454; cursor:pointer;}
+.c-modeldealerlist-city>li.cur, .c-modeldealerlist-city li:hover{background:#e8e8e8; font-weight:bold; color:#3f67c0;}
+.c-modeldealerlist-city>li.end{width:82px; border-right:0;}
+.c-modeldealerlist-city>li.disabled,.c-modeldealerlist-city li.disabled:hover{color:#b5b5b5;background:#fff;font-weight: normal;cursor: default}
+.c-modeldealerlist-city>li.cur,.c-modeldealerlist-city>li.cur:hover{background:#e8e8e8; font-weight:bold; }
+.c-modeldealerlist-con{width:340px; height:200px; margin:20px 0 0 0; }
+.c-modeldealerlist-con>dt{height:35px; padding:0 20px 0 10px; background:#ff8e42; font:14px/35px 'simsun'; color:#fff; overflow:hidden;}
+.c-modeldealerlist-con>dt a{color:#fff;}
+.c-modeldealerlist-con>dt a:hover em{text-decoration:none;cursor:pointer;}
+.c-modeldealerlist-con>dd{height:164px; border:1px solid #b0b0b0; border-top:0;}
+.c-modeldealerlist-con>dd .c-mdlc-price{height:34px; padding:0 10px; background:#e8e8e8; font:14px/34px 'microsoft yahei'; color:#1b1b1b; overflow:hidden;}
+                          .c-mdlc-price .clr-red{color: #D70000;}
+.c-modeldealerlist-con>dd .c-mdlc-info{height:25px; padding-left:10px; padding-right:10px; font:12px/25px; color:#000;overflow:hidden;white-space: nowrap;}
+                          .c-mdlc-info .clr-red{color:#a40000;}
+                          .c-mdlc-info .clr-orange{color:#ff8e42;}
+                          .c-mdlc-info .icon-loc{position:absolute; top:0; right:10px;}
+.c-modeldealerlist-con>dd .c-mdlc-info.pr{padding-right: 25px}
+.c-modeldealerlist-con>dd .c-mdlc-link{width:300px; height:38px; margin:0 auto; border-top:1px solid #ababab; text-align:center;}
+                          .c-mdlc-linkprice, .c-mdlc-linkorder{display:inline-block; height:38px; font:12px/38px 'microsoft yahei'; color:#000;}
+                          .c-mdlc-linkprice:hover, .c-mdlc-linkorder:hover{color:#61D0FF}
+                          .c-mdlc-linkprice{padding-left:45px;  background-position:0 -155px; }
+                          .c-mdlc-linkorder{padding-left:45px; background-position:0 -190px;}
+                          .c-mdlc-linkprice:hover{background-position: 0 -253px}
+                          .c-mdlc-linkorder:hover{background-position: 0 -288px}
+                          .c-mdlc-linkline{display:inline-block; height:38px; border-right:1px solid #ababab; margin:0 40px; font:12px/38px 'microsoft yahei';}
+
+/*_modelactivitylist*/
+.c-modelactivitylist>li{margin:20px 0 0; border: 2px solid #fff;}
+                    .c-modelactivitylist-img{display:block; position:relative; width:100%; height:160px; color:#fff; } 
+                    .c-modelactivitylist-imginfo{display:block; position:absolute; left:0; bottom:0;width:220px; padding:3px 10px; background:url(../../images/modelactivitybg.png) repeat; font:14px/18px 'simsun'; z-index:3;}
+                    a:hover .c-modelactivitylist-imginfo{text-decoration:underline;}
+                    .c-modelactivitylist-content{height:95px; padding:5px 10px; border:1px solid #bfbfbf; border-top:0px; background:#e8e8e8; font:14px/24px 'simsun'; color:#000; }
+                    .c-modelactivitylist-content .pdb-8{overflow:hidden; word-spacing:nowrap; height:24px; padding:0; margin:0 0 8px;}                   
+                    .c-modelactivitylist-content .clr-gray3{color:#434343;}
+                    .c-modelactivitylist-content .clr-gray7{color:#707070; line-height:34px; font-size:12px}
+                                                 .btn-signup{display:inline-block; width:100px; height:34px; background:#10965c; font:14px/34px 'micrsosft yahei'; color:#fff; text-align:center;}
+
+.c-modelactivitylist>li:hover{border-color: #3f67c0;}
+
+/*_modelnewslist*/
+.mnlist{padding:20px 0 0;}
+.mnlist>dt{float:left; width:300px; height:200px; padding:20px; background:url(../../images/modelnewslistbg.png) repeat; overflow:hidden;}
+.mnlist>dd{float:right; width:340px;}
+                   .mnlist-tilte{height:56px; margin-top:-5px; font:24px/28px 'microsoft yahei'; overflow:hidden;}
+                   .mnlist-tilte a{color:#3f67c0;} .mnlist-tilte a:hover{text-decoration:underline;}
+                   .mnlist-info{padding:8px 0; height:24px; font:12px/24px 'simsun'; color:#999; white-space:nowrap}
+                   .mnlist-info span{display:inline-block; padding:0 30px 0 5px; background-position:0 -224px;}
+                   .mnlist-info span.modelIco{padding-left:20px}
+                   .mnlist-info a{color:#999;}
+                   .mnlist-content{height:150px; font:12px/22px 'simsun'; color:#535353; overflow:hidden;}
+                   .mnlist-content a{color:#535353; } .mnlist-content a:hover{text-decoration:underline;}
+.c-modelnewslist>li{margin:20px 0 0; border-top:1px dashed #d3d3d3;}
+.c-modelnewslist>li .mnlist>dt{width:210px; height:140px; padding:0; background:none; }
+.c-modelnewslist>li .mnlist>dd{width:100%;}
+.c-modelnewslist>li .mnlist-tilte{height:28px; font-size:16px;}
+.c-modelnewslist>li .mnlist-info{padding:0px 0 10px;}
+.c-modelnewslist>li .mnlist-content{height:85px;}
+
+/*_noticelis*/
+.c-noticelist{width:960px; margin:0 auto;}
+.noticeTil{height:30px; margin:0 0 20px; padding:0 10px 4px 20px; border-bottom:3px solid #000; line-height:30px; font-weight:normal;}
+.noticeMonth{width:91px; height:40px; margin:3px 0 0 5px; background:url(../../images/icon002.png) no-repeat 0 0; font:bold 22px/32px 'microsft yahei'; color:#fff; text-align:center;}
+.noticelist ul{width:100%; padding:20px 0; background:url(../../images/line01.png) repeat-y 52px top;}
+.noticelist ul li{padding:5px 0;}
+  .noticeDay{width:45px; height:24px; margin:10px 0; padding:0 30px 0 0; background:url(../../images/icon003.png) no-repeat 44px bottom; font:14px/24px 'micrsoft yahei'; color:#545454; text-align:center; }
+  .noticeCon{margin:0 0 0 75px; padding:10px 0; font:12px/18px 'simsun'; color:#666; }
+  .noticeContitle{display:block; font:16px/24px 'microsoft yahei'; color:#000; cursor:default;}
+  .noticeContitle a{color:#000;}  
+  .noticeContitle em{font-size:12px; font-family:'simsun';color:#666;}  
+  .noticeCon .noticeCon-text{position:relative; padding:10px 0 5px;}
+  .noticeCon .noticeCon-text .noticePackup{float:right; display:block; margin:15px 0 0; padding-right:15px; background:url(../../images/icon004.png) no-repeat right 6px; font:bold 12px/24px 'simsun'; color:#666; cursor:pointer;}
+.noticelist .noticeMonth.cur{background:url(../../images/icon002.png) no-repeat 0 bottom;}
+.noticelist ul .cur .noticeDay{background:url(../../images/icon003.png) no-repeat 44px top; font-size:16px; color:#000; text-align:left;}
+.noticelist ul .cur .noticeCon{margin:0 0 0 75px; padding:10px; padding:10px; border-top:2px solid #aaa; border-bottom:1px solid #e8e8e8; background:#f7f7f7; font:12px/20px 'simsun'; color:#666; }
+.noticelist ul .cur .noticeCon a{ margin:0 0 10px; font-size:20px;}
+.noticelist ul .cur .noticeContitle em{margin-right:-10px;  target="_blank"font-size:12px; font-family:'simsun';color:#666;}
+.noticelist ul .noticelist-page{margin:40px 0 70px;}
+.noticelist ul li .noticeDay_more{font-size:16px; color:#000; text-align:left;}
+.c-noticelist .breadcrumbs{padding:0 0 15px;}
+/*_activitymarketbanner*/
+.c-activitymarketbanner{ }
+
+/*_activityarea*/
+.modelactivitynav-content{border-left:1px solid #cfcfcf; border-right:1px solid #cfcfcf; border-bottom:2px solid #cfcfcf; background:#f6f6f6;}
+.modelactivitynav-category{font:bold 12px/50px 'simsun';}
+.modelactivitynav-category>dt{float:left; width:90px; height:100%; padding:0 0 0 20px; background:#f0f5ff; color:#000;}
+.modelactivitynav-category>dd a{float:left; margin:10px 25px 0 0; height:27px; padding:0 10px; line-height:27px; color:#3c4d7b;}
+.modelactivitynav-category>dd a.cur{background:#36b5ec; color:#fff;}
+.title-m .f-20{font-size: 20px;}
+.activityarea-title .title-name{font-size:16px}
+.activityarea-title .f-12{display:inline-block; margin-left:25px; line-height:24px; font-family:"simsun"; }
+.avylist-page{padding:30px 0 40px; text-align:right;}
+
+
+
+/* carStyle-tabTop */
+.carStyle-tabMain{ border-bottom:2px solid #ddd;}
+.carStyle-tabMain li{ float: left;}
+.carStyle-tabMain a{ display: block; width:95px; height:35px; line-height:35px; text-align:center; color:#545454; margin-bottom:-2px;}
+.carStyle-tabMain .hover a{ 
+	border:2px solid #ddd; 
+	border-bottom:2px solid #fff; 
+	color:#10965c; 
+	-moz-border-radius:4px 4px 0 0;
+    -khtml-border-radius:4px 4px 0 0;
+    -webkit-border-radius:4px 4px 0 0;
+    border-radius:4px 4px 0 0;
+}
+
+/*品牌首页logo样式*/
+.carStyle-logo-tabSub{border:1px solid #d0d0d0;}
+.carStyle-logo-tabSub li{ float:left; width:69px; height:72px; text-align:center; font-weight:bold; overflow:hidden;}
+.carStyle-logo-tabSub li a{ display:block; width:100%; height:100%; line-height:72px; color:#333; position:relative; *cursor:pointer;}
+.carStyle-logo-tabSub li a:hover{ /*background-color:#36b5ec; color:#fff;*/text-decoration:none}
+.carStyle-logo-tabSub .brand-item-name, .brand-item-mark{display:none; position:absolute; left:0; top:0; width:100%; height:100%;}
+.carStyle-logo-tabSub .brand-item-name{text-align:center; font:14px/72px Microsoft Yahei; color:#fff;}
+.carStyle-logo-tabSub .brand-item-mark{background:#000; opacity:.7; filter:alpha(opacity=70);}
+.carStyle-logo-tabSub a:hover .brand-item-name, a:hover .brand-item-mark{display:block;}
+
+.carStyle-logo-tabSub li.hover{ /*background-color:#36b5ec; color:#fff;*/ position: relative; line-height:72px;}
+	.hover .brand-item-mark-cur{position:absolute; left:0; top:0; width:100%; height:100%; background:#000; opacity:.7; filter:alpha(opacity=70);}
+	.hover .brand-item-name-cur{text-align:center; font:14px/72px Microsoft Yahei; color:#fff; position:absolute; top: 0; left:0; width:100%; display:block;}
+.carStyle-logo-tabSub li.hover a.brand-item-close{display:none; padding-top:0; position:absolute; top:0; right:1px; z-index:9; width:15px; height:15px; line-height: 15px; text-align:center; color:#fff;}
+.carStyle-logo-tabSub li.hover a.brand-item-close{display:block;}
+
+.carStyle-logo-tabSub li .caricon{margin-top:14px;}
+.carStyle-logo-tabSub li.hoverlevel{ background-color:#36b5ec; color:#fff;}
+.carStyle-logo-tabSub li.hoverlevel .caricon{ padding-top:5px;}
+.carStyle-logo-tabSub li.word{ line-height:67px;}
+.carStyle-logo-tabSub li.word a{ height:72px; padding-top:0px;}
+.carStyle-logo-tabSub li.hover a{color:#fff;}
+.carStyle-logo-tabSub li.t_first a{height:56px;line-height:20px;padding:16px 20px 0;width:34px;}
+.carStyle-logo-tabSub li.t_first{width:74px;}
+.carStyle-logo-tabSub li.last{width:77px;}
+
+
+/* carStyle-tabSub */
+.carStyle-tabSub li { float: left; width: 77px; height: 72px; margin-right: -1px; border: 1px solid #d0d0d0; background-color: #ebebeb; text-align: center; font-weight: bold; overflow: hidden }
+.carStyle-tabSub li a { display: block; width: 77px; height: 67px; padding-top: 5px; color: #333 }
+.carStyle-tabSub li a:hover { background-color: #36b5ec; color: #fff; text-decoration: none }
+.carStyle-tabSub li.hover { background-color: #36b5ec; color: #fff }
+.carStyle-tabSub li.hover i { margin-top: 5px }
+.carStyle-tabSub li .caricon { margin-top: 14px }
+.carStyle-tabSub li.hoverlevel { background-color: #36b5ec; color: #fff }
+.carStyle-tabSub li.hoverlevel .caricon { padding-top: 5px }
+.carStyle-tabSub li.word { line-height: 67px }
+.carStyle-tabSub li.word a { height: 72px; padding-top: 0 }
+.carStyle-tabSub li.hover a { color: #fff }
+.carStyle-tabSub li.t_first a { height: 56px; line-height: 20px; padding: 16px 20px 0; width: 34px }
+.carStyle-tabSub li.t_first { width: 74px }
+
+/* carStyle-tabSub-size */
+.carStyle-tabSub-size li{width:76px;}
+.carStyle-tabSub-size li.last{width:82px;}
+.carStyle-tabSub-size li{position:relative;}
+.carStyle-tabSub-size li a:hover, .carStyle-tabSub-size li.hoverlevel a:hover{color:#333;}
+.carStyle-tabSub-size li.hoverlevel a.size-item-close{display:none; padding-top:0; position:absolute; top:0; right:1px; z-index:9; width:15px; height:15px; line-height: 15px; text-align:center; color:#fff;}
+.carStyle-tabSub-size li.hoverlevel a.size-item-close{display:block;}
+.carStyle-tabSub-size li a{width:100%;}
+
+/*.tp_eidt li{width:88px;}
+.tp_eidt li a{width:88px;}*/
+/*
+ * @description:dealer component ;
+ * @author:roseying;
+ * @data:20131127;
+*/
+/*dealernewslist*/
+.c-dealernewslist>li{margin:0 0 20px; border-bottom:1px dashed #d3d3d3;}
+.c-dealernewslist>li .mnlist{padding:0 0 20px;}
+.c-dealernewslist>li .mnlist>dt{width:210px; height:140px; padding:0; background:none; }
+.c-dealernewslist>li .mnlist>dd{width:480px;}
+.c-dealernewslist>li .mnlist-tilte{height:28px; font-size:16px;}
+.c-dealernewslist>li .mnlist-tilte a{color:#3d64c3;}
+.c-dealernewslist>li .mnlist-info{padding:0px 0 10px;}
+.c-dealernewslist>li .mnlist-content{height:85px;}
+
+.c-dealerpage{margin-top:35px;}
+.text-c img{vertical-align: text-bottom;}
+
+/**fix by dong yuanyuan 2014-3-17**/
+.va-imgs{vertical-align:-3px;}
+/**fix by dong yuanyuan 2014-3-19**/
+.num-font{font-family:tahoma,arial,\5b8b\4f53}
+.title-model .mt-n6{margin-top: -5px;*margin-top:0px; height:40px;}
+
+.nofloat>dd{float:none !important; width:100%;}

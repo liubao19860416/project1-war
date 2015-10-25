@@ -1,0 +1,36 @@
+.tipsy { padding: 5px; font-size: 13px; position: absolute;z-index:112}
+.tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 250px; text-align: left; }
+.tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px;overflow:hidden; }
+.tipsy-arrow { position: absolute; background: url('../tipsy/black.gif') no-repeat top left; width: 9px; height: 5px; }
+.tipsy-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+.tipsy-nw .tipsy-arrow { top: 0; left: 10px; }
+.tipsy-ne .tipsy-arrow { top: 0; right: 10px; }
+.tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+.tipsy-e .tipsy-arrow,.tipsy-es .tipsy-arrow,.tipsy-en .tipsy-arrow { top: 50%; margin-top: -4px; right: 0; width: 5px; height: 9px; background-position: top right; }
+.tipsy-es .tipsy-arrow{bottom:15px;top:auto}
+.tipsy-en .tipsy-arrow{top:15px}
+.tipsy-w .tipsy-arrow,.tipsy-ws .tipsy-arrow ,.tipsy-wn .tipsy-arrow  { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+.tipsy-ws .tipsy-arrow{bottom:15px;top: auto}
+.tipsy-wn .tipsy-arrow{top:15px}
+
+.tipsy-red { padding: 5px; font-size: 13px; position: absolute;z-index:112}
+.tipsy-red .tipsy-inner { padding: 5px 8px 4px 8px; background-color: #fef1e1; color: #333; max-width: 250px; text-align: left; border:1px solid #ff8e42}
+.tipsy-red .tipsy-inner { overflow:hidden; z-index: 1}
+.tipsy-red .tipsy-arrow { position: absolute; background: url('../tipsy/red.gif') no-repeat top left; width: 9px; height: 5px;z-index: 2 }
+.tipsy-red-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+.tipsy-red-nw .tipsy-arrow { top: 0; left: 10px; }
+.tipsy-red-ne .tipsy-arrow { top: 0; right: 10px; }
+.tipsy-red-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+.tipsy-red-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+.tipsy-red-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+.tipsy-red-e .tipsy-arrow,.tipsy-red-es .tipsy-arrow,.tipsy-red-en .tipsy-arrow { top: 50%; margin-top: -4px; right: 1px; width: 5px; height: 9px; background-position: top right; }
+.tipsy-red-es .tipsy-arrow{bottom:15px;top:auto}
+.tipsy-red-en .tipsy-arrow{top:15px}
+.tipsy-red-w .tipsy-arrow,.tipsy-red-ws .tipsy-arrow ,.tipsy-red-wn .tipsy-arrow  { top: 50%; margin-top: -4px; left: 1px; width: 5px; height: 9px; }
+.tipsy-red-ws .tipsy-arrow{bottom:15px;top: auto}
+.tipsy-red-wn .tipsy-arrow{top:15px}
+
+
+.textMess.textMess_bd,.textMess_bd{border:#ffbe40 solid 1px;}

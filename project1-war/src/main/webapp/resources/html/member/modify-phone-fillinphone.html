@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>修改手机--填写手机号获取验证码</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../../css/member/reset.css" rel="stylesheet">	
+    <link href="../../css/member/common.css" rel="stylesheet">
+    <link href="../../css/member/passwords.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+</head>
+
+<body>
+<div class="flowsteps">
+     <ol class="num">
+    <li class="befourline"></li>
+    <li class="first done"><span><i>1</i><em>身份验证</em></span></li><li class="current"><span><i>2</i><em>设置新手机号</em></span></li><li class="last"><span><i>3</i><em>完成</em></span></li><li class="afterline"></li>
+  </ol>
+  </div>
+<div class="revisecont">
+  <div class="revise">
+     <div class="verify-inpt">
+			<div class="tabtxt">
+				<form id="fillphone">
+				<div class="mobile">
+					<ul>
+						<li class="mb-10"><label>手机号：</label><input class="m-member" name="" value="" validate="phone" rel-required="true"><!--<span class="m-notice m-err"><i></i><span>手机格式有误！</span></span>--></li>
+						<li class="mb-46"><label>&nbsp;</label><span class="getcode f-yahei">获取验证码</span><!--<span class="getcode getcode-gray f-yahei">60秒后再次发送</span>--></li>
+						<li class="mb-46"><label>验证码：</label><input class="m-member" name="" value="" validate="yzm" rel-required="true"><!--<span class="m-notice m-err"><i></i><span>验证码错误！</span></span>--></li>
+						<li><label>&nbsp;</label><input class="btn zt" name="" type="submit" id="button" value="提  交"></li>
+					</ul>
+				</div>
+				</form>
+			</div>
+            <p class="customer">如果遇到问题，您可以直接致电客服4008-020-666</p>
+		</div>
+  </div>
+</div>
+
+<script src="../../js/component/ECar.tab.js"></script>
+<script src="../../js/validate.js"></script>
+<script type="text/javascript" src="../../js/verify.js"></script>
+<script>
+$(function(){
+
+    ECar.validate.init({
+      formid:'fillphone',
+      config:{
+          'phone':{
+            'empty':'请输入您的手机号！',
+            'err':'手机格式有误！'
+           }
+       }
+    });
+
+
+    $('input#submit').click(function(){
+    	return ECar.validate.init.submit('fillphone');
+    });
+    
+    ECar.validate.init({
+      formid:'fillphone',
+      config:{
+          'yzm':{
+            'empty':'请输入您的验证码！',
+            'err':'验证码错误！'
+           }
+       }
+    });
+
+
+    $('input#submit').click(function(){
+    	return ECar.validate.init.submit('fillphone');
+    });
+
+})
+</script>
+
+</body>
+</html>

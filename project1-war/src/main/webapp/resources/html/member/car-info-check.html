@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>填写车主认证信息</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/component/form.css" rel="stylesheet" />
+<link href="../../css/member/car-info.css" rel="stylesheet" />
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../../js/header.js"></script>
+<script>var base="/saic-ebiz-web-front";</script>
+</head>
+<body>
+
+<div style="width:780px;margin:0px auto">
+  
+	<div class="member carinfo-check">
+		<h3>填写车主车辆认证信息</h3>
+		<div class="member-box">
+			<form id="authenticationForm" action="" method="post" autocomplete="off">
+				<div class="form-item form-item-brand">
+					<span class="form-item-label">
+						<i>*</i>
+						<label>品牌：</label>
+					</span>
+					<div id="brandList" class="brand-list clearfix">
+						<span class="brand-check"><i class="logo-s logo-vw"></i><em>大众</em></span>
+					</div>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">车系：</label>
+					</span>
+					<strong class="car-info-item">君越</strong>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">车型：</label>
+					</span>
+					<strong class="car-info-item">2014款***乞丐版</strong>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">车主姓名：</label>
+					</span>
+					<strong class="car-info-item">张三风</strong>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">车主手机：</label>
+					</span>
+					<strong class="car-info-item">139****5562</strong>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">VIN码：</label>
+					</span>
+					<strong class="car-info-item">SSG42342874216</strong>
+					<div id="vinTips" class="vin-tips">
+						<a href="javascript:void(0);">什么是vin码</a>
+						<div class="vin-drop">
+							<i class="triangle"></i>
+							<img src="../../images/about_02.jpg" width="441" height="332" alt="什么是VIN码" />
+						</div>
+					</div>
+				</div>
+				<div class="form-item">
+					<input id="authenticationBtn" type="submit" class="btn" name="" value="提交信息">
+				</div>
+			</form>
+		</div>
+	</div>	
+
+</div>
+<script src="../../js/component/ECar.imitatescroll.js" type="text/javascript"></script>
+<script src="../../js/component/ECar.uiform.js" type="text/javascript"></script>
+<script src="../../js/carInfoSubmit.js" type="text/javascript"></script>
+</body>
+</html>

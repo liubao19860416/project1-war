@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>编辑个人信息</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/member/user-info.css" rel="stylesheet" />
+</head>
+<body>
+
+<div style="width:780px; margin:0 auto;">
+
+<div class="member user-info">
+	<h3>编辑个人资料</h3>
+	<ul id="tab" class="info-tab">
+		<li rel="#one" class="one hover"><i class="triangle info-triangle triangle-r">&nbsp;</i>基本信息</li>
+		<li rel="#two" class="two"><a href="javascript:void(0);"><i class="triangle info-triangle triangle-r hide">&nbsp;</i>家庭工作情况</a></li>
+		<li rel="#three" class="three"><a href="javaScript:void(0);"><i class="triangle info-triangle triangle-r hide">&nbsp;</i>更多其他信息</a></li>
+	</ul>
+	<!-- 基本信息 -->
+	<form id="bascInfo">
+	<table id="one" class="info-table f-14" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="l40 text-r">&nbsp;</td>
+			<td class="l40">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="text-r" width="145"><span class="clr-orange">*</span>&nbsp;真实姓名：</td>
+			<td><input type="text" validate="realname" rel-required="true" value="" class="m-member m-user"><span class="txt m-notice m-user-tip">输入中英文</span></td>
+		</tr>
+		<tr>
+			<td class="text-r">昵称：</td>
+			<td><input type="text" validate="nickname" value="" class="m-member m-user"></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;性别：</td>
+			<td groupvalidate="radio@sex"><input type="radio" name="radio01" value=""/>&nbsp;&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio01" value="" />&nbsp;&nbsp;女</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;出生日期：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select">1990<i class="triangle triangle-t"></i></div>&nbsp;&nbsp;年&nbsp;&nbsp;
+					<ul class="user-select-list hide">
+						<li>1991</li>
+						<li>1992</li>
+						<li>1993</li>
+						<li>1994</li>
+						<li>1995</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select">05<i class="triangle triangle-t"></i></div>&nbsp;&nbsp;月&nbsp;&nbsp;
+					<ul class="user-select-list hide">
+						<li>06</li>
+						<li>07</li>
+						<li>08</li>
+						<li>09</li>
+						<li>10</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select">05<i class="triangle triangle-t"></i></div>&nbsp;&nbsp;日&nbsp;&nbsp;
+					<ul class="user-select-list hide">
+						<li>06</li>
+						<li>07</li>
+						<li>08</li>
+						<li>09</li>
+						<li>10</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;证件号码：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">身份证<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list" style="width:93px;">
+						<li class="hover">驾驶证</li>
+						<li>军官证</li>
+						<li>其他</li>
+					</ul>
+				</div>
+				<input type="text" validate="cardnum" depend="cardtype" rel-required="true" value="" class="m-member m-user" style="width:185px;"><span class="txt m-notice m-user-tip">输入中英文</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;手机号码：</td>
+			<td><input type="text" rel-required="true" validate="phone" value="" class="m-member m-user" style="width:290px;"><span class="txt m-notice m-user-tip">输入中英文</span></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;邮箱账号：</td>
+			<td><input type="text" validate="email" rel-required="true" value="" class="m-member m-user" style="width:290px;"><span class="txt m-notice m-user-tip">输入中英文</span></td>
+		</tr>
+		<tr>
+			<td class="text-r">所在地：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">省<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>江苏省</li>
+						<li>海南省</li>
+						<li>江西省</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">市<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>杭州市</li>
+						<li>杭州市</li>
+						<li>杭州市</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">县<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>自治县</li>
+						<li>自治县</li>
+						<li>自治县</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;详细地址：</td>
+			<td><input type="text" validate="address" rel-required="true" value="" class="m-member m-user" style="width:290px;"><span class="txt m-notice m-user-tip">输入中英文</span></td>
+		</tr>
+		<tr>
+			<td class="text-r">邮政编码：</td>
+			<td><input type="text" validate="postalcode" maxlength="6" value="" class="m-member m-user" style="width:290px;"></td>
+		</tr>
+		<tr>
+			<td class="text-r">&nbsp;</td>
+			<td><input id="bascInfoBtn" type="button" value="保 存" name="" class="btn">&nbsp;&nbsp;&nbsp;&nbsp;保存成功！</td>
+		</tr>
+		<tr>
+			<td class="l15 text-r">&nbsp;</td>
+			<td class="l15">&nbsp;</td>
+		</tr>
+	</table>		
+
+	</form>
+
+	
+	<!-- 基本信息2 -->
+	<table class="info-table f-14 info-word" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="l40 text-r">&nbsp;</td>
+			<td class="l40">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="text-r" width="145"><span class="clr-orange">*</span>&nbsp;真实姓名：</td>
+			<td><strong>张三</strong></td>
+		</tr>
+		<tr>
+			<td class="text-r">昵称：</td>
+			<td><input type="text" value="" class="m-member m-user"></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;性别：</td>
+			<td><strong>男</strong></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;出生日期：</td>
+			<td><strong>1990&nbsp;&nbsp;年&nbsp;&nbsp;10&nbsp;&nbsp;月&nbsp;&nbsp;10&nbsp;&nbsp;日</strong></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;证件号码：</td>
+			<td>
+				<strong>身份证&nbsp;&nbsp;&nbsp;&nbsp;11111111111111</strong>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;手机号码：</td>
+			<td><input type="text" value="" class="m-member m-user" style="width:290px;">&nbsp;&nbsp;<a href="#" title="立即绑定" class="link f-12">立即绑定</a></td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;邮箱账号：</td>
+			<td><strong class="dsp-ib" style="width:308px;">123@123.com</strong>&nbsp;&nbsp;<a href="#" title="修改邮箱" class="link f-12">修改邮箱</a></td>
+		</tr>
+		<tr>
+			<td class="text-r">所在地：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">省<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>江苏省</li>
+						<li>海南省</li>
+						<li>江西省</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">市<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>杭州市</li>
+						<li>杭州市</li>
+						<li>杭州市</li>
+					</ul>
+				</div>
+				<div class="user-select-block">
+					<div class="user-select" style="width:78px;">县<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list hide" style="width:78px;">
+						<li>自治县</li>
+						<li>自治县</li>
+						<li>自治县</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r"><span class="clr-orange">*</span>&nbsp;详细地址：</td>
+			<td><input type="text" value="" class="m-member m-user" style="width:290px;"><span class="m-notice m-user-tip"><i></i><span>输入中英文</span></span><span class="m-notice m-err m-user-tip"><i></i><span>输入有误</span></span></td>
+		</tr>
+		<tr>
+			<td class="text-r">邮政编码：</td>
+			<td><input type="text" value="" class="m-member m-user" style="width:290px;"></td>
+		</tr>
+		<tr>
+			<td class="text-r">&nbsp;</td>
+			<td><input type="button" value="保 存" name="" class="btn">&nbsp;&nbsp;&nbsp;&nbsp;保存成功！</td>
+		</tr>
+		<tr>
+			<td class="l15 text-r">&nbsp;</td>
+			<td class="l15">&nbsp;</td>
+		</tr>
+	</table>
+	
+	
+	<!-- 家庭工作情况 -->
+	<table id="two" class="info-table f-14 hide" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="l40 text-r">&nbsp;</td>
+			<td class="l40">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="text-r" width="145">婚姻状况：</td>
+			<td>
+				<input type="radio" name="radio02" value="" checked />&nbsp;&nbsp;未婚&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio02" value="" />&nbsp;&nbsp;已婚&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio02" value="" />&nbsp;&nbsp;保密
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r">小孩年龄：</td>
+			<td>
+				<input type="checkbox" name="" value="" checked />&nbsp;&nbsp;无&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="" value="" />&nbsp;&nbsp;0-3岁&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="" value="" />&nbsp;&nbsp;4-6岁&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="" value="" />&nbsp;&nbsp;7-12岁&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" name="" value="" />&nbsp;&nbsp;12-18岁
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r">行业类别：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select" style="width:261px;">行业类别<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list" style="width:276px;">
+						<li>行业类别名称</li>
+						<li>行业类别名称</li>
+						<li>行业类别名称</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r">单位名称：</td>
+			<td><input type="text" value="" class="m-member m-user"></td>
+		</tr>
+		<tr>
+			<td class="text-r">职业：</td>
+			<td><input type="text" value="" class="m-member m-user"></td>
+		</tr>
+		<tr>
+			<td class="text-r">职务：</td>
+			<td><input type="text" value="" class="m-member m-user"></td>
+		</tr>
+		<tr>
+			<td class="text-r">个人月收入：</td>
+			<td>
+				<div class="user-select-block">
+					<div class="user-select user-select-seamless" style="width:261px;">请选择<i class="triangle triangle-t"></i></div>
+					<ul class="user-select-list" style="width:276px;">
+						<li>个人月收入</li>
+						<li>个人月收入</li>
+						<li>个人月收入</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r">教育程度：</td>
+			<td>
+				<input type="radio" name="radio03" value="" checked />&nbsp;&nbsp;博士&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio03" value="" />&nbsp;&nbsp;硕士&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio03" value="" />&nbsp;&nbsp;本科&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio03" value="" />&nbsp;&nbsp;专科&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio03" value="" />&nbsp;&nbsp;高中&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio03" value="" />&nbsp;&nbsp;高中以下
+			</td>
+		</tr>
+		<tr>
+			<td class="text-r">兴趣爱好：</td>
+			<td><input type="text" value="" class="m-member m-user"><span class="m-notice m-user-tip"><i></i><span>输入中英文</span></span></td>
+		</tr>
+		<tr>
+			<td class="text-r">&nbsp;</td>
+			<td><input type="button" value="保 存" name="" class="btn">&nbsp;&nbsp;&nbsp;&nbsp;保存成功！</td>
+		</tr>
+		<tr>
+			<td class="l15 text-r">&nbsp;</td>
+			<td class="l15">&nbsp;</td>
+		</tr>
+	</table>
+	
+	
+	<!-- 更多其他信息 -->
+	<form id="more" action="">
+		<table id="three" class="info-table f-14 hide" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="l40 text-r">&nbsp;</td>
+				<td class="l40">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="text-r" width="145">开户银行名称：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">开户银行省市：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">开户银行账号：</td>
+				<td><input type="text" value="" class="m-member m-user" maxlength="50"></td>
+			</tr>
+			<tr>
+				<td class="text-r">开户人名称：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">传真号：</td>
+				<td><input type="text" value="" validate="istel" rel-required="true" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">QQ号：</td>
+				<td><input type="text" validate="qq" rel-required="true" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">个人网站：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">微博帐号：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">微信帐号：</td>
+				<td><input type="text" value="" class="m-member m-user"></td>
+			</tr>
+			<tr>
+				<td class="text-r">&nbsp;</td>
+				<td><input id="moreBtn" type="button" value="保 存" name="" class="btn">&nbsp;&nbsp;&nbsp;&nbsp;保存成功！</td>
+			</tr>
+			<tr>
+				<td class="l15 text-r">&nbsp;</td>
+				<td class="l15">&nbsp;</td>
+			</tr>
+		</table>
+	
+	</form>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script src="../../js/component/ECar.tab.js"></script>
+<script src="../../js/validate.js"></script>
+<script type="text/javascript">
+ECar.tab({
+	selector : "#tab",
+	selected:"hover"
+});
+
+$(function(){
+	$('.user-select-list').hide();
+
+	$('.user-select').hover(function() {
+		$(this).next().show();
+	}, function() {
+		$(this).next().hide();
+	});
+
+	$('.user-select-list li').hover(function() {
+		$(this).addClass('hover')
+	}, function() {
+		$(this).removeClass('hover')
+	});
+
+	$('.user-select-list').hover(function() {
+		$(this).show();
+	}, function() {
+		$(this).hide();
+	});
+
+
+	bascInfoBtn
+
+
+
+	ECar.validate.init({
+		formid:'bascInfo'
+	});
+
+	$('#bascInfoBtn').live('click',function(){
+		//console.info(ECar.validate.init.submit('more'));
+		return ECar.validate.init.submit('bascInfo');	
+	});
+
+	//其他更多信息
+	ECar.validate.init({
+		formid:'more'
+	});
+	
+	$('#moreBtn').live('click',function(){
+		//console.info(ECar.validate.init.submit('more'));
+		return ECar.validate.init.submit('more');	
+	});
+})
+</script>
+
+</body>
+</html>

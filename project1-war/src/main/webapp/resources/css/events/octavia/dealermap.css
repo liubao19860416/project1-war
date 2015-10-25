@@ -1,0 +1,76 @@
+.dealer-main {
+	border: 1px solid #ababab;
+	border-color:#ababab #fff;
+	height: 465px;
+}
+.dealer-list {
+	width: 238px;
+	float: left;
+	height: 465px
+}
+.dealer-area {
+	height: 38px;
+	background-color: #cfcfcf;
+	padding: 12px 0 0 20px
+}
+.dealer-list-content {
+	height: 415px;
+	overflow: hidden;
+}
+.dealer-list-content .scroll-content {
+	padding-right: 18px;
+	width: 220px
+}
+.dealer-list-content-list li {
+	padding: 10px 10px;
+	height: 39px;
+	cursor: pointer;
+}
+.dealer-list-content-list li a {
+	color: #505050;
+	font-weight: bold
+}
+.dealer-list-content-list li.even {
+	background: #e9e8e8
+}
+.dealer-list-content-list li.selected {
+	background: #c3e4f2
+}
+.dealer-list-content-list li.null .icon {
+	float: left;
+	margin: 3px 0 0 10px;
+	vertical-align: middle
+}
+.dealer-list-content-list li.null div {
+	margin-left: 45px;
+	padding: 5px 14px 0 0;
+	color: #959595;
+	*float: left;
+	*zoom: 1;
+	*margin-left: 10px
+}
+.dealer-map {
+	padding-left: 238px;
+	height: 100%
+}
+
+.form-select{display:inline-block;*display:inline;*zoom:1;border:solid 1px #999;height: 23px;position: relative;cursor: pointer; font-size: 12px; background: #fff; vertical-align: middle}
+.form-select-handle{color:#000;display:inline-block;zoom:1; line-height:23px; height:23px;padding:0 16px 0 5px}
+.form-select-handle i{position: absolute;right:4px;top:10px;border-style:solid dashed dashed dashed;border-color:transparent;border-top-color:#666;font-size:0;height:0;line-height:0;width:0;border-width:5px 4px 0;vertical-align: middle;}
+.form-select-expand i{border-style:dashed dashed solid dashed;border-width:0 4px 5px;border-color:transparent;border-bottom-color:#666;}
+.form-select-handle span{white-space: nowrap;overflow: hidden;display:block;width:100%}
+.form-select-options{border:1px solid #e4e4e4;background: #fff;position:absolute;left:-1px;top:25px;display:none;z-index: 100}
+.form-select-options-above{bottom:25px; top:auto!important}
+.form-select-options li{line-height:1.2em; padding: 7px 10px}
+.form-select-options ul{width:100%}
+.form-select-options li:hover,.form-select-options li.hover,.form-select-options li.selected{background:#dcdcdc}
+.form-select-options{overflow:hidden}
+.form-select-unselected{color:#999}
+.form-option-selected{background-color: #c3e4f2}
+
+.dealer-area{font-size: 0}
+.sel-area{width:124px}
+.sel-city{background:#545454; border-color:#545454; width:60px}
+.sel-city .form-select-handle{color:#fff; padding-left:10px}
+.sel-city .form-select-handle i{border-top-color:#fff}
+.sel-city .form-select-expand i{border-bottom-color:#fff}

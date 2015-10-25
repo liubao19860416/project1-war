@@ -1,0 +1,611 @@
+/* 娉ㄥ唽淇℃伅 */
+.registerbox{width:900px;margin:40px auto;height:552px;/*border:3px solid #F8F8F8;background:#FDFDFD;*/ padding:0 55px;}
+.registerbox .register-infor{overflow:hidden; /*margin-top:50px;*/}
+.registerbox .register-infor dl{clear:both;overflow:hidden; padding-bottom:46px;}
+.registerbox .register-infor dl dt{float:left;font-size:14px;width:100px;color:#000;text-align:right; margin-right:10px; padding-top:10px;}
+.registerbox .register-infor dl dd{float:left;position:relative;}
+.registerbox .register-infor dl dd .ui-text{border:2px solid #DEDEDE;color:#6B6B6B;float:left;font-size:14px;height:33px;line-height:33px;padding:5px 4px;width:294px;}
+.registerbox .register-infor dl dd .text{width:97px;float:left;}
+.registerbox .register-infor .spacing{margin-right:6px;}
+.item-username {font-size: 12px;margin-bottom: 10px;}
+.item-username .m-notice{margin-left:6px\9;}
+.item-username dt {
+	font-size: 14px;
+}
+.registerbox .register-infor dl dd .label{float:left;}
+.registerbox .register-infor dl dd img{cursor:pointer;float:left;}
+.registerbox .register-infor dl dd .replace{color:#BEC3C7;display:inline-block;float:left; margin-left:15px; padding-top:12px; width:100px;}
+.registerbox .register-infor dl dd .color{color:#3F67C0;}
+.registerbox .register-infor .remember{margin-left:110px;margin-top:-10px;line-height:35px;}
+.registerbox .register-infor .remember .agree{margin-left:5px;color:#6B6B6B;margin-right:10px;}
+.registerbox .register-infor .remember .blue{color:#3A4E7C;}
+.registerbox .register-infor .remember .checkbox{margin-top:3px;border:1px solid #ccc9d4;}
+.registerbox .register-infor .remember .ticks{background:url(../../images/checkbox.png) no-repeat center center;}
+.registerbox .register-infor .registerbut{margin-left:110px;margin-top:20px;*margin-left:55px;}
+.registerbox .register-infor .registerbut .font{font-size:18px;}
+.registerbox .register-infor .pwdline,.pwdline1,.pwdline2,.pwdline3{clear:both;height:18px; padding-top:2px;}
+.registerbox .register-infor .pwds{background:#ddd;border-right:1px solid #FFFFFF;color:#FFFFFF;float:left;height:18px;line-height:18px;overflow:hidden;text-align:center;width:101px; display:block;font-family:"Microsoft Yahei";}
+.registerbox .register-infor .pwdline1 .weak{background:#D70000;}
+.registerbox .register-infor .pwdline1 .general{background:#ddd;}
+.registerbox .register-infor .pwdline1 .strong{background:#ddd;}
+
+.registerbox .register-infor .pwdline2 .weak{background:#ddd;}
+.registerbox .register-infor .pwdline2 .general{background:#ff8e42;}
+.registerbox .register-infor .pwdline2 .strong{background:#ddd;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+
+.registerbox .register-infor .pwdline3 .weak{background:#ddd;}
+.registerbox .register-infor .pwdline3 .general{background:#ddd;}
+.registerbox .register-infor .pwdline3 .strong{background:#36B200;}
+
+.remember span.check{display:inline-block;width:13px;height:13px;border:1px solid #ccc;vertical-align: middle;margin-top:4px;}
+
+
+/* 鐢ㄦ埛娉ㄥ唽鍗忚 */
+.agreement{width:820px;margin:40px auto 0 auto;border:3px solid #f8f8f8;padding:29px 47px 130px;}
+.agreement h1{font:22px "Microsoft Yahei";text-align:center;}
+.agreement .agreement-cont{margin-top:40px;line-height:24px;color:#6b6b6b;}
+.agreement h4{margin: 1.5em 0}
+.agreement p{text-indent: 2em}
+
+.m-notice {max-width: 410px; vertical-align: middle;}
+.yzm, .sms {
+	float:left;
+}
+
+.sms {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#register-infor .btn-disable {
+	cursor: default;
+}
+
+#register-infor .btn-disable:hover {
+	cursor: default;
+	background-color: #bdc3c7;
+}
+
+.btn-capcha {
+	width: 112px;
+	height: 38px;
+	line-height: 38px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* 澶撮儴 #processes */
+#processes, #processes-mobile {
+	width: 970px;
+	margin: 0 auto;
+	/*margin-left: -14px;*/
+}
+
+.process {
+	float: left;
+	position: relative;
+	font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	line-height: 22px;
+	color: #dddddd;
+	width: 161px;
+	padding: 24px 0 24px 67px;
+	border-bottom: 2px solid #d6d6d6;
+	margin-left: 14px;
+}
+
+.process.active {
+	color: #4170c1;
+	border-bottom-color: #4170c1;
+}
+
+.process.spf {
+	padding-left: 82px;
+	width: 146px;
+}
+
+.reg-icon {
+	position: absolute;
+	left: 25px;
+	display: inline-block;
+	background-image: url("../../images/member/sprite.png");
+	vertical-align: middle;
+	line-height: 22px;
+	*display: inline;
+	*zoom: 1;
+}
+
+.reg-icon-person {
+	width: 21px;
+	height: 21px;
+	background-position: 0 -212px;
+	position: absolute;
+	top: 10px;
+	left: 275px;
+}
+
+.reg-icon-lock {
+	width: 19px;
+	height: 23px;
+	background-position: 0 -183px;
+	top: 10px;
+	left: 275px;
+}
+
+.reg-icon-member {
+	width: 27px;
+	height: 31px;
+	background-position: 0 0;
+}
+
+.active .reg-icon-member {
+	background-position: -36px 0;
+}
+
+.reg-icon-mobile {
+	left: 32px;
+	bottom: 15px;
+	width: 26px;
+	height: 39px;
+	background-position: 0 -41px;
+}
+
+.reg-icon-small-mobile {
+	width: 16px;
+	height: 28px;
+	background-position: -31px -212px;
+	position: absolute;
+	left: 380px;
+	top: 10px;
+}
+
+.active .reg-icon-mobile {
+	background-position: -37px -42px;
+}
+
+.reg-icon-certmember {
+	width: 31px;
+	height: 31px;
+	bottom: 15px;
+	background-position: 0 -133px;
+}
+
+.bindmobile {
+	position: relative;
+}
+
+.active .reg-icon-certmember {
+	background-position: -38px -134px;
+}
+
+.reg-icon-vehicle {
+	width: 29px;
+	height: 29px;
+	background-position: 0 -95px;
+}
+
+.active .reg-icon-vehicle {
+	background-position: -38px -95px;
+}
+
+
+
+/* 鎵嬫満娉ㄥ唽娴佺▼ */
+#processes-mobile .process {
+	width: 240px;
+	text-align: center;
+}
+
+#processes-mobile .reg-icon {
+	left: 70px;
+}
+
+/* 灏忎笁瑙�*/
+#processes .reg-icon.reg-icon-tri, #processes-mobile .reg-icon.reg-icon-tri {
+	width: 9px;
+	height: 4px;
+	background-position: -32px -185px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -4px;
+	position: absolute;
+	display: none;
+}
+
+#processes .active .reg-icon.reg-icon-tri, #processes-mobile  .active .reg-icon.reg-icon-tri {
+	display: block;
+}
+
+.tryOthers {
+	margin: 10px 0 0 110px;
+	
+}
+
+.tryOthers .clr-blue {
+	color: #4170C1;
+}
+
+.redstar {
+	color: #E4393C;
+	margin-right: 3px;
+}
+
+
+.register-infor .maininfo {
+	font-weight: bold;
+	font-size: 31px;
+	color: #FF8D41;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.detailInfo {
+	color: #777777;
+	font-size: 14px;
+	width: 770px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+#carinfo-form {
+	font-family: NSimSun;
+	color: #444;
+	overflow: hidden;
+}
+#carinfo-form .tips {
+	position: absolute;
+	display: none;
+	right: 0;
+	bottom: 0;
+}
+
+#carinfo-form .selected .tips {
+	display: block;
+}
+
+#carinfo-form .brand-item {
+	float: left;
+	position: relative;
+}
+#carinfo-form .brand-item {
+	border: 1px solid #fff;
+}
+
+#carinfo-form dd {
+	width: 650px;
+}
+
+#carinfo-form .brand-item.selected {
+	border-color: #d2d2d2;
+}
+#carinfo-form .brand {
+    height: 97px;
+    border-radius: 3px/5px;
+    background: url() left bottom no-repeat;
+    padding-bottom: 3px;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+#carinfo-form .brand-item {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#carinfo-form .brand-item:hover {
+    cursor: pointer
+}
+
+#carinfo-form a.brand-one {
+    width: 95px;
+    height: 97px;
+    position: relative;
+    /*border-right: 1px solid #dcdcdc;*/
+    display: block;
+    background: url() repeat-x
+}
+
+/* logo */
+.icon_logos {
+    background-image:url(../../images/index/new_logos.png);
+    background-repeat:no-repeat;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.index-logo-rw {
+    background-position:0 0;
+    width:38px;
+    height:46px;
+}
+.index-logo-mg{
+    background-position:0 -56px;
+    width:46px;
+    height:45px;
+}
+.index-logo-bk {
+    background-position:0 -111px;
+    width:45px;
+    height:46px;
+}
+.index-logo-clt {
+    background-position:0 -167px;
+    width:70px;
+    height:20px;
+}
+.index-logo-cdl {
+    background-position:0 -197px;
+    width:50px;
+    height:44px;
+}
+.index-logo-vw {
+    background-position:0 -251px;
+    width:49px;
+    height:47px;
+}
+.index-logo-skd {
+    background-position:0 -308px;
+    width:49px;
+    height:49px;
+}
+.index-logo-wl {
+    background-position:0 -365px;
+    width:62px;
+    height:33px;
+}
+.index-logo-bj {
+    background-position:0 -408px;
+    width:39px;
+    height:45px;
+}
+.index-logo-dt {
+    background-position:0 -463px;
+    width:56px;
+    height:34px;
+}
+
+.index-logo-roewe {
+    background-position:0 0;
+    width:38px;
+    height:46px;
+}
+.index-logo-mg{
+    background-position:0 -56px;
+    width:46px;
+    height:45px;
+}
+.index-logo-buick {
+    background-position:0 -111px;
+    width:45px;
+    height:46px;
+}
+.index-logo-chevrolet {
+    background-position:0 -167px;
+    width:70px;
+    height:20px;
+}
+.index-logo-cadillac {
+    background-position:0 -197px;
+    width:50px;
+    height:44px;
+}
+.index-logo-volkswagen {
+    background-position:0 -251px;
+    width:49px;
+    height:47px;
+}
+.index-logo-skoda {
+    background-position:0 -308px;
+    width:49px;
+    height:49px;
+}
+.index-logo-WULING {
+    background-position:0 -365px;
+    width:62px;
+    height:33px;
+}
+.index-logo-baojun {
+    background-position:0 -408px;
+    width:39px;
+    height:45px;
+}
+.index-logo-MAXUS {
+    background-position:0 -463px;
+    width:56px;
+    height:34px;
+}
+.brand .icon_logos {
+	position: relative;
+}
+.brand .icon_logos:hover {
+	cursor: pointer;
+}
+.brand .index-logo-rw {
+	left: 30px;
+	top: 19px;
+}
+.brand .index-logo-mg {
+	left: 24px;
+	top: 19px;
+}
+.brand .index-logo-bk {
+	left: 25px;
+	top: 19px;
+}
+.brand .index-logo-clt {
+	left: 13px;
+	top: 31px;
+}
+.brand .index-logo-cdl {
+	left: 22px;
+	top: 20px;
+}
+.brand .index-logo-vw {
+	left: 23px;
+	top: 18px;
+}
+.brand .index-logo-skd {
+	left: 23px;
+	top: 16px;
+}
+.brand .index-logo-wl {
+	left: 16px;
+	top: 25px;
+}
+.brand .index-logo-bj {
+	left: 28px;
+	top: 18px;
+}
+.brand .index-logo-dt {
+	left: 20px;
+	top: 23px;
+}
+
+
+.brand .index-logo-roewe {
+	left: 30px;
+	top: 19px;
+}
+.brand .index-logo-mg {
+	left: 24px;
+	top: 19px;
+}
+
+.brand .index-logo-buick {
+	left: 25px;
+	top: 19px;
+}
+
+.brand .index-logo-chevrolet {
+	left: 13px;
+	top: 31px;
+}
+
+.brand .index-logo-cadillac {
+	left: 22px;
+	top: 20px;
+}
+
+.brand .index-logo-volkswagen {
+	left: 23px;
+	top: 18px;
+}
+
+.brand .index-logo-skoda {
+	left: 23px;
+	top: 16px;
+}
+
+.brand .index-logo-WULING {
+	left: 16px;
+	top: 25px;
+}
+
+.brand .index-logo-baojun {
+	left: 28px;
+	top: 18px;
+}
+
+.brand .index-logo-MAXUS {
+	left: 20px;
+	top: 23px;
+}
+
+.brand .brand-name {
+	position: absolute;
+	width: 100%;
+	text-align:center;
+	/*font-family: "Microsoft Yahei";*/
+	font-size: 12px;
+	line-height: 12px;
+	bottom: 12px;
+	color: #333;
+	left: 0;
+}
+.brand .brand-name:hover {
+	cursor: pointer;
+}
+
+
+#series,  #models, #buytime{
+	width: 331px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #D7D7D7;
+}
+
+#carowner .m-err{
+	margin-left: 10px;
+}
+
+#carinfo-form 
+
+
+#carinfo-form .clr-gray9{
+	 margin-top: 10px;
+}
+
+#buytime {
+	<!--width: 326px;-->
+	padding-left: 5px;
+}
+
+#carowner {
+	height: 650px;
+	overflow: hidden;
+}
+
+#carowner .register-infor dl {
+	padding-bottom: 30px;
+}
+
+#carowner .register-infor .item-username {
+	padding-bottom: 20px;
+}
+
+
+#carinfo-form  #brands {
+	width: 700px;
+	position: relative;
+}
+
+#brands  .m-notice {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+#carinfo-form .hide {
+	display: none;
+}
+
+#carinfo-form .m-notice {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.time-out {
+	margin-top: 10px;
+	line-height: 16px;
+}
+
+#remind-register {
+	height: 300px;
+}
+
+.detailInfo .btn {
+	margin-right: 5px;
+}
+
+.notic {
+	margin-top: 5px;
+}
+
+::-ms-clear { display: none; }
+.m-member {
+	line-height: 23px;
+}
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../jslib/jquery_1_8_3.min.js"></script>
+<script src="../js/component/ECar.validate.js"></script>
+<title>表单验证</title>
+</head>
+<body>
+	<form id="Form">
+		<table>
+			<tr>
+				<th>车系：</th>
+				<td><select id="model" data-required="true" data-msg-required="请选择车系">
+						<option value="0">请选择</option>
+						<option value="1">大众</option></select>
+					<span data-msg-for="model"></span></td>
+			</tr>
+			<tr>
+				<th>账号：</th>
+				<td><input id="account" type="text" data-required="true"
+					data-msg-required="请填写账号" data-remote="../json/remote.json"
+					data-msg-remote="账号已存在" />
+					<span data-msg-for="account"></span></td>
+			</tr>
+			<tr>
+				<th>姓名：</th>
+				<td><input id="name" type="text" data-required="true"
+					data-msg-required="请填写姓名" />
+					<span data-msg-for="name"></span></td>
+			</tr>
+			<tr>
+				<th>手机：</th>
+				<td><input id="mobile" type="text" data-required="true"
+					data-msg-required="请填写手机号码" data-regexp="^1[3,5,8]\d{9}$"
+					data-msg-regexp="手机格式不正确" />
+					<span data-msg-for="mobile"></span></td>
+			</tr>
+			<tr>
+				<th>备注：</th>
+				<td><textarea></textarea></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><input type="submit" value="提交" /></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+$(function(){
+	new ECar.validate("#Form");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+.c-dealer{border:1px solid #bfbfbf;border-top:none}
+.c-dealer-nav{border-bottom:1px solid #BFBFBF}
+.c-dealer-nav li{float:left;width:106px;height:40px}
+.c-dealer-nav li.end{float:left;width:110px;height:40px}
+.c-dealer-nav li a{display:block;width:100%;height:100%;text-align:center;color:#545454;font:bold 14px/40px "Microsoft Yahei";text-decoration:none}
+.c-dealer-nav li a:hover{ background:#f0f0f0}
+.c-dealer-nav li.current a{color:#3f67c0; }
+.c-dealer-nav li.disabled a,.c-dealer-nav li.disabled a:hover{color:#b5b5b5;background: #fff;cursor:default}
+.c-dealer-nav li.current a,.c-dealer-nav li.current a:hover{background: #e8e8e8}
+.c-dealer-content{height:492px}
+.c-dealer-list{float:left;width:254px;height:100%;position:relative}
+.c-dealer-list-wrapper{height:100%;overflow:hidden} 
+.c-dealer-list-content h4{height:41px;text-align:center;color: #545454;*width:236px;font:16px/41px "Microsoft Yahei";border-bottom:1px solid #a7a7a7;display:block}
+.c-dealer-list-content li{height:90px;padding:0 20px 0 10px;line-height:1.8em;*vertical-align: bottom}
+.c-dealer-list-content h5{font:bold 14px "Microsoft Yahei";padding-top:10px;text-overflow: ellipsis;white-space: nowrap;width:206px;overflow: hidden}
+.c-dealer-list-content h5 a{color:#313131;}
+.c-dealer-list-content li.odd{background: #f4f4f4}
+.c-dealer-list-content li.even{background: #fff}
+.c-dealer-list-content li.null {color: #999;padding:20px}
+.c-dealer-list-content li.null i{float: left;}
+.c-dealer-list-content li.null div{margin-left:36px}
+.c-dealer-list-content li.selected{background: #cdf0ff}
+.c-dealer-list-content li:hover h5 a,.c-dealer-list-content li.hover h5 a{color: #313131}
+.c-dealer-list-content li:hover,.c-dealer-list-content li.hover{background-color: #e9f7fd;cursor: pointer}
+.c-dealer-list-content p{font-size:12px;color:#7d7d7d}
+.c-dealer-list-content p b{color:#d70000;font-family:"Microsoft Yahei"}
+.c-dealer-list-content a.c-dealer-btn{display:block;margin:3px 0 0 auto;width:54px;height: 22px;line-height: 22px; color:#fff;background: #ff8e42;text-align:center;}
+.c-dealer-list .scrollbar{position:absolute;top:0;right:0;height:100%;}
+.c-dealer-map{height:100%;margin-left:254px}
+.c-dealer-mapitem{position:absolute}
+.c-dealer-mapitem-arrow,.c-dealer-map-infowin-narrow,.c-dealer-map-infowin-close{background:url(../../images/sp_map.png) no-repeat;}
+.c-dealer-mapitem-arrow{position:absolute;width:26px;height:35px;bottom:0;left:-13px; cursor: pointer; background-position: 0 0}
+.c-dealer-mapitem-arrow-hover,.c-dealer-mapitem-current .c-dealer-mapitem-arrow{width:34px;height:46px;background-position: -26px 0;left:-17px}
+.c-dealer-map-infowin{position: absolute;left:-67px;bottom:26px;color:#898989; line-height: 1.8em;z-index: 1002}
+.c-dealer-map-infowin-content{width:294px;padding:15px 16px;border:5px solid #ababab;position:relative;bottom:33px;background:#fff;z-index: 1000}
+.c-dealer-map-infowin-content h5,.c-dealer-map-info-event{font-family:"Microsoft Yahei";white-space: nowrap;text-overflow: ellipsis;width:100%;overflow: hidden}
+.c-dealer-map-info-event{margin-bottom:15px;}
+.c-dealer-map-info-event a{color:#e9611d; font-size:14px;}
+.c-dealer-map-infowin-content h5 a{color:#3f67bf;font-size:14px;font-weight:normal;display:block; width:100%; line-height:22px; overflow: hidden;}
+.c-dealer-map-info-price span{color:#d70000;font-weight:bold; font-size:  18px; }
+.c-dealer-map-infowin-narrow{position:absolute;width:28px;height:38px; background-position: -60px 0;left:67px;bottom:0;z-index: 1001}
+.c-dealer-map-infowin-close{position:absolute;width:32px;height:32px;background-position: -88px 0; cursor: pointer;left:320px;top:-43px;z-index: 1002}
+.c-dealer-mapitem-current{z-index: 1005}
+.c-dealer-map-info-btnset{margin-top:15px}
+.c-dealer-map-info-btnset .first{margin-right:28px}
+.c-dealer-map-info-event{ margin:10px 0;color: #e9611d}
+.c-dealer-map-info-event strong{ margin-right:15px;font-size: 16px;}
+.c-dealer-map-infowin-content h5{line-height:1.5em; width:100%; padding-bottom: 5px;white-space: normal}
+.c-dealer-map-info-address{width:21em}
+.c-dealer-style .c-dealer-list-content li{height:64px}

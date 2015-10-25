@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>填写车主认证信息</title>
+<link href="../../css/reset.css" rel="stylesheet" />
+<link href="../../css/common.css" rel="stylesheet" />
+<link href="../../css/member/member.css" rel="stylesheet" />
+<link href="../../css/component/form.css" rel="stylesheet" />
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script type="text/javascript" src="../../js/header.js"></script>
+<script>var base="/saic-ebiz-web-front";</script>
+</head>
+<body>
+
+<div style="width:780px;margin:0px auto">
+
+	<div class="member carInfo">
+		<h3>填写车主车辆认证信息</h3>
+		<div class="member-box">
+			<form id="authenticationForm" action="" method="post" autocomplete="off">
+				<div class="form-item form-item-brand">
+					<span class="form-item-label">
+						<i>*</i>
+						<label>品牌：</label>
+					</span>
+					<div id="brandList" class="brand-list clearfix">
+						<a href="#" title="大众"><i class="logo-s logo-vw"></i><em>大众</em><b></b></a>
+						<a href="#" title="斯柯达"><i class="logo-s logo-skoda"></i><em>斯柯达</em><b></b></a>
+						<a href="#" title="别克"><i class="logo-s logo-buick"></i><em>别克</em><b></b></a>
+						<a href="#" title="雪佛兰"><i class="logo-s logo-chevrolet"></i><em>雪佛兰</em><b></b></a>
+						<a href="#" title="凯迪拉克"><i class="logo-s logo-cadillac"></i><em>凯迪拉克</em><b></b></a>
+						<a href="#" title="荣威"><i class="logo-s logo-roewe"></i><em>荣威</em><b></b></a>
+						<a href="#" title="MG"><i class="logo-s logo-mg"></i><em>MG</em><b></b></a>
+						<a href="#" title="宝骏"><i class="logo-s logo-baojun"></i><em>宝骏</em><b></b></a>
+					</div>
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请选择车辆品牌</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<i>*</i>
+						<label for="">车系：</label>
+					</span>
+					<select id="carSeriesSelect" class="select-style" style="width:276px;">
+						<option value="0">请选择车系</option>
+						<option value="1">车系1</option>
+						<option value="2">车系2</option>
+						<option value="3">车系3</option>
+						<option value="4">车系4</option>
+					</select>
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请选择车辆车系</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<i>*</i>
+						<label for="">车型：</label>
+					</span>
+					<select id="carSeriesSelect" class="select-style" style="width:276px;">
+						<option value="0">请选择车系</option>
+						<option value="1">车系1</option>
+						<option value="2">车系2</option>
+						<option value="3">车系3</option>
+						<option value="4">车系4</option>
+					</select>
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请选择车辆车系</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<i>*</i>
+						<label for="">车主姓名：</label>
+					</span>
+					<input type="text" maxlength="30" value="" class="m-member m-user" />
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请选择车辆车系</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<i>*</i>
+						<label for="">车主手机：</label>
+					</span>
+					<input type="text" maxlength="30" value="" class="m-member m-user" />
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请选择车辆车系</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">VIN码：</label>
+					</span>
+					<input type="text" maxlength="30" value="" class="m-member m-user" />
+					<div id="vinTips" class="vin-tips">
+						<a href="javascript:void(0);">什么是vin码</a>
+						<div class="vin-drop">
+							<i class="triangle"></i>
+							<img src="../../images/about_02.jpg" width="441" height="332" alt="什么是VIN码" />
+						</div>
+					</div>
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请输入正确的VIN码！</span></span>
+				</div>
+				<div class="form-item">
+					<span class="form-item-label">
+						<label for="">购车发票：</label>
+					</span>
+					
+					<span class="m-notice m-user-tip m-err errclass"><i></i><span>请输入正确的VIN码！</span></span>
+				</div>
+				<div class="form-item">
+					<input id="authenticationBtn" type="submit" class="btn" name="" value="提交信息">
+				</div>
+			</form>
+		</div>
+	</div>	
+
+</div>
+<script src="../../js/component/ECar.imitatescroll.js" type="text/javascript"></script>
+<script src="../../js/component/ECar.uiform.js" type="text/javascript"></script>
+<script src="../../js/carInfoSubmit.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/*头部导航条样式*/
+/*============================nav======================================*/
+#navigation {
+	width: 990px;
+	margin: auto;
+	background-color: #293356;
+	font-size: 0;
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+    position:relative;
+    z-index: 5;
+}
+
+#navigation .nav-sub {
+	float:left;
+	padding-left: 50px;
+}
+
+#navigation .nav-sub li {	
+	padding-left: 25px;
+	padding-right: 15px;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	font-size:0;
+	float:left;
+	white-space: nowrap;  /*for ie7 bug*/
+}
+
+.nav-see {
+	width: 194px;
+	border-top: 2px solid #49bced;
+}
+
+.nav-buy {
+	width: 288px;
+	border-top: 2px solid #fa9f00;
+}
+.nav-use{
+	border-top: 2px solid #6e9bff;
+}
+#navigation .nav-link {
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+	color: #fff;
+	padding-bottom: 3px;
+}
+
+#navigation .nav-link {
+	text-decoration: none;
+}
+
+#navigation .nav-link:hover {
+	border-bottom: 1px solid;
+}
+
+#navigation .nav-see .nav-link:hover {
+	border-bottom-color: #009cff;
+}
+
+#navigation .nav-buy .nav-link:hover {
+	border-bottom-color: #fa9f00;
+}
+
+#navigation .nav-use .nav-link:hover {
+	border-bottom-color: #6e9bff;
+}
+
+#navigation .triangle {
+	top: 15px;
+	left: 15px;
+}
+
+#navigation .nav-see .triangle{
+	border-left-color: #009cff;
+}
+
+#navigation .nav-buy .triangle{
+	border-left-color: #fa9f00;
+}
+
+#navigation .nav-use .triangle {
+	border-left-color: #6e9bff;
+}
+
+#navigation .nav-btn:hover {
+	background-color: #0365be;
+	box-shadow: 0 0 4px #293356 inset;
+}
+
+#navigation .help-dial {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	border-top: 2px solid #6e9bff;
+	width: 147px;
+	padding-left: 32px;
+}
+
+#navigation .num {
+	font-size: 20px;
+	color: #fff;
+	font-family: Kalinga, "Microsoft Yahei", Arial;
+	line-height:40px;	
+}
+
+/*add by dyy*/
+.nav-sub .look-pa{
+	position: absolute;
+	left:0;
+	top: -4px;
+	z-index: 2;
+}
+#navigation .help-dial .tel-pa{
+	position: absolute;
+	left:6px;
+	top: 6px;
+	z-index: 2;
+}
+#navigation .nav-cxh{
+	width: 43px;
+}
+.icon_index {
+    background-image:url(../../images/index/index_sprite.png);
+    background-repeat:no-repeat;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+.icon-nav-cxh{
+	background-position:-95px -108px;
+    width:43px;
+    height:14px;  
+    position: absolute;
+    left:25px;
+    top:14px;  
+    font-size:0;
+}
+
+
+.icon-tel {
+    background-position:-95px -80px;
+    width:26px;
+    height:23px;
+}
+.icon-qst-mark {
+    background-position:-55px 0;
+    width:35px;
+    height:33px;
+}
+
+
+.icon-nav-look {
+    background-position:0 0;
+    width:50px;
+    height:45px;
+}
+.icon-nav-buy {
+    background-position:0 -50px;
+    width:50px;
+    height:45px;
+}
+.icon-nav-use {
+    background-position:0 -99px;
+    width:50px;
+    height:45px;
+}

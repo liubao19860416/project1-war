@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>预定特殊车---提交订单</title>
+  <meta name="keywords" content="SEO内容，关键词" />
+  <meta name="description" content="SEO内容，页面描述" />
+  <link href="../css/reset.css" rel="stylesheet">
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/purchasePostOder.css" rel="stylesheet">
+  <link href="../css/component/dialog.css" rel="stylesheet">
+  <script src="../jslib/jquery_1_8_3.min.js"></script>
+</head>
+<body>
+  <div class="w960">
+    <div class="orderInfo mt-20">
+      <p class="remind f-yahei f-18"> <i class="icon icon-checked-l"></i>
+        订单提交成功，请在&nbsp;<span class="time">200分钟内</span>&nbsp;完成付款！否则订单会自动取消
+      </p>
+      <div class="orderInfoDetail mt-10">
+        <dl class="orderNumber f-14">
+          <dt class="dsp-i">订单编号：</dt>
+          <dd class="dsp-i">1234567890</dd>
+        </dl>
+        <dl class="orderPrice">
+          <dt class="dsp-i f-14">应付金额：</dt>
+          <dd class="dsp-i f-yahei f-30">
+            <span class="f-22">&yen;</span>
+            500.00
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <form method="post" action="http://www.baidu.com" autocomplete="off" class="paySubmit">
+      <input type="hidden" name="timeout" value="false">
+      <input type="hidden" name="ajax" value="false">
+      <input type="hidden" name="orderID" value="123456"> <!-- @lx -->
+      <div class="payMethod">
+        <!-- 支付方法选择tab -->
+        <ul class="tabbutton clearfix f-yahei f-16" id="tab">
+          <li class="activePayMethod" rel="#c1" data-pay-type="bankPay"> <!-- @lx -->
+            <a href="javascript:void(0)">信用卡支付</a>
+          </li>
+          <li rel="#c2" data-pay-type="bankPay">
+            <a href="javascript:void(0)">储蓄卡支付</a>
+          </li>
+          <li rel="#c3" data-pay-type="directPay">
+            <a href="javascript:void(0)">支付平台</a>
+          </li>
+        </ul>
+        <!-- 支付方法内容区div -->
+        <!-- 信用卡 -->
+        <div id="c1" class="methodList clearfix">
+            <li><input type="radio" name="bankInfo" value="00"><img src="../images/orderItems/bankPic/gh.jpg" alt="中国工商银行"></li>
+            <li><input type="radio" name="bankInfo" value="01"><img src="../images/orderItems/bankPic/js.jpg" alt="中国建设银行"></li>
+            <li><input type="radio" name="bankInfo" value="02"><img src="../images/orderItems/bankPic/zs.jpg" alt="招商银行"></li>
+            <li><input type="radio" name="bankInfo" value="03"><img src="../images/orderItems/bankPic/nh.jpg" alt="中国农业银行"></li>
+            <li><input type="radio" name="bankInfo" value="04"><img src="../images/orderItems/bankPic/jh.jpg" alt="交通银行"></li>
+            <li><input type="radio" name="bankInfo" value="05"><img src="../images/orderItems/bankPic/gf.jpg" alt="广发银行"></li>
+            <li><input type="radio" name="bankInfo" value="06"><img src="../images/orderItems/bankPic/zh.jpg" alt="中国银行"></li>
+            <li><input type="radio" name="bankInfo" value="07"><img src="../images/orderItems/bankPic/ms.jpg" alt="中国民生银行"></li>
+            <li><input type="radio" name="bankInfo" value="08"><img src="../images/orderItems/bankPic/hx.jpg" alt="华夏银行"></li>
+            <li><input type="radio" name="bankInfo" value="09"><img src="../images/orderItems/bankPic/xy.jpg" alt="兴业银行"></li>
+            <li><input type="radio" name="bankInfo" value="010"><img src="../images/orderItems/bankPic/gd.jpg" alt="中国光大银行"></li>
+            <li><input type="radio" name="bankInfo" value="011"><img src="../images/orderItems/bankPic/yz.jpg" alt="中国邮政储蓄银行"></li>
+        </div>
+        <!-- 储蓄卡 -->
+        <div id="c2" class="methodList">
+          <ul class="clearfix">
+            <li><input type="radio" name="bankInfo" value="10"><img src="../images/orderItems/bankPic/gh.jpg" alt="中国工商银行"></li>
+            <li><input type="radio" name="bankInfo" value="11"><img src="../images/orderItems/bankPic/js.jpg" alt="中国建设银行"></li>
+            <li><input type="radio" name="bankInfo" value="12"><img src="../images/orderItems/bankPic/zs.jpg" alt="招商银行"></li>
+            <li><input type="radio" name="bankInfo" value="13"><img src="../images/orderItems/bankPic/nh.jpg" alt="中国农业银行"></li>
+            <li><input type="radio" name="bankInfo" value="14"><img src="../images/orderItems/bankPic/jh.jpg" alt="交通银行"></li>
+            <li><input type="radio" name="bankInfo" value="15"><img src="../images/orderItems/bankPic/gf.jpg" alt="广发银行"></li>
+            <li><input type="radio" name="bankInfo" value="16"><img src="../images/orderItems/bankPic/zh.jpg" alt="中国银行"></li>
+            <li><input type="radio" name="bankInfo" value="17"><img src="../images/orderItems/bankPic/ms.jpg" alt="中国民生银行"></li>
+            <li><input type="radio" name="bankInfo" value="18"><img src="../images/orderItems/bankPic/hx.jpg" alt="华夏银行"></li>
+            <li><input type="radio" name="bankInfo" value="19"><img src="../images/orderItems/bankPic/xy.jpg" alt="兴业银行"></li>
+            <li><input type="radio" name="bankInfo" value="110"><img src="../images/orderItems/bankPic/gd.jpg" alt="中国光大银行"></li>
+            <li><input type="radio" name="bankInfo" value="111"><img src="../images/orderItems/bankPic/yz.jpg" alt="中国邮政储蓄银行"></li>
+          </ul>
+        </div>
+        <!-- 支付平台 -->
+        <div id="c3" class="methodList clearfix">
+          <li><input type="radio" name="payMethod" value="20"><img src="../images/orderItems/bankPic/zfb.jpg" alt="支付宝"></li>
+        </div>
+      </div>
+      <!-- button -->
+      <input class='btn btn-yellow f-b btn-payOrder' value="询问价格" type="submit">
+  </form>
+  <div id="timeoutPopup" class="timeoutPopup hide">
+    <div class="timeoutReminder f-18 f-yahei"><i class="icon icon-alert-l"></i><span>订单提交已经超30分钟！订单已失效！</span><p>请重新预订!</p></div>
+    <p class="nextAction"><a href="http://www.google.com" class="jumpLink link-blue">进入网站首页</a></p>
+  </div>
+  <div id="payMethodUnchosenPopup" class="payMethodUnchosenPopup hide">
+    <p class="warning f-18 f-yahei"><i class="icon icon-alert-l"></i>请选择支付银行或支付平台</p>
+    <p class="action"><span class="btn btn-med" onclick="ECar.dialog.close();">确定</span></p>
+  </div>
+  <div id="normalPay" class="narmalPay hide">
+    <div class="possibleAction"><a class="btn btn-paid" href="http://www.baidu.com#会员页面">已完成支付</a><a class="btn btn-redo" href="file:///C:/stsWorkspace/dev/saic-ebiz-web-orderItems/src/main/webapp/resources/html/purchasePostOrder.html">重新选择支付方式</a></div>
+    <p class="contact"><a href="">联系客服&nbsp;kefu@anji.com</a></p>
+  </div>
+</div>
+  <script src="../js/component/ECar.dialog.js"></script>
+  <script src="../js/component/ECar.tab.js"></script>
+  <script src="../js/component/ECar.customRadio.js"></script>
+  <script src="../js/purchasePostOrder.js"></script>
+  <script src="../js/paymentValidate.js"></script>
+</body>
+</html>

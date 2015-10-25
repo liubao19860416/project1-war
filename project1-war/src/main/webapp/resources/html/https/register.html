@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册信息</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../../css/member/reset.css" rel="stylesheet">	
+    <link href="../../css/member/common.css" rel="stylesheet">
+    <link href="../../css/member/register.css" rel="stylesheet">
+</head>才
+
+<body>
+<!-- 注册信息 -->
+<div class="registerbox">
+  <form id="register-infor">
+   <div class="register-infor">
+    <dl>
+      <dt>用户名：</dt>
+      <dd>
+        <input class="m-member spacing" type="text" rel-required="true" validate="username" name="username" value="">
+        <span class="txt m-notice">请输入您的手机号码</span>
+      </dd>
+    </dl>
+    <dl>
+      <dt>设置密码：</dt>
+      <dd>
+        <input class="m-member spacing" type="text" rel-required="true" name="pwd" validate="password" value="">
+        <span class="txt m-notice">6-16位字符，可以为英文或数字</span>  
+        
+        <div class="pwdline">
+         <span class="pwds weak">弱</span>
+         <span class="pwds general">中</span>
+         <span class="pwds strong">强</span>
+        </div>
+      </dd>
+    </dl>
+    <dl>
+      <dt>确认密码：</dt>
+      <dd>
+        <input  class="m-member spacing" type="password" rel-required="true" validate="repassword" name="rpwd" value="">        
+      </dd>
+    </dl>
+    <dl>
+      <dt>验证码：</dt>
+      <dd>
+       <input class="m-member m-member220-46 text " type="text" maxlength="4" rel-required="true" validate="yzm" name="yzm">
+       <label class="img"><img src="../../images/member/verify.jpg" width="100px" height="46px" alt="" border="0"></label>
+       <label class="replace">看不清？<a href="#" class="color">换一张</a></label>       
+      </dd>
+    </dl>
+    <div class="remember" groupvalidate="checkbox@read"><input class="checkbox ticks" name="read" type="checkbox" value="" checked><label class="agree">我已经阅读并同意<a href="#" class="blue" target="_blank">《***用户注册协议》</a></label><!-- <span class="m-notice m-err"><i></i><span>请接受服务协议！</span></span> --></div>
+    <div class="registerbut"><input class="btn btn-med btn220-50 font" name="" type="button" value="同意协议并注册"></div>
+  </div>
+
+
+  </form>
+
+</div>
+
+
+
+<script type="text/javascript" src="../../jslib/jquery_1_8_3.min.js"></script>
+<script src="../../js/validate.js"></script>
+<script src="../../js/pwdStrong.js"></script>
+<script type="text/javascript">
+  $(function(){
+
+    ECar.validate.init({
+      formid:'register-infor',
+      config:{
+         'email':{
+           'empty':'请输入您的邮箱1',
+           'err':'邮箱格式有误1',
+           'remoteerr':'已经存在1'
+          }
+      }
+    });
+
+
+    $('.registerbut input').click(function(){
+      if(ECar.validate.init.submit('register-infor')){
+        console.info('yes')
+      }else{
+        console.info('no');
+      }
+    });
+
+
+    $('#register-infor [name="pwd"]').keyup(function(event){
+      var e=window.event||event;
+      var $this=$(this);      
+      var value=$this.val();
+      pwdCheck.init(e,value,$('.register-infor .pwdline'));
+      
+    });
+
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>公告图片详情</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <script src="../jslib/jquery_1_8_3.min.js"></script>
+    <script src="../js/header.js"></script>
+</head>
+
+<body>
+<div class="top_collect_main" id="topCollect">
+  <div class="top_collect">公告：本站于2014年3月20日晚12:00-12:30分关机维护,届时所有服务不可访问,带来的不便之处请谅解<img class="close" src="../images/close.jpg" width="16px" height="16px" border="0" id="topCollect-close"></div>
+</div>
+<div class="n-topnav">
+  <div class="header">
+    <h3><a href="#"><span class="current">上海</span><span class="triangle drop"></span></a></h3>
+     <ul class="login-box" id="box01">
+      <li><a href="#">登陆</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">注册</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">车主俱乐部</a></li>
+    </ul>
+    <ul class="login-box" id="box02" style="display:none;">
+      <li><a href="#">早上好 , 用户名用户名用户名名</a></li>
+      <li class="site-nav-pipe">|</li>
+      <li><a href="#">消息</a><span class="news">23</span></li>
+      <li class="site-nav-pipe">|</li>
+      <li class="mouse_over pr" id="userCenter"><a href="#"><span class="current">个人中心</span><span class="triangle drop"></span></a>
+        <div class="group" id="useGroup">
+          <a href="#">我的订单</a>
+          <a href="#">我的询价</a>
+          <a href="#">试乘试驾</a>
+          <a href="#">消息提醒</a>
+        </div>
+      </li>
+    </ul>
+    <div class="top-search">
+      <input class="searchText" type="text" value="荣威550" onFocus="this.style.color='#6a6a6a';if (value =='荣威550'){value =''}" onBlur="this.style.color='#6a6a6a';if (value ==''){value='荣威550'}">
+      <input class="searchBtn" type="submit">
+    </div>
+  </div>
+</div>
+<div class="n-subnav">
+  <div class="subnav-cont">
+    <div class="saiclogo"><a href="#"><img width="193px" height="66px" border="0" src="../images/saiclogo.jpg"></a></div>
+    <div class="subnav-tit">
+      <ul class="subnav-tit-nr">
+        <li><a href="#">车型大全</a><span class="iconthree-all iconlist"></span></li>
+        <li><a href="#">经销商</a></li>
+        <li><a href="#">促销活动</a></li>
+        <li><a href="#">购车工具</a><span class="iconthree-all iconlist"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+	$("#box01").find('li:eq(0)').click(function(){
+		$("#box01").hide();
+		$("#box02").show();
+	});
+	$("#box02").find('li:eq(0)').click(function(){
+		$("#box02").hide();
+		$("#box01").show();
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>车系详情_经销商列表</title>
+    <meta name="keywords" content="SEO内容，关键词" />
+    <meta name="description" content="SEO内容，页面描述" />
+    <link href="../css/reset.css" rel="stylesheet">	
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/component/carStyle.css" rel="stylesheet">    
+</head>
+
+<body>
+  <div class="fl w700"> 
+  <h3 class="title title-m"><span class="title-name"><i></i>经销商列表</span><span class="fr"><a href="#" class="title-more">更多</a></span></h3>
+	
+    <div class="c-modeldealerlist">    
+       <ul class="c-modeldealerlist-city clearfix" id="modeldealerlist-city">         
+           <li class="cur">全部</li>
+           <li>徐汇</li>
+           <li>宝山</li>
+           <li>浦东新区</li>
+           <li>闵行</li>
+           <li>长宁</li>
+           <li>嘉定</li>
+           <li>青浦</li>
+           <li class="end">卢湾</li>
+           <li>卢湾</li>
+           <li>徐汇</li>
+           <li>宝山</li>
+           <li>浦东</li>
+           <li>闵行</li>
+           <li>长宁</li>
+           <li>嘉定</li>
+           <li>青浦</li>
+           <li class="end">普陀</li>   
+       </ul>
+       <div class="clearfix" id="c-modeldealerlist-con"></div>
+    </div>
+  </div> 
+
+<script src="../jslib/jquery_1_8_3.min.js"></script>
+<script> 
+//合并的时候要删除的
+   $(function(){
+     $('#c-modeldealerlist-con').load('modeldealerlist_data.html');
+    $('#modeldealerlist-city>li').click(function(){
+       $(this).addClass('cur').siblings().removeClass('cur');
+       $('#c-modeldealerlist-con').load('modeldealerlist_data.html');
+    });
+   })
+</script>
+
+</body>
+</html>

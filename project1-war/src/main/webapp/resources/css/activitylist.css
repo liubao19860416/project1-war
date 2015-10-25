@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 车系活动列表页 */
+.modelactivity{width:960px;}
+.modelactivity .avylist{overflow:hidden;}
+	.avylist li{float:left;padding:12px 0px;width:960px;}
+	.avylist .gray{ background:#f6f6f6; padding:12px 0px}
+	.avylist .pic{width:306px;height:206px; margin-right:22px; float:left;}
+	.avylist .pic img{border:3px solid #9d9d9d; max-height:200px;}
+	.avylist .txt{ padding-left:328px;}
+	.avylist .txt h4{font:18px "Microsoft Yahei";margin:10px 0px 12px;height:28px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	.avylist .txt h4 a{color:#3f67c0;}
+	.avylist .txt p{font:12px "\5b8b\4f53";line-height:26px;color:#000; width:630px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	.avylist .txt p .color{color:#ff8e42;font-weight:bold;}
+	.avylist .txt p .color font{font:20px Arial, Helvetica, sans-serif;vertical-align:-2px;padding:0px 3px;}
+	.avylist .signup{width:280px;height:34px; padding-left:328px; *padding-left:0; margin-top:29px;font-family:"Microsoft Yahei";}
+	.avylist .signup .entered{width:138px;height:32px;float:left;line-height:34px;color:#ef0000;text-align:center;overflow:hidden;border-top-left-radius:3px;border-bottom-left-radius:3px;-webkit-border-top-left-radius:3px;-webkit-border-bottom-left-radius:3px;-moz-border-top-left-radius:3px;-moz-border-bottom-left-radius:3px;border-bottom:1px solid #35b5eb;border-top:1px solid #35b5eb;border-left:1px solid #35b5eb;}
+	.avylist .signup .entered .big{font-size:14px;}
+	.avylist .signup .atonce{width:140px; height:34px;margin-left:-2px;}
+	.avylist .signup .atonce a{color:#fff;}
+
+
+
+/* 标题 */
+.title-tabone li{float:left;width:112px;height:30px;margin-left:1px}
+.cx_ad_box{height:70px;overflow:hidden;margin-top:15px;}
+.cx_ad_box1{width: 250px; height: 70px; float: left; display: inline; margin: 0px; padding: 0px;}
+.cx_ad_box2{width: 700px; height: 70px; float: left; display: inline; margin: 0px 0px 0px 10px; padding: 0px;}
